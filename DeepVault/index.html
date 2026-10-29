@@ -130,6 +130,7 @@ section.band + section.band { border-top: 1px solid var(--line); }
 /* Rechtstexte und Support */
 .doc { padding-block: 48px 64px; display: grid; gap: 28px; }
 .doc header { display: grid; gap: 10px; }
+.doc > [data-l] { display: grid; gap: 28px; }
 .doc .sub { color: var(--muted); }
 .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; }
 .toc ol { margin: 8px 0 0; padding-left: 0; list-style: none; columns: 2; column-gap: 28px; font-size: .9375rem; }
@@ -139,6 +140,29 @@ section.band + section.band { border-top: 1px solid var(--line); }
 .legal-sec p, .legal-sec li { overflow-wrap: anywhere; }
 .address { font-style: normal; line-height: 1.7; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 10px; }
+
+/* Kostenrechner */
+.calc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.calc label { display: grid; gap: 6px; font-weight: 600; font-size: .9375rem; }
+.calc input[type=range] { width: 100%; accent-color: var(--accent); }
+.calc .val { font-family: var(--mono); color: var(--accent); font-weight: 700; }
+.calc select, .calc input[type=number] { font: inherit; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.presets button { font: inherit; font-size: .875rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.presets button:hover { border-color: var(--accent); }
+.result .big { font: 800 clamp(2.4rem, 7vw, 3.4rem)/1 var(--display); color: var(--meeting); }
+.result .year { font: 700 1.375rem/1.2 var(--display); }
+.result ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.cta-box { background: var(--accent-soft); border-radius: 14px; padding: 20px; display: grid; gap: 8px; }
+@media (max-width: 760px) { .calc { grid-template-columns: minmax(0, 1fr); } }
+
+/* Presse */
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 0; }
+.facts dt { font-weight: 700; }
+.facts dd { margin: 0; }
+.press-icon { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.press-icon img { width: 96px; height: 96px; border-radius: 22px; }
+.quote-box { white-space: pre-line; font-size: .9375rem; background: var(--paper); border: 1px dashed var(--line); border-radius: 10px; padding: 14px; }
 details { border-bottom: 1px solid var(--line); padding-block: 14px; }
 details:first-of-type { border-top: 1px solid var(--line); }
 summary { cursor: pointer; font-weight: 650; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
@@ -171,30 +195,23 @@ details > div { padding-top: 10px; color: var(--muted); display: grid; gap: 8px;
 a.store { text-decoration: none; transition: transform .15s ease, opacity .15s ease; }
 a.store:hover { opacity: .88; }
 a.store:active { transform: scale(.97); }
-.press { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; }
-.press .dl { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 12px; background: var(--accent); color: #fff; font: 650 1rem/1 var(--sans); text-decoration: none; }
-.press .dl:hover { opacity: .9; }
-.press dl { margin: 14px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 16px; font-size: .9375rem; }
-.press dt { color: var(--muted); }
-.press dd { margin: 0; }
-@media (max-width: 860px) { .press { grid-template-columns: minmax(0, 1fr); } }
 </style>
 <noscript><style>[data-l]{display:revert !important}</style></noscript>
 </head>
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="index.html" data-internal><img src="icon-180.png" alt="" width="34" height="34">DeepVault</a>
-<nav class="nav" aria-label="Navigation"><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><span class="langs" role="group" aria-label="Sprache · Language · Idioma"><button type="button" data-setlang="de" aria-pressed="true" lang="de">DE</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button><button type="button" data-setlang="es" aria-pressed="false" lang="es">ES</button></span></nav>
+<nav class="nav" aria-label="Navigation"><a href="rechner.html" data-internal><span data-l="de">Kostenrechner</span><span data-l="en">Cost calculator</span><span data-l="es">Calculadora</span></a><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><span class="langs" role="group" aria-label="Sprache · Language · Idioma"><button type="button" data-setlang="de" aria-pressed="true" lang="de">DE</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button><button type="button" data-setlang="es" aria-pressed="false" lang="es">ES</button></span></nav>
 </div></header>
 <main>
 <section class="hero"><div class="wrap">
 <div class="hero-copy">
 <span class="eyebrow"><span data-l="de">iPhone-App · Auswertung nur auf deinem Gerät</span><span data-l="en">iPhone app · Analysed only on your device</span><span data-l="es">App para iPhone · Análisis solo en tu dispositivo</span></span>
-<h1><span data-l="de">Was kosten dich Meetings wirklich?</span><span data-l="en">What do meetings really cost you?</span><span data-l="es">¿Cuánto te cuestan de verdad las reuniones?</span></h1>
-<p class="lead"><span data-l="de">DeepVault rechnet deine Kalenderwoche durch: Meeting-Zeit, Fokuszeit, zerstückelte Lücken und was das mit deinem Stundensatz wert ist. Ohne Server, ohne Konto, ohne Tracking.</span><span data-l="en">DeepVault works through your calendar week: meeting time, focus time, fragmented gaps and what it all costs at your hourly rate. No server, no account, no tracking.</span><span data-l="es">DeepVault analiza tu semana de calendario: tiempo en reuniones, tiempo de enfoque, huecos fragmentados y cuánto vale todo con tu tarifa por hora. Sin servidor, sin cuenta, sin seguimiento.</span></p>
+<h1><span data-l="de">Meetings fressen deine Woche.</span><span data-l="en">Meetings eat your week.</span><span data-l="es">Las reuniones se comen tu semana.</span></h1>
+<p class="lead"><span data-l="de">DeepVault zeigt dir in Euro, was deine Meetings kosten, wie viel Fokuszeit dir bleibt und welcher Hebel dir am meisten Zeit zurückbringt. Für Teamleads, Freelancer und alle mit vollem Kalender – ohne Server, ohne Konto, ohne Tracking.</span><span data-l="en">DeepVault shows what your meetings cost, how much focus time you have left and which change wins you back the most time. For team leads, freelancers and anyone with a packed calendar – no server, no account, no tracking.</span><span data-l="es">DeepVault te muestra lo que cuestan tus reuniones, cuánto tiempo de enfoque te queda y qué cambio te devuelve más tiempo. Para responsables de equipo, freelancers y cualquiera con la agenda llena, sin servidor, sin cuenta, sin seguimiento.</span></p>
 <div class="actions">
 <a class="soon store" href="https://apps.apple.com/app/id6827739648" rel="noopener"><svg viewBox="0 0 17 20" width="20" height="24" aria-hidden="true" fill="currentColor"><path d="M14.2 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2.1-.9-3.4-.9C3.6 4.8 2 5.8 1.1 7.4c-1.9 3.2-.5 8 1.3 10.6.9 1.3 1.9 2.7 3.3 2.6 1.3-.1 1.8-.9 3.4-.9s2 .9 3.4.8c1.4 0 2.3-1.3 3.2-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.9-1.1-2.9-4.3zM11.6 2.9C12.3 2 12.8.8 12.7-.4c-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg><span><small><span data-l="de">Laden im</span><span data-l="en">Download on the</span><span data-l="es">Descárgalo en el</span></small>App Store</span></a>
-<a href="datenschutz.html" data-internal><span data-l="de">So schützt DeepVault deine Daten</span><span data-l="en">How DeepVault protects your data</span><span data-l="es">Cómo protege DeepVault tus datos</span></a>
+<a href="rechner.html" data-internal><span data-l="de">Was kostet dein Jour fixe? Jetzt ausrechnen →</span><span data-l="en">What does your weekly sync cost? Calculate now →</span><span data-l="es">¿Cuánto cuesta tu reunión semanal? Calcúlalo →</span></a>
 </div>
 </div>
 <figure class="week" aria-label="Beispielwoche">
@@ -226,21 +243,10 @@ a.store:active { transform: scale(.97); }
 <p class="note"><span data-l="de">7 Tage kostenlos testen. Monatlich, jährlich oder einmalig kaufen.</span><span data-l="en">Try it free for 7 days. Monthly, yearly or a one-time purchase.</span><span data-l="es">Prueba gratis 7 días. Pago mensual, anual o único.</span></p></div>
 <ul><li><span data-l="de">Kunden-Report als PDF und CSV-Export für Abrechnung und Zeiterfassung</span><span data-l="en">Client report as PDF and CSV export for billing and time tracking</span><span data-l="es">Informe para clientes en PDF y exportación CSV para facturar y registrar horas</span></li><li><span data-l="de">Wochenplaner: die ganze Woche mit einem Tipp planen, auch per Siri</span><span data-l="en">Week planner: plan your whole week in one tap, also via Siri</span><span data-l="es">Planificador semanal: planifica toda la semana con un toque, también con Siri</span></li><li><span data-l="de">Verlauf und Trends über 12 Wochen, ab dem ersten Tag – mit Quartals-Rückblick zum Teilen</span><span data-l="en">History and trends over 12 weeks, from day one – with a shareable quarterly review</span><span data-l="es">Historial y tendencias de 12 semanas, desde el primer día, con un resumen trimestral para compartir</span></li><li><span data-l="de">E-Mail-Erweiterung mit Outlook und 9 Kennzahlen, von E-Mail-Kosten bis Mail-Rhythmus</span><span data-l="en">Email extension with Outlook and 9 metrics, from email cost to email rhythm</span><span data-l="es">Extensión de correo con Outlook y 9 métricas, del coste del correo a tu ritmo de correo</span></li><li><span data-l="de">Eigene Challenges für dein Team</span><span data-l="en">Your own team challenges</span><span data-l="es">Retos propios para tu equipo</span></li></ul>
 </div></section>
-<section class="band" id="presse"><div class="wrap press">
-<div><div class="section-head" style="margin-bottom:0"><h2><span data-l="de">Presse</span><span data-l="en">Press</span><span data-l="es">Prensa</span></h2>
-<p><span data-l="de">App-Icon, Screenshots und Pressetext zum Download. Gerne beantworte ich Fragen oder stelle Testzugänge für Pro bereit.</span><span data-l="en">App icon, screenshots and press text to download. Happy to answer questions or provide Pro test access.</span><span data-l="es">Icono, capturas de pantalla y texto de prensa para descargar. Respondo encantado a preguntas o facilito acceso de prueba a Pro.</span></p></div>
-<dl>
-<dt><span data-l="de">Entwickler</span><span data-l="en">Developer</span><span data-l="es">Desarrollador</span></dt><dd>Stathis Fotiadis · Fotiadis Apps, Stuttgart</dd>
-<dt><span data-l="de">Preis</span><span data-l="en">Price</span><span data-l="es">Precio</span></dt><dd><span data-l="de">Kostenlos · Pro 2,99&nbsp;€/Monat, 22,99&nbsp;€/Jahr oder 49,99&nbsp;€ einmalig</span><span data-l="en">Free · Pro €2.99/month, €22.99/year or €49.99 one-time</span><span data-l="es">Gratis · Pro 2,99&nbsp;€/mes, 22,99&nbsp;€/año o 49,99&nbsp;€ pago único</span></dd>
-<dt><span data-l="de">Plattform</span><span data-l="en">Platform</span><span data-l="es">Plataforma</span></dt><dd><span data-l="de">iPhone · Deutsch, Englisch, Spanisch</span><span data-l="en">iPhone · German, English, Spanish</span><span data-l="es">iPhone · alemán, inglés, español</span></dd>
-<dt><span data-l="de">Kontakt</span><span data-l="en">Contact</span><span data-l="es">Contacto</span></dt><dd><a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></dd>
-</dl></div>
-<a class="dl" href="DeepVault-Pressemappe.zip" download>↓ <span data-l="de">Pressemappe (ZIP)</span><span data-l="en">Press kit (ZIP)</span><span data-l="es">Kit de prensa (ZIP)</span></a>
-</div></section>
 </main>
 <footer class="foot"><div class="wrap">
 <span>© 2026 Fotiadis Apps</span>
-<nav aria-label="Rechtliches"><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="index.html#presse" data-internal><span data-l="de">Presse</span><span data-l="en">Press</span><span data-l="es">Prensa</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a></nav>
+<nav aria-label="Rechtliches"><a href="rechner.html" data-internal><span data-l="de">Kostenrechner</span><span data-l="en">Cost calculator</span><span data-l="es">Calculadora</span></a><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><a href="presse.html" data-internal><span data-l="de">Presse</span><span data-l="en">Press</span><span data-l="es">Prensa</span></a></nav>
 <span><span data-l="de">Diese Webseite setzt keine Cookies und verwendet kein Tracking.</span><span data-l="en">This website sets no cookies and uses no tracking.</span><span data-l="es">Este sitio web no usa cookies ni seguimiento.</span></span>
 </div></footer>
 <script>

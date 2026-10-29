@@ -130,6 +130,7 @@ section.band + section.band { border-top: 1px solid var(--line); }
 /* Rechtstexte und Support */
 .doc { padding-block: 48px 64px; display: grid; gap: 28px; }
 .doc header { display: grid; gap: 10px; }
+.doc > [data-l] { display: grid; gap: 28px; }
 .doc .sub { color: var(--muted); }
 .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; }
 .toc ol { margin: 8px 0 0; padding-left: 0; list-style: none; columns: 2; column-gap: 28px; font-size: .9375rem; }
@@ -139,6 +140,29 @@ section.band + section.band { border-top: 1px solid var(--line); }
 .legal-sec p, .legal-sec li { overflow-wrap: anywhere; }
 .address { font-style: normal; line-height: 1.7; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 10px; }
+
+/* Kostenrechner */
+.calc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.calc label { display: grid; gap: 6px; font-weight: 600; font-size: .9375rem; }
+.calc input[type=range] { width: 100%; accent-color: var(--accent); }
+.calc .val { font-family: var(--mono); color: var(--accent); font-weight: 700; }
+.calc select, .calc input[type=number] { font: inherit; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.presets button { font: inherit; font-size: .875rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.presets button:hover { border-color: var(--accent); }
+.result .big { font: 800 clamp(2.4rem, 7vw, 3.4rem)/1 var(--display); color: var(--meeting); }
+.result .year { font: 700 1.375rem/1.2 var(--display); }
+.result ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.cta-box { background: var(--accent-soft); border-radius: 14px; padding: 20px; display: grid; gap: 8px; }
+@media (max-width: 760px) { .calc { grid-template-columns: minmax(0, 1fr); } }
+
+/* Presse */
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 0; }
+.facts dt { font-weight: 700; }
+.facts dd { margin: 0; }
+.press-icon { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.press-icon img { width: 96px; height: 96px; border-radius: 22px; }
+.quote-box { white-space: pre-line; font-size: .9375rem; background: var(--paper); border: 1px dashed var(--line); border-radius: 10px; padding: 14px; }
 details { border-bottom: 1px solid var(--line); padding-block: 14px; }
 details:first-of-type { border-top: 1px solid var(--line); }
 summary { cursor: pointer; font-weight: 650; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
@@ -174,7 +198,7 @@ details > div { padding-top: 10px; color: var(--muted); display: grid; gap: 8px;
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="index.html" data-internal><img src="icon-180.png" alt="" width="34" height="34">DeepVault</a>
-<nav class="nav" aria-label="Navigation"><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="impressum.html" data-internal aria-current="page"><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><span class="langs" role="group" aria-label="Sprache · Language · Idioma"><button type="button" data-setlang="de" aria-pressed="true" lang="de">DE</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button><button type="button" data-setlang="es" aria-pressed="false" lang="es">ES</button></span></nav>
+<nav class="nav" aria-label="Navigation"><a href="rechner.html" data-internal><span data-l="de">Kostenrechner</span><span data-l="en">Cost calculator</span><span data-l="es">Calculadora</span></a><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="impressum.html" data-internal aria-current="page"><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><span class="langs" role="group" aria-label="Sprache · Language · Idioma"><button type="button" data-setlang="de" aria-pressed="true" lang="de">DE</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button><button type="button" data-setlang="es" aria-pressed="false" lang="es">ES</button></span></nav>
 </div></header>
 <main class="wrap narrow doc"><div data-l="de" lang="de"><header><h1>Impressum</h1></header>
 <section class="legal-sec"><h2>Angaben gemäß § 5 DDG</h2><address class="address">Fotiadis Apps<br>Inhaber: Stathis Fotiadis<br>Sankt-Pöltener-Straße 37<br>70469 Stuttgart<br>Deutschland</address></section>
@@ -191,7 +215,7 @@ details > div { padding-top: 10px; color: var(--muted); display: grid; gap: 8px;
 <section class="legal-sec"><h2>Resolución de litigios de consumo</h2><p>No estamos dispuestos ni obligados a participar en procedimientos de resolución de litigios ante una entidad de resolución de litigios de consumo.</p></section></div></main>
 <footer class="foot"><div class="wrap">
 <span>© 2026 Fotiadis Apps</span>
-<nav aria-label="Rechtliches"><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="index.html#presse" data-internal><span data-l="de">Presse</span><span data-l="en">Press</span><span data-l="es">Prensa</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a></nav>
+<nav aria-label="Rechtliches"><a href="rechner.html" data-internal><span data-l="de">Kostenrechner</span><span data-l="en">Cost calculator</span><span data-l="es">Calculadora</span></a><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><a href="presse.html" data-internal><span data-l="de">Presse</span><span data-l="en">Press</span><span data-l="es">Prensa</span></a></nav>
 <span><span data-l="de">Diese Webseite setzt keine Cookies und verwendet kein Tracking.</span><span data-l="en">This website sets no cookies and uses no tracking.</span><span data-l="es">Este sitio web no usa cookies ni seguimiento.</span></span>
 </div></footer>
 <script>
