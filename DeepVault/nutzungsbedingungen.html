@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="de" data-lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="apple-itunes-app" content="app-id=6827739648">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nutzungsbedingungen · DeepVault</title>
+<meta name="description" content="Impressum von DeepVault."><meta name="dv-title-de" content="Nutzungsbedingungen · DeepVault"><meta name="dv-title-en" content="Terms of use · DeepVault"><meta name="dv-title-es" content="Condiciones de uso · DeepVault"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="icon-180.png"><meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+/* Layout: ruhige Lesespalte; die Startseite zeigt als Leitmotiv eine gezeichnete Kalenderwoche */
+:root {
+  --paper: #F4F6F9;
+  --surface: #FFFFFF;
+  --ink: #131A27;
+  --muted: #586276;
+  --line: #DADFE7;
+  --accent: #2B59E8;
+  --accent-soft: #E3EAFD;
+  --focus: #12916A;
+  --meeting: #DE9327;
+  --slot: #E7EBF1;
+  --mark: #FFF1C7;
+  --display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0C1018; --surface: #141A25; --ink: #E8ECF4; --muted: #9AA4B8; --line: #263043;
+    --accent: #7D9BFF; --accent-soft: #1C2747; --focus: #3BC992; --meeting: #F2AE4E; --slot: #1B2230; --mark: #4A3B12;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0C1018; --surface: #141A25; --ink: #E8ECF4; --muted: #9AA4B8; --line: #263043;
+  --accent: #7D9BFF; --accent-soft: #1C2747; --focus: #3BC992; --meeting: #F2AE4E; --slot: #1B2230; --mark: #4A3B12;
+  color-scheme: dark;
+}
+
+/* Sprachumschaltung: ohne JavaScript ist Deutsch sichtbar */
+:root:not([data-lang="en"]):not([data-lang="es"]) [data-l]:not([data-l="de"]),
+:root[data-lang="en"] [data-l]:not([data-l="en"]),
+:root[data-lang="es"] [data-l]:not([data-l="es"]) { display: none !important; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--sans);
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 750; letter-spacing: -0.01em; }
+h3 { font-size: 1.125rem; font-weight: 700; }
+p { margin: 0; }
+mark.ph { background: var(--mark); color: inherit; padding: 0 .2em; border-radius: 3px; }
+
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.narrow { max-width: 760px; }
+
+/* Kopfzeile */
+.top { border-bottom: 1px solid var(--line); background: var(--surface); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 750 1.125rem/1 var(--display); }
+.brand img { width: 34px; height: 34px; border-radius: 8px; }
+.nav { display: flex; align-items: center; gap: 4px 18px; flex-wrap: wrap; font-size: .9375rem; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
+.langs { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+.langs button {
+  font: 600 .8125rem/1 var(--sans); letter-spacing: .04em; color: var(--muted);
+  background: none; border: 0; padding: 6px 10px; border-radius: 999px; cursor: pointer;
+}
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* Startseite */
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-block: 64px 56px; }
+.eyebrow { font: 600 .8125rem/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--focus); }
+.hero .lead { font-size: 1.1875rem; color: var(--muted); max-width: 34em; }
+.hero-copy { display: grid; gap: 20px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
+.soon {
+  display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 12px;
+  background: var(--ink); color: var(--paper); font: 650 1rem/1 var(--sans);
+}
+.soon small { display: block; font-size: .6875rem; font-weight: 500; opacity: .75; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 3px; }
+
+.week { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 18px 14px; }
+.week-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 12px; font-size: .875rem; color: var(--muted); }
+.week-head strong { color: var(--ink); font-family: var(--display); font-size: 1rem; }
+.grid { display: grid; grid-template-columns: 30px repeat(5, minmax(0, 1fr)); gap: 6px; }
+.hours { position: relative; height: 264px; font: 500 .6875rem/1 var(--mono); color: var(--muted); }
+.hours span { position: absolute; right: 2px; transform: translateY(-50%); }
+.day { position: relative; height: 264px; background: var(--slot); border-radius: 8px; overflow: hidden; }
+.dname { text-align: center; font: 600 .75rem/1 var(--sans); color: var(--muted); padding-bottom: 6px; }
+.blk { position: absolute; left: 3px; right: 3px; border-radius: 5px; }
+.blk.m { background: var(--meeting); }
+.blk.f { background: var(--focus); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 12px; font-size: .8125rem; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.readout { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line); display: flex; flex-wrap: wrap; gap: 6px 18px; font: 500 .8125rem/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+.readout b { font-weight: 700; }
+
+section.band { padding-block: 56px; }
+section.band + section.band { border-top: 1px solid var(--line); }
+.section-head { display: grid; gap: 10px; margin-bottom: 28px; max-width: 40em; }
+.section-head p { color: var(--muted); }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 36px; }
+.metric { display: grid; gap: 6px; align-content: start; }
+.metric .unit { font: 600 .8125rem/1 var(--mono); color: var(--accent); }
+.metric p { color: var(--muted); font-size: .9688rem; }
+
+.promises { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.promise { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 8px; align-content: start; }
+.promise p { color: var(--muted); font-size: .9688rem; }
+.check { width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font: 700 .875rem/1 var(--sans); }
+
+.pro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.pro ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.pro li { padding-left: 26px; position: relative; }
+.pro li::before { content: ""; position: absolute; left: 0; top: .5em; width: 12px; height: 12px; border-radius: 3px; background: var(--focus); }
+.note { color: var(--muted); font-size: .9375rem; }
+
+/* Rechtstexte und Support */
+.doc { padding-block: 48px 64px; display: grid; gap: 28px; }
+.doc header { display: grid; gap: 10px; }
+.doc > [data-l] { display: grid; gap: 28px; }
+.doc .sub { color: var(--muted); }
+.toc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; }
+.toc ol { margin: 8px 0 0; padding-left: 0; list-style: none; columns: 2; column-gap: 28px; font-size: .9375rem; }
+.toc li { break-inside: avoid; padding: 2px 0; }
+.legal-sec { display: grid; gap: 10px; scroll-margin-top: 16px; }
+.legal-sec ul { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.legal-sec p, .legal-sec li { overflow-wrap: anywhere; }
+.address { font-style: normal; line-height: 1.7; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: grid; gap: 10px; }
+
+/* Kostenrechner */
+.calc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.calc label { display: grid; gap: 6px; font-weight: 600; font-size: .9375rem; }
+.calc input[type=range] { width: 100%; accent-color: var(--accent); }
+.calc .val { font-family: var(--mono); color: var(--accent); font-weight: 700; }
+.calc select, .calc input[type=number] { font: inherit; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; }
+.presets button { font: inherit; font-size: .875rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.presets button:hover { border-color: var(--accent); }
+.result .big { font: 800 clamp(2.4rem, 7vw, 3.4rem)/1 var(--display); color: var(--meeting); }
+.result .year { font: 700 1.375rem/1.2 var(--display); }
+.result ul { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.cta-box { background: var(--accent-soft); border-radius: 14px; padding: 20px; display: grid; gap: 8px; }
+@media (max-width: 760px) { .calc { grid-template-columns: minmax(0, 1fr); } }
+
+/* Presse */
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 0; }
+.facts dt { font-weight: 700; }
+.facts dd { margin: 0; }
+.press-icon { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.press-icon img { width: 96px; height: 96px; border-radius: 22px; }
+.quote-box { white-space: pre-line; font-size: .9375rem; background: var(--paper); border: 1px dashed var(--line); border-radius: 10px; padding: 14px; }
+details { border-bottom: 1px solid var(--line); padding-block: 14px; }
+details:first-of-type { border-top: 1px solid var(--line); }
+summary { cursor: pointer; font-weight: 650; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font: 600 1.25rem/1 var(--mono); color: var(--muted); }
+details[open] summary::after { content: "–"; }
+details > div { padding-top: 10px; color: var(--muted); display: grid; gap: 8px; }
+.copy { font: 600 .8125rem/1 var(--sans); border: 1px solid var(--line); background: var(--paper); color: var(--ink); padding: 7px 12px; border-radius: 8px; cursor: pointer; }
+
+/* Fußzeile */
+.foot { border-top: 1px solid var(--line); background: var(--surface); }
+.foot .wrap { padding-block: 24px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: .875rem; color: var(--muted); }
+.foot nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.foot a { color: var(--muted); }
+
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 40px; }
+  .metrics, .promises { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pro { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .metrics, .promises { grid-template-columns: minmax(0, 1fr); }
+  .toc ol { columns: 1; }
+  .hours, .day { height: 220px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blk { animation: grow .5s ease-out both; }
+  @keyframes grow { from { transform: scaleY(.6); opacity: .4; } to { transform: none; opacity: 1; } }
+}
+</style>
+<noscript><style>[data-l]{display:revert !important}</style></noscript>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html" data-internal><img src="icon-180.png" alt="" width="34" height="34">DeepVault</a>
+<nav class="nav" aria-label="Navigation"><a href="rechner.html" data-internal><span data-l="de">Kostenrechner</span><span data-l="en">Cost calculator</span><span data-l="es">Calculadora</span></a><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><span class="langs" role="group" aria-label="Sprache · Language · Idioma"><button type="button" data-setlang="de" aria-pressed="true" lang="de">DE</button><button type="button" data-setlang="en" aria-pressed="false" lang="en">EN</button><button type="button" data-setlang="es" aria-pressed="false" lang="es">ES</button></span></nav>
+</div></header>
+<main class="wrap narrow doc"><div data-l="de" lang="de"><header><h1>Nutzungsbedingungen</h1><p class="sub">DeepVault · Stand: November 2026</p></header>
+<section class="legal-sec"><h2>1. Geltung</h2><p>Für die Nutzung von DeepVault gilt der Standard-Lizenzvertrag für Apps von Apple (Licensed Application End User License Agreement). Diese Seite ergänzt ihn um Hinweise zu DeepVault Pro, Widerruf, Erstattung und den Grenzen der Auswertung.</p><p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Lizenzvertrag von Apple (EULA)</a></p></section>
+<section class="legal-sec"><h2>2. DeepVault Pro und Abos</h2><ul><li>Verkäufer und Vertragspartner für Käufe in der App ist Apple. Bezahlt wird über deine Apple-ID; wir erhalten keine Zahlungsdaten.</li><li>Monats- und Jahresabo verlängern sich automatisch um die gewählte Laufzeit zum angezeigten Preis, wenn du nicht mindestens 24 Stunden vor Ablauf kündigst.</li><li>Eine kostenlose Testphase geht automatisch in das gewählte Abo über, wenn du nicht vorher kündigst. Hast du Mitteilungen erlaubt, erinnert dich die App zwei Tage vor dem Ende.</li><li>Kündigen kannst du jederzeit in den Einstellungen deiner Apple-ID oder in DeepVault unter Einstellungen → „Abo verwalten“. Pro bleibt bis zum Ende der bezahlten Laufzeit aktiv.</li><li>„Lebenslang“ ist eine Einmalzahlung ohne Verlängerung.</li></ul></section>
+<section class="legal-sec"><h2>3. Widerrufsrecht und Erstattung</h2><p>Da Apple Verkäufer ist, gelten für Widerruf und Erstattung die Bedingungen von Apple. Als Verbraucherin oder Verbraucher in der EU hast du ein gesetzliches Widerrufsrecht von 14 Tagen; bei digitalen Inhalten kann es erlöschen, sobald die Nutzung mit deiner Zustimmung beginnt. Eine Erstattung beantragst du direkt bei Apple:</p><p><a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p><p>Wir selbst können keine Zahlungen erstatten, helfen dir aber gern weiter: <a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></p></section>
+<section class="legal-sec"><h2>4. Was die Zahlen bedeuten</h2><p>Kosten, Noten, Sparpotenziale und Hochrechnungen sind Schätzungen. Sie beruhen auf deinem Kalender, deinem eingegebenen Stundensatz und festen, in der App erklärten Regeln. Sie sind keine Lohn-, Steuer-, Arbeitsrechts- oder Gesundheitsberatung und kein Ersatz für eine Zeiterfassung.</p></section>
+<section class="legal-sec"><h2>5. Community</h2><p>Die Community ist freiwillig und läuft ohne Server. Teile Codes nur mit Personen, die zustimmen, und verwende keine beleidigenden Spitznamen. Die Werte beruhen auf Vertrauen und sind nicht fälschungssicher.</p></section>
+<section class="legal-sec"><h2>6. Haftung</h2><p>Wir haften unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder Gesundheit. Bei leichter Fahrlässigkeit haften wir nur für die Verletzung wesentlicher Pflichten und begrenzt auf den typischen, vorhersehbaren Schaden. Zwingende gesetzliche Rechte, insbesondere bei Mängeln, bleiben unberührt.</p></section>
+<section class="legal-sec"><h2>7. Kontakt</h2><p>Fotiadis Apps · <a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></p></section>
+</div><div data-l="en" lang="en"><header><h1>Terms of use</h1><p class="sub">DeepVault · As of November 2026</p></header>
+<section class="legal-sec"><h2>1. Scope</h2><p>Use of DeepVault is governed by Apple&#x27;s standard Licensed Application End User License Agreement. This page adds information on DeepVault Pro, withdrawal, refunds and the limits of the analysis.</p><p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple License Agreement (EULA)</a></p></section>
+<section class="legal-sec"><h2>2. DeepVault Pro and subscriptions</h2><ul><li>Apple is the seller and contracting party for in-app purchases. Payment is made via your Apple ID; we receive no payment data.</li><li>Monthly and yearly subscriptions renew automatically for the chosen period at the displayed price unless you cancel at least 24 hours before the end of the period.</li><li>A free trial converts automatically into the chosen subscription unless you cancel before it ends. If you have allowed notifications, the app reminds you two days before the end.</li><li>You can cancel at any time in your Apple ID settings or in DeepVault under Settings → “Manage subscription”. Pro stays active until the end of the paid period.</li><li>“Lifetime” is a one-time payment with no renewal.</li></ul></section>
+<section class="legal-sec"><h2>3. Right of withdrawal and refunds</h2><p>Because Apple is the seller, Apple&#x27;s terms apply to withdrawal and refunds. As a consumer in the EU you have a statutory 14-day right of withdrawal; for digital content it may expire once use begins with your consent. Request a refund directly from Apple:</p><p><a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p><p>We cannot refund payments ourselves, but we&#x27;re happy to help: <a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></p></section>
+<section class="legal-sec"><h2>4. What the numbers mean</h2><p>Costs, grades, savings potentials and projections are estimates. They are based on your calendar, the hourly rate you enter and fixed rules explained in the app. They are not payroll, tax, employment-law or health advice and do not replace time tracking.</p></section>
+<section class="legal-sec"><h2>5. Community</h2><p>The community is optional and runs without a server. Only share codes with people who agree, and don&#x27;t use offensive nicknames. Values are based on trust and are not tamper-proof.</p></section>
+<section class="legal-sec"><h2>6. Liability</h2><p>We are liable without limitation for intent and gross negligence and for injury to life, body or health. For slight negligence we are liable only for breach of essential obligations, limited to typical, foreseeable damage. Mandatory statutory rights, in particular regarding defects, remain unaffected.</p></section>
+<section class="legal-sec"><h2>7. Contact</h2><p>Fotiadis Apps · <a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></p></section>
+</div><div data-l="es" lang="es"><header><h1>Condiciones de uso</h1><p class="sub">DeepVault · Noviembre de 2026</p></header>
+<section class="legal-sec"><h2>1. Ámbito</h2><p>El uso de DeepVault se rige por el acuerdo de licencia estándar de Apple (Licensed Application End User License Agreement). Esta página lo complementa con información sobre DeepVault Pro, desistimiento, reembolsos y los límites del análisis.</p><p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Acuerdo de licencia de Apple (EULA)</a></p></section>
+<section class="legal-sec"><h2>2. DeepVault Pro y suscripciones</h2><ul><li>Apple es el vendedor y la parte contratante de las compras dentro de la app. El pago se hace con tu Apple ID; no recibimos datos de pago.</li><li>Las suscripciones mensual y anual se renuevan automáticamente por el periodo elegido al precio mostrado, salvo que canceles al menos 24 horas antes de que termine.</li><li>Una prueba gratuita pasa automáticamente a la suscripción elegida si no cancelas antes. Si has permitido las notificaciones, la app te avisa dos días antes de que termine.</li><li>Puedes cancelar en cualquier momento en los ajustes de tu Apple ID o en DeepVault en Ajustes → «Gestionar suscripción». Pro sigue activo hasta el final del periodo pagado.</li><li>«De por vida» es un pago único sin renovación.</li></ul></section>
+<section class="legal-sec"><h2>3. Derecho de desistimiento y reembolsos</h2><p>Como Apple es el vendedor, para el desistimiento y los reembolsos se aplican las condiciones de Apple. Como consumidor en la UE tienes un derecho legal de desistimiento de 14 días; en contenidos digitales puede extinguirse cuando empieza el uso con tu consentimiento. Solicita el reembolso directamente a Apple:</p><p><a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a></p><p>Nosotros no podemos reembolsar pagos, pero te ayudamos con gusto: <a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></p></section>
+<section class="legal-sec"><h2>4. Qué significan las cifras</h2><p>Los costes, notas, ahorros potenciales y proyecciones son estimaciones. Se basan en tu calendario, la tarifa por hora que introduces y reglas fijas explicadas en la app. No son asesoramiento salarial, fiscal, laboral ni de salud, ni sustituyen un registro de jornada.</p></section>
+<section class="legal-sec"><h2>5. Comunidad</h2><p>La comunidad es voluntaria y funciona sin servidor. Comparte códigos solo con personas que estén de acuerdo y no uses apodos ofensivos. Los valores se basan en la confianza y no son a prueba de manipulaciones.</p></section>
+<section class="legal-sec"><h2>6. Responsabilidad</h2><p>Respondemos sin limitación en caso de dolo y negligencia grave, así como por daños a la vida, el cuerpo o la salud. En caso de negligencia leve solo respondemos por el incumplimiento de obligaciones esenciales y limitado al daño típico y previsible. Los derechos legales imperativos, en particular por defectos, no se ven afectados.</p></section>
+<section class="legal-sec"><h2>7. Contacto</h2><p>Fotiadis Apps · <a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></p></section>
+</div></main>
+<footer class="foot"><div class="wrap">
+<span>© 2026 Fotiadis Apps</span>
+<nav aria-label="Rechtliches"><a href="rechner.html" data-internal><span data-l="de">Kostenrechner</span><span data-l="en">Cost calculator</span><span data-l="es">Calculadora</span></a><a href="datenschutz.html" data-internal><span data-l="de">Datenschutz</span><span data-l="en">Privacy</span><span data-l="es">Privacidad</span></a><a href="support.html" data-internal><span data-l="de">Support</span><span data-l="en">Support</span><span data-l="es">Soporte</span></a><a href="nutzungsbedingungen.html" data-internal><span data-l="de">Nutzungsbedingungen</span><span data-l="en">Terms</span><span data-l="es">Condiciones</span></a><a href="impressum.html" data-internal><span data-l="de">Impressum</span><span data-l="en">Legal notice</span><span data-l="es">Aviso legal</span></a><a href="presse.html" data-internal><span data-l="de">Presse</span><span data-l="en">Press</span><span data-l="es">Prensa</span></a></nav>
+<span><span data-l="de">Diese Webseite setzt keine Cookies und verwendet kein Tracking.</span><span data-l="en">This website sets no cookies and uses no tracking.</span><span data-l="es">Este sitio web no usa cookies ni seguimiento.</span></span>
+</div></footer>
+<script>
+(function () {
+  var langs = ['de', 'en', 'es'];
+  function pick() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('lang'); } catch (err) {}
+    if (langs.indexOf(q) >= 0) return q;
+    try { var s = localStorage.getItem('dv-lang'); if (langs.indexOf(s) >= 0) return s; } catch (err) {}
+    var n = (navigator.language || 'de').slice(0, 2).toLowerCase();
+    return n === 'de' ? 'de' : (n === 'es' ? 'es' : 'en');
+  }
+  function apply(l) {
+    var root = document.documentElement;
+    root.setAttribute('data-lang', l);
+    root.lang = l;
+    var buttons = document.querySelectorAll('[data-setlang]');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-setlang') === l ? 'true' : 'false');
+    }
+    var meta = document.querySelector('meta[name="dv-title-' + l + '"]');
+    if (meta) document.title = meta.getAttribute('content');
+    var links = document.querySelectorAll('a[data-internal]');
+    for (var j = 0; j < links.length; j++) {
+      var href = links[j].getAttribute('href');
+      var hash = href.indexOf('#') >= 0 ? href.slice(href.indexOf('#')) : '';
+      var base = href.split('#')[0].split('?')[0];
+      links[j].setAttribute('href', base + '?lang=' + l + hash);
+    }
+  }
+  apply(pick());
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-setlang]');
+    if (b) {
+      var l = b.getAttribute('data-setlang');
+      try { localStorage.setItem('dv-lang', l); } catch (err) {}
+      apply(l);
+      return;
+    }
+    var c = ev.target.closest('[data-copy]');
+    if (c) {
+      var text = c.getAttribute('data-copy');
+      var done = function () { c.setAttribute('data-done', '1'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () {});
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
