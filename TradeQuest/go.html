@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>InQuestly – Einladung</title>
+<meta name="robots" content="noindex">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<link rel="icon" href="favicon.svg">
+<style>
+  :root { --lime:#C7F36B; --forest:#10261C; --forest2:#1E4530; --cream:#F5F0E3; --lav:#6B5CF5; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
+    font:17px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    color:var(--cream); background:linear-gradient(180deg, var(--forest2), var(--forest)); }
+  main { width:100%; max-width:420px; text-align:center; }
+  img { width:120px; height:auto; filter:drop-shadow(0 10px 18px rgba(0,0,0,.3)); }
+  h1 { font-size:28px; line-height:1.15; margin:14px 0 8px; }
+  p { margin:0 0 18px; opacity:.85; }
+  .claim { background:rgba(255,255,255,.08); border-radius:18px; padding:14px 16px; margin:0 0 18px; font-weight:600; }
+  a.btn { display:block; padding:16px; border-radius:16px; font-weight:700; text-decoration:none; margin-bottom:10px; }
+  .open { background:var(--lime); color:var(--forest); }
+  .store { background:rgba(255,255,255,.12); color:var(--cream); }
+  .code { margin-top:18px; font-size:13px; opacity:.6; word-break:break-all; }
+  small { display:block; margin-top:20px; opacity:.5; font-size:12px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="mascot.svg" alt="">
+  <h1 id="h">Du wurdest herausgefordert!</h1>
+  <p id="s">Öffne die Einladung in InQuestly.</p>
+  <div class="claim" id="c" hidden></div>
+  <a class="btn open" id="open" href="#">In InQuestly öffnen</a>
+  <a class="btn store" id="store" href="https://apps.apple.com/app/id6834527194">InQuestly laden – kostenlos</a>
+  <div class="code" id="code"></div>
+  <small id="f">InQuestly – Börse lernen wie ein Spiel. Keine Anlageberatung.</small>
+</main>
+<script>
+(function () {
+  var en = !/^de\b/i.test(navigator.language || 'de');
+  var q = new URLSearchParams(location.search), p = q.get('p'), d = q.get('d'), a = q.get('a'), link = '', code = p || d || a || '';
+  function dec(s) { try { return JSON.parse(decodeURIComponent(escape(atob(s.replace(/^PR[GA]-/, '').replace(/-/g, '+').replace(/_/g, '/'))))); } catch (e) { return null; } }
+  var T = en ? { h:'You have been challenged!', s:'Open the invitation in InQuestly.', open:'Open in InQuestly', store:'Get InQuestly – free', f:'InQuestly – learn the stock market like a game. Not investment advice.',
+                 pred:function (o) { return o.u + ' says: ' + o.n + (o.d ? ' rises' : ' falls') + (o.g ? ' by at least ' + o.g + ' %' : '') + ' by ' + new Date(o.e).toLocaleDateString('en-GB') + '. Do you agree?'; },
+                 duel:'Read the same 10 charts as your friend – whoever gets more right wins.', ans:'Your friend answered your forecast.', code:'Code: ' }
+              : { h:'Du wurdest herausgefordert!', s:'Öffne die Einladung in InQuestly.', open:'In InQuestly öffnen', store:'InQuestly laden – kostenlos', f:'InQuestly – Börse lernen wie ein Spiel. Keine Anlageberatung.',
+                 pred:function (o) { return o.u + ' sagt: ' + o.n + (o.d ? ' steigt' : ' fällt') + (o.g ? ' um mindestens ' + o.g + ' %' : '') + ' bis ' + new Date(o.e).toLocaleDateString('de-DE') + '. Hältst du dagegen?'; },
+                 duel:'Lies dieselben 10 Charts wie dein Freund – wer mehr richtig hat, gewinnt.', ans:'Dein Freund hat auf deine Prognose geantwortet.', code:'Code: ' };
+  document.documentElement.lang = en ? 'en' : 'de';
+  ['h', 's', 'open', 'store', 'f'].forEach(function (k) { document.getElementById(k).textContent = T[k]; });
+  if (p) { link = 'tqapp://pred?c=' + encodeURIComponent(p); var o = dec(p); if (o) { var c = document.getElementById('c'); c.textContent = T.pred(o); c.hidden = false; } }
+  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); document.getElementById('s').textContent = T.duel; }
+  else if (a) { link = 'tqapp://predans?c=' + encodeURIComponent(a); document.getElementById('s').textContent = T.ans; }
+  var btn = document.getElementById('open');
+  if (link) { btn.href = link; document.getElementById('code').textContent = T.code + code; setTimeout(function () { location.href = link; }, 400); }
+  else btn.style.display = 'none';
+})();
+</script>
+</body>
+</html>
