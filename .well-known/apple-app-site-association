@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["AF29GFA59L.de.stathisfo.tradequest"],
+        "components": [ { "/": "/TradeQuest/go.html*" } ]
+      }
+    ]
+  }
+}
