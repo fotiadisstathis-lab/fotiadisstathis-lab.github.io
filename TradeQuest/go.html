@@ -50,7 +50,8 @@
   document.documentElement.lang = en ? 'en' : 'de';
   ['h', 's', 'open', 'store', 'f'].forEach(function (k) { document.getElementById(k).textContent = T[k]; });
   if (p) { link = 'tqapp://pred?c=' + encodeURIComponent(p); var o = dec(p); if (o) { var c = document.getElementById('c'); c.textContent = T.pred(o); c.hidden = false; } }
-  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); document.getElementById('s').textContent = T.duel; }
+  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); document.getElementById('s').textContent = T.duel;
+    var ti = d.indexOf('~'); if (ti > 0) { var who = d.slice(ti + 1).slice(0, 24); code = d.slice(0, ti); document.getElementById('h').textContent = en ? who + ' challenges you!' : who + ' fordert dich heraus!'; } }
   else if (a) { link = 'tqapp://predans?c=' + encodeURIComponent(a); document.getElementById('s').textContent = T.ans; }
   var btn = document.getElementById('open');
   if (link) { btn.href = link; document.getElementById('code').textContent = T.code + code; setTimeout(function () { location.href = link; }, 400); }
