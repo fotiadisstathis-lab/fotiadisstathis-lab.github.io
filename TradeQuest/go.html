@@ -43,16 +43,16 @@
   function dec(s) { try { return JSON.parse(decodeURIComponent(escape(atob(s.replace(/^PR[GA]-/, '').replace(/\.[a-z0-9]+$/, '').replace(/-/g, '+').replace(/_/g, '/'))))); } catch (e) { return null; } }
   var T = en ? { h:'You have been challenged!', s:'Open the invitation in InQuestly.', open:'Open in InQuestly', store:'Get InQuestly – free', f:'InQuestly – learn the stock market like a game. Not investment advice.',
                  pred:function (o) { return o.u + ' says: ' + o.n + (o.d ? ' rises' : ' falls') + (o.g ? ' by at least ' + o.g + ' %' : '') + ' by ' + new Date(o.e).toLocaleDateString('en-GB') + '. Do you agree?'; },
-                 duel:'Read the same 10 charts as your friend – whoever gets more right wins.', ans:'Your friend answered your forecast.', code:'Code: ',
+                 duel:'Read the same 10 charts as your friend – whoever gets more right wins.', quiz:'Answer the same 10 knowledge questions as your friend – whoever gets more right wins.', ans:'Your friend answered your forecast.', code:'Code: ',
                  friend:'Open the invite in InQuestly – then you are friends and see each other in leagues, duels and forecasts.', fh:function (w) { return w ? w + ' wants to learn with you!' : 'A friend invites you!'; } }
               : { h:'Du wurdest herausgefordert!', s:'Öffne die Einladung in InQuestly.', open:'In InQuestly öffnen', store:'InQuestly laden – kostenlos', f:'InQuestly – Börse lernen wie ein Spiel. Keine Anlageberatung.',
                  pred:function (o) { return o.u + ' sagt: ' + o.n + (o.d ? ' steigt' : ' fällt') + (o.g ? ' um mindestens ' + o.g + ' %' : '') + ' bis ' + new Date(o.e).toLocaleDateString('de-DE') + '. Hältst du dagegen?'; },
-                 duel:'Lies dieselben 10 Charts wie dein Freund – wer mehr richtig hat, gewinnt.', ans:'Dein Freund hat auf deine Prognose geantwortet.', code:'Code: ',
+                 duel:'Lies dieselben 10 Charts wie dein Freund – wer mehr richtig hat, gewinnt.', quiz:'Beantworte dieselben 10 Wissensfragen wie dein Freund – wer mehr richtig hat, gewinnt.', ans:'Dein Freund hat auf deine Prognose geantwortet.', code:'Code: ',
                  friend:'Öffne die Einladung in InQuestly – dann seid ihr Freunde und seht euch in Liga, Duellen und Prognosen.', fh:function (w) { return w ? w + ' möchte mit dir lernen!' : 'Ein Freund lädt dich ein!'; } };
   document.documentElement.lang = en ? 'en' : 'de';
   ['h', 's', 'open', 'store', 'f'].forEach(function (k) { document.getElementById(k).textContent = T[k]; });
   if (p) { link = 'tqapp://pred?c=' + encodeURIComponent(p); var o = dec(p); if (o) { var c = document.getElementById('c'); c.textContent = T.pred(o); c.hidden = false; } }
-  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); document.getElementById('s').textContent = T.duel;
+  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); document.getElementById('s').textContent = /^Q/i.test(d) ? T.quiz : T.duel;
     var ti = d.indexOf('~'); if (ti > 0) { var who = d.slice(ti + 1); var si = who.lastIndexOf('*'); if (si > 0) who = who.slice(0, si); who = who.slice(0, 24); code = d.slice(0, ti); document.getElementById('h').textContent = en ? who + ' challenges you!' : who + ' fordert dich heraus!'; } }
   else if (a) { link = 'tqapp://predans?c=' + encodeURIComponent(a); document.getElementById('s').textContent = T.ans; }
   else if (f) { link = 'tqapp://friend?c=' + encodeURIComponent(f); code = '';
