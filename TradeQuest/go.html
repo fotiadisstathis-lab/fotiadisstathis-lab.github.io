@@ -40,7 +40,7 @@
 (function () {
   var en = !/^de\b/i.test(navigator.language || 'de');
   var q = new URLSearchParams(location.search), p = q.get('p'), d = q.get('d'), a = q.get('a'), f = q.get('f'), link = '', code = p || d || a || '';
-  function dec(s) { try { return JSON.parse(decodeURIComponent(escape(atob(s.replace(/^PR[GA]-/, '').replace(/-/g, '+').replace(/_/g, '/'))))); } catch (e) { return null; } }
+  function dec(s) { try { return JSON.parse(decodeURIComponent(escape(atob(s.replace(/^PR[GA]-/, '').replace(/\.[a-z0-9]+$/, '').replace(/-/g, '+').replace(/_/g, '/'))))); } catch (e) { return null; } }
   var T = en ? { h:'You have been challenged!', s:'Open the invitation in InQuestly.', open:'Open in InQuestly', store:'Get InQuestly – free', f:'InQuestly – learn the stock market like a game. Not investment advice.',
                  pred:function (o) { return o.u + ' says: ' + o.n + (o.d ? ' rises' : ' falls') + (o.g ? ' by at least ' + o.g + ' %' : '') + ' by ' + new Date(o.e).toLocaleDateString('en-GB') + '. Do you agree?'; },
                  duel:'Read the same 10 charts as your friend – whoever gets more right wins.', ans:'Your friend answered your forecast.', code:'Code: ',
