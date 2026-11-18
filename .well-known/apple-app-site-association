@@ -2,8 +2,17 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["AF29GFA59L.de.stathisfo.tradequest"],
-        "components": [ { "/": "/TradeQuest/go.html*" } ]
+        "appIDs": [
+          "AF29GFA59L.de.stathisfo.tradequest"
+        ],
+        "components": [
+          {
+            "/": "/InQuestly/go.html*"
+          },
+          {
+            "/": "/TradeQuest/go.html*"
+          }
+        ]
       }
     ]
   }
