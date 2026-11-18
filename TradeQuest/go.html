@@ -1,71 +1,12 @@
 <!doctype html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>InQuestly – Einladung</title>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InQuestly</title>
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/go.html">
 <meta name="robots" content="noindex">
-<meta name="apple-itunes-app" content="app-id=6834527194">
-<link rel="icon" href="favicon.svg">
-<link rel="apple-touch-icon" href="icon-180.png">
-<meta property="og:site_name" content="InQuestly">
-<meta property="og:title" content="InQuestly – Einladung">
-<meta property="og:description" content="Du wurdest herausgefordert! Öffne die Einladung in InQuestly – die Börse spielerisch verstehen.">
-<style>
-  :root { --lime:#C7F36B; --forest:#10261C; --forest2:#1E4530; --cream:#F5F0E3; --lav:#6B5CF5; }
-  * { box-sizing:border-box; }
-  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
-    font:17px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    color:var(--cream); background:linear-gradient(180deg, var(--forest2), var(--forest)); }
-  main { width:100%; max-width:420px; text-align:center; }
-  img { width:120px; height:auto; filter:drop-shadow(0 10px 18px rgba(0,0,0,.3)); }
-  h1 { font-size:28px; line-height:1.15; margin:14px 0 8px; }
-  p { margin:0 0 18px; opacity:.85; }
-  .claim { background:rgba(255,255,255,.08); border-radius:18px; padding:14px 16px; margin:0 0 18px; font-weight:600; }
-  a.btn { display:block; padding:16px; border-radius:16px; font-weight:700; text-decoration:none; margin-bottom:10px; }
-  .open { background:var(--lime); color:var(--forest); }
-  .store { background:rgba(255,255,255,.12); color:var(--cream); }
-  .code { margin-top:18px; font-size:13px; opacity:.6; word-break:break-all; }
-  small { display:block; margin-top:20px; opacity:.5; font-size:12px; }
-</style>
-</head>
-<body>
-<main>
-  <img src="mascot.svg" alt="">
-  <h1 id="h">Du wurdest herausgefordert!</h1>
-  <p id="s">Öffne die Einladung in InQuestly.</p>
-  <div class="claim" id="c" hidden></div>
-  <a class="btn open" id="open" href="#">In InQuestly öffnen</a>
-  <a class="btn store" id="store" href="https://apps.apple.com/app/id6834527194">InQuestly laden – kostenlos</a>
-  <div class="code" id="code"></div>
-  <small id="f">InQuestly – die Börse spielerisch verstehen. Keine Anlageberatung.</small>
-</main>
-<script>
-(function () {
-  var en = !/^de\b/i.test(navigator.language || 'de');
-  var q = new URLSearchParams(location.search), p = q.get('p'), d = q.get('d'), a = q.get('a'), f = q.get('f'), link = '', code = p || d || a || '';
-  function dec(s) { try { return JSON.parse(decodeURIComponent(escape(atob(s.replace(/^PR[GA]-/, '').replace(/\.[a-z0-9]+$/, '').replace(/-/g, '+').replace(/_/g, '/'))))); } catch (e) { return null; } }
-  var T = en ? { h:'You have been challenged!', s:'Open the invitation in InQuestly.', open:'Open in InQuestly', store:'Get InQuestly – free', f:'InQuestly – learn the stock market like a game. Not investment advice.',
-                 pred:function (o) { return o.u + ' says: ' + o.n + (o.d ? ' rises' : ' falls') + (o.g ? ' by at least ' + o.g + ' %' : '') + ' by ' + new Date(o.e).toLocaleDateString('en-GB') + '. Do you agree?'; },
-                 duel:'Read the same charts as your friend – whoever gets more right wins.', quiz:'Answer the same knowledge questions as your friend – whoever gets more right wins.', tip:'Call the same 5 stocks as your friend: up or down over 4 weeks? Whoever scores more points wins.', ans:'Your friend answered your forecast.', code:'Code: ',
-                 friend:'Open the invite in InQuestly – then you are friends and see each other in leagues, duels and forecasts.', fh:function (w) { return w ? w + ' wants to learn with you!' : 'A friend invites you!'; } }
-              : { h:'Du wurdest herausgefordert!', s:'Öffne die Einladung in InQuestly.', open:'In InQuestly öffnen', store:'InQuestly laden – kostenlos', f:'InQuestly – die Börse spielerisch verstehen. Keine Anlageberatung.',
-                 pred:function (o) { return o.u + ' sagt: ' + o.n + (o.d ? ' steigt' : ' fällt') + (o.g ? ' um mindestens ' + o.g + ' %' : '') + ' bis ' + new Date(o.e).toLocaleDateString('de-DE') + '. Hältst du dagegen?'; },
-                 duel:'Lies dieselben Charts wie dein Freund – wer mehr richtig hat, gewinnt.', quiz:'Beantworte dieselben Wissensfragen wie dein Freund – wer mehr richtig hat, gewinnt.', tip:'Tippe dieselben 5 Aktien wie dein Freund: Steigen oder fallen sie in 4 Wochen? Wer mehr Punkte holt, gewinnt.', ans:'Dein Freund hat auf deine Prognose geantwortet.', code:'Code: ',
-                 friend:'Öffne die Einladung in InQuestly – dann seid ihr Freunde und seht euch in Liga, Duellen und Prognosen.', fh:function (w) { return w ? w + ' möchte mit dir lernen!' : 'Ein Freund lädt dich ein!'; } };
-  document.documentElement.lang = en ? 'en' : 'de';
-  ['h', 's', 'open', 'store', 'f'].forEach(function (k) { document.getElementById(k).textContent = T[k]; });
-  if (p) { link = 'tqapp://pred?c=' + encodeURIComponent(p); var o = dec(p); if (o) { var c = document.getElementById('c'); c.textContent = T.pred(o); c.hidden = false; } }
-  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); document.getElementById('s').textContent = /^TIPP-/i.test(d) ? T.tip : /^Q/i.test(d) ? T.quiz : T.duel;
-    var ti = d.indexOf('~'); if (ti > 0) { var who = d.slice(ti + 1); var si = who.lastIndexOf('*'); if (si > 0) who = who.slice(0, si); who = who.slice(0, 24); code = d.slice(0, ti); document.getElementById('h').textContent = en ? who + ' challenges you!' : who + ' fordert dich heraus!'; } }
-  else if (a) { link = 'tqapp://predans?c=' + encodeURIComponent(a); document.getElementById('s').textContent = T.ans; }
-  else if (f) { link = 'tqapp://friend?c=' + encodeURIComponent(f); code = '';
-    var cut = f.lastIndexOf('*'), who = (cut > 0 ? f.slice(0, cut) : f).slice(0, 24);
-    document.getElementById('h').textContent = T.fh(who); document.getElementById('s').textContent = T.friend; }
-  var btn = document.getElementById('open');
-  if (link) { btn.href = link; if (code) document.getElementById('code').textContent = T.code + code; setTimeout(function () { location.href = link; }, 400); }
-  else btn.style.display = 'none';
-})();
-</script>
-</body>
-</html>
+<meta http-equiv="refresh" content="1; url=/InQuestly/go.html">
+<script>location.replace("/InQuestly/go.html" + location.search + location.hash);</script>
+<style>body{font:17px -apple-system,BlinkMacSystemFont,sans-serif;margin:40px 20px;color:#1d1d1f}a{color:#0a7d3e}</style>
+</head><body>
+<p>InQuestly ist umgezogen: <a href="/InQuestly/go.html">fotiadisapps.de/InQuestly/go.html</a></p>
+</body></html>
