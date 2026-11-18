@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 0 252 240">
+  <defs>
+    <radialGradient id="body" cx="45%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#8EE06A"/><stop offset=".6" stop-color="#4FB548"/><stop offset="1" stop-color="#2E8A3A"/>
+    </radialGradient>
+    <radialGradient id="head" cx="42%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#9BE877"/><stop offset=".55" stop-color="#58BF4E"/><stop offset="1" stop-color="#318F3D"/>
+    </radialGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6D8"/><stop offset="1" stop-color="#F2E2A8"/></linearGradient>
+    <linearGradient id="horn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF4D0"/><stop offset="1" stop-color="#E8C77A"/></linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3FA34A"/><stop offset="1" stop-color="#1F6E33"/></linearGradient>
+  </defs>
+  <!-- Schatten -->
+  <ellipse cx="120" cy="222" rx="62" ry="9" fill="#000" opacity=".18"/>
+  <!-- Flügel -->
+  <path d="M70 128 C40 108 22 118 18 96 C34 104 44 96 48 84 C56 100 66 102 78 112 Z" fill="url(#wing)"/>
+  <path d="M170 128 C200 108 218 118 222 96 C206 104 196 96 192 84 C184 100 174 102 162 112 Z" fill="url(#wing)"/>
+  <!-- Schwanz -->
+  <path d="M158 196 C190 200 206 184 204 166 C214 176 216 196 198 208 C184 216 164 212 154 204 Z" fill="#3E9E45"/>
+  <!-- Körper -->
+  <ellipse cx="120" cy="170" rx="54" ry="50" fill="url(#body)"/>
+  <ellipse cx="120" cy="178" rx="34" ry="36" fill="url(#belly)"/>
+  <path d="M96 160 h48 M94 176 h52 M97 192 h46" stroke="#E2CC87" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Arme (jubelnd) -->
+  <path d="M74 150 C58 140 52 122 56 108" stroke="#3F9E46" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <path d="M166 150 C182 140 188 122 184 108" stroke="#3F9E46" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <circle cx="56" cy="104" r="10" fill="#58BF4E"/><circle cx="184" cy="104" r="10" fill="#58BF4E"/>
+  <!-- Füße -->
+  <ellipse cx="96" cy="216" rx="18" ry="9" fill="#2F8A3B"/><ellipse cx="144" cy="216" rx="18" ry="9" fill="#2F8A3B"/>
+  <!-- Hörner -->
+  <path d="M84 56 Q76 28 92 6 Q96 30 106 48 Z" fill="url(#horn)"/>
+  <path d="M156 56 Q164 28 148 6 Q144 30 134 48 Z" fill="url(#horn)"/>
+  <!-- Rückenzacken -->
+  <path d="M110 30 l10 -14 l10 14 Z" fill="#2E8A3A"/>
+  <!-- Kopf -->
+  <ellipse cx="120" cy="86" rx="62" ry="54" fill="url(#head)"/>
+  <!-- Wangen -->
+  <ellipse cx="82" cy="104" rx="10" ry="6" fill="#FFC2CC" opacity=".9"/><ellipse cx="158" cy="104" rx="10" ry="6" fill="#FFC2CC" opacity=".9"/>
+  <!-- Augen -->
+  <ellipse cx="98" cy="80" rx="15" ry="18" fill="#fff"/><ellipse cx="142" cy="80" rx="15" ry="18" fill="#fff"/>
+  <ellipse cx="100" cy="83" rx="10" ry="12" fill="#1B2A22"/><ellipse cx="140" cy="83" rx="10" ry="12" fill="#1B2A22"/>
+  <circle cx="104" cy="77" r="4.5" fill="#fff"/><circle cx="144" cy="77" r="4.5" fill="#fff"/>
+  <circle cx="96" cy="88" r="2" fill="#fff" opacity=".8"/><circle cx="136" cy="88" r="2" fill="#fff" opacity=".8"/>
+  <!-- Nasenlöcher -->
+  <circle cx="112" cy="102" r="2.2" fill="#2A7A35"/><circle cx="128" cy="102" r="2.2" fill="#2A7A35"/>
+  <!-- Lächeln -->
+  <path d="M100 112 C110 126 130 126 140 112 C132 116 108 116 100 112 Z" fill="#7A2E2E"/>
+  <path d="M110 119 C116 124 124 124 130 119" stroke="#FF8F8F" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>
