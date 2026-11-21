@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Steigt oder fällt? Das Börsen-Quiz – InQuestly</title>
+<meta name="description" content="5 echte Börsenmomente: Tippe, ob der Kurs stieg oder fiel. Das kostenlose Börsen-Quiz von InQuestly – teile dein Ergebnis und fordere Freunde heraus.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/quiz.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InQuestly">
+<meta property="og:title" content="Steigt oder fällt? Das Börsen-Quiz">
+<meta property="og:description" content="5 echte Börsenmomente. Wie viele tippst du richtig?">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/quiz.html">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/quiz-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="theme-color" content="#F4F6F9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C1018" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+:root { --paper:#F4F6F9; --surface:#fff; --ink:#131A27; --muted:#586276; --faint:#8A93A6; --line:#DADFE7; --soft:#EEF1F5;
+  --accent:#2B59E8; --accentInk:#fff; --zone:#F3F5F8; --grid:#EEF0F4;
+  --up:#34C759; --dn:#FF3B30; --upTxt:#1A7F4B; --dnTxt:#C9001A; --upBg:#E8F7EE; --dnBg:#FFECEC;
+  --sans:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Arial, sans-serif;
+  --display:ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif; color-scheme:light; }
+@media (prefers-color-scheme: dark) { :root { --paper:#0C1018; --surface:#141A25; --ink:#E8ECF4; --muted:#9AA4B8; --faint:#6F7A90;
+  --line:#263043; --soft:#1B2331; --accent:#7D9BFF; --accentInk:#0C1018; --zone:#192130; --grid:#1D2636;
+  --up:#30D158; --dn:#FF453A; --upTxt:#4ADE80; --dnTxt:#FF7A70; --upBg:#123323; --dnBg:#3A1517; color-scheme:dark; } }
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--paper); color:var(--ink); font:400 1.0625rem/1.5 var(--sans); -webkit-font-smoothing:antialiased; }
+main { max-width:560px; margin:0 auto; padding:max(16px, env(safe-area-inset-top)) 16px 40px; }
+a { color:var(--accent); }
+button { font:inherit; color:inherit; }
+[hidden] { display:none !important; }
+.top { display:flex; align-items:center; justify-content:space-between; height:48px; margin-bottom:8px; }
+.brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; letter-spacing:-.01em; }
+.brand img { width:30px; height:30px; border-radius:8px; box-shadow:0 0 0 1px var(--line); }
+.dots { display:flex; gap:6px; }
+.dots i { width:22px; height:6px; border-radius:3px; background:var(--line); transition:background .3s; }
+.dots i.ok { background:var(--up); } .dots i.no { background:var(--dn); } .dots i.now { background:var(--ink); }
+.kick { font-weight:650; font-size:.95rem; color:var(--muted); margin:18px 0 4px; letter-spacing:-.005em; }
+h1 { font:800 2.25rem/1.08 var(--display); letter-spacing:-.03em; margin:0 0 10px; }
+h1 .up { color:var(--upTxt); } h1 .dn { color:var(--dnTxt); }
+.sub { color:var(--muted); margin:0 0 18px; min-height:3em; }
+.card { background:var(--surface); border-radius:22px; box-shadow:0 0 0 1px var(--line), 0 18px 40px -22px rgba(19,26,39,.35); overflow:hidden; }
+.chart { display:block; width:100%; height:auto; }
+.chart text { font-family:var(--sans); }
+.btns { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 0; }
+.btn { appearance:none; border:2px solid transparent; border-radius:18px; background:var(--surface); box-shadow:0 0 0 1px var(--line);
+  min-height:64px; font-weight:750; font-size:1.2rem; letter-spacing:-.01em; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;
+  transition:transform .12s, background .2s, border-color .2s, opacity .2s; }
+.btn:active { transform:scale(.98); }
+.btn:focus-visible, .cta:focus-visible, .ghost:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+.btn.ok { background:var(--upBg); border-color:var(--up); color:var(--upTxt); box-shadow:none; }
+.btn.no { background:var(--dnBg); border-color:var(--dn); color:var(--dnTxt); box-shadow:none; }
+.btn.dim { opacity:.45; }
+.btn[disabled] { cursor:default; }
+.verdict { display:flex; align-items:center; gap:10px; margin:16px 0 0; font-weight:700; }
+.chip { display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:999px; font-size:.95rem; }
+.chip.ok { background:var(--upBg); color:var(--upTxt); } .chip.no { background:var(--dnBg); color:var(--dnTxt); }
+.cta { appearance:none; border:0; border-radius:16px; background:var(--accent); color:var(--accentInk); min-height:56px; padding:0 22px;
+  font-weight:700; font-size:1.08rem; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; }
+.cta.wide { width:100%; }
+.ghost { appearance:none; border:0; background:transparent; color:var(--accent); font-weight:650; cursor:pointer; padding:10px 4px; }
+.next { margin:14px 0 0; }
+.hero { font:800 4.6rem/1 var(--display); letter-spacing:-.05em; margin:20px 0 4px; font-variant-numeric:tabular-nums; }
+.hero small { font-size:.42em; color:var(--muted); letter-spacing:-.01em; font-weight:700; }
+.banner { background:var(--surface); box-shadow:0 0 0 1px var(--line); border-radius:16px; padding:12px 14px; margin:12px 0 0; font-weight:600; }
+.share { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:18px 0 0; }
+.share .cta { min-height:52px; font-size:1rem; }
+.share .alt { background:var(--soft); color:var(--ink); }
+.app { padding:16px; margin:22px 0 0; }
+.app .row { display:flex; gap:14px; align-items:flex-start; }
+.app img { width:58px; height:58px; border-radius:14px; box-shadow:0 0 0 1px var(--line); flex:none; }
+.app p { margin:2px 0 12px; color:var(--muted); font-size:.98rem; }
+.app b { color:var(--ink); }
+.list { margin:16px 0 0; padding:0; list-style:none; }
+.list li { display:flex; gap:10px; align-items:baseline; padding:8px 0; border-top:1px solid var(--line); font-size:.98rem; }
+.list li:first-child { border-top:0; }
+.list .m { font-weight:800; width:1.4em; flex:none; }
+.list .m.ok { color:var(--upTxt); } .list .m.no { color:var(--dnTxt); }
+.list .r { margin-left:auto; font-weight:700; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.note { color:var(--faint); font-size:.85rem; line-height:1.45; margin:26px 0 0; }
+.foot { color:var(--faint); font-size:.85rem; margin:14px 0 0; }
+.foot a { color:var(--faint); }
+.toast { position:fixed; left:50%; bottom:max(24px, env(safe-area-inset-bottom)); transform:translateX(-50%); background:var(--ink); color:var(--paper);
+  padding:10px 16px; border-radius:12px; font-weight:600; font-size:.95rem; opacity:0; transition:opacity .25s; pointer-events:none; }
+.toast.on { opacity:1; }
+@media (max-width:380px) { h1 { font-size:1.95rem; } .hero { font-size:3.9rem; } .btn { font-size:1.1rem; } }
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <a class="brand" href="index.html"><img src="icon-180.png" alt="" width="30" height="30">InQuestly</a>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </header>
+
+  <section id="intro">
+    <p class="kick">Das Börsen-Quiz · 5 Runden</p>
+    <h1>Steigt oder fällt?</h1>
+    <p class="sub">Fünf echte Börsenmomente, vom KI-Hype bis zum Ölpreis unter null. Du siehst den Chart bis zum Stichtag und tippst, wie es weiterging.</p>
+    <div class="card"><svg class="chart" id="preview" viewBox="0 0 600 340" role="img" aria-label="Beispiel-Chart mit verdecktem Ausgang"></svg></div>
+    <p class="banner" id="challenge" hidden></p>
+    <p style="margin:18px 0 0"><button class="cta wide" id="start" type="button">Quiz starten</button></p>
+    <p class="note">Echte Börsenmomente, Verlauf nachgebildet: Die Schlusskurse am Stichtag und am Ende stimmen, die Tage dazwischen sind simuliert. Kein Konto, keine Cookies. Keine Anlageberatung.</p>
+  </section>
+
+  <section id="round" hidden>
+    <p class="kick" id="rkick"></p>
+    <h1 id="rh1"></h1>
+    <p class="sub" id="rsub"></p>
+    <div class="card"><svg class="chart" id="chart" viewBox="0 0 600 340" role="img" aria-label="Kursverlauf bis zum Stichtag, der Ausgang ist verdeckt"></svg></div>
+    <div class="btns" id="btns">
+      <button class="btn" id="bdn" type="button" aria-label="Fällt">📉 Fällt</button>
+      <button class="btn" id="bup" type="button" aria-label="Steigt">📈 Steigt</button>
+    </div>
+    <div class="verdict" id="verdict" hidden></div>
+    <p class="next" id="nextp" hidden><button class="cta wide" id="next" type="button">Weiter</button></p>
+  </section>
+
+  <section id="end" hidden>
+    <p class="kick">Dein Ergebnis</p>
+    <p class="hero" id="score"></p>
+    <h1 id="eh1" style="font-size:1.7rem"></h1>
+    <p class="banner" id="vs" hidden></p>
+    <div class="share">
+      <button class="cta" id="share" type="button">Ergebnis teilen</button>
+      <a class="cta alt" id="wa" href="#" rel="noopener">Per WhatsApp</a>
+    </div>
+    <p class="foot" style="margin-top:8px">Dein Link fordert Freunde heraus: Sie sehen deine Punktzahl und müssen sie schlagen.</p>
+    <div class="card app">
+      <div class="row">
+        <img src="icon-180.png" alt="" width="58" height="58">
+        <p><b>Mehr davon in InQuestly.</b> Markt-Charts mit echten Börsenmomenten, eine Tagesprognose und Prognose-Duelle gegen Freunde. Börse lernen in 5 Minuten am Tag, ohne echtes Geld.</p>
+      </div>
+      <a class="cta wide" id="store" href="https://apps.apple.com/de/app/id6834527194?ppid=a9139cab-1e98-46e6-96c0-a2e4bad2b358" rel="noopener">Gratis im App Store laden</a>
+    </div>
+    <ul class="list card" id="review" style="padding:4px 16px"></ul>
+    <p style="margin:14px 0 0"><button class="ghost" id="again" type="button">Nochmal spielen</button></p>
+    <p class="note">Echte Börsenmomente, Verlauf nachgebildet: Die Schlusskurse am Stichtag und am Ende stimmen, die Tage dazwischen sind simuliert. Vergangene Kursverläufe sagen nichts über die Zukunft. Keine Anlageberatung. In der App gibt es 14 solche Fallstudien (eine zum Ausprobieren, alle mit InQuestly Pro); Markt-Charts und Prognose-Duell sind gratis.</p>
+  </section>
+
+  <p class="foot"><a href="index.html">InQuestly</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+'use strict';
+/* Kursdaten: Auszug aus den Fallstudien der App (data/real.json über marketing/tiktok/kurz/daten.py).
+   Schlusskurse an Stichtag und Ende sind echte Eckdaten, die Tage dazwischen sind nachgebildet. */
+const D = {"nvda":{"hist":60,"h":1,"from":"2023-03-01","cut":"2023-05-24","end":"2023-05-25","o":[23.86,22.97,22.88,22.42,22.24,23.19,24.14,22.5,22.62,24.12,23.88,24.28,25.12,26.23,26.26,26.32,26.32,25.24,26.71,28.1,27.66,27.49,27.3,26.58,26.91,26.07,26.69,26.59,26.49,26.41,26.39,26.44,25.94,26.08,25.55,27.73,26.66,29.04,28.21,26.98,27.48,27.15,26.65,27.32,27.87,27.34,27.36,28.55,27.48,26.86,27.47,28.82,27.25,26.76,28.97,30.31,32.12,31.16,31.27,30.72,30.12],"hi":[23.89,23.31,23.23,22.68,23.49,24.35,24.69,23.19,24.04,24.31,24.52,24.98,27.21,26.56,27.37,26.58,26.96,26.52,28.65,28.48,27.87,28.89,28.33,27.82,27.56,27.02,27.12,27.01,26.96,26.82,26.72,26.6,26.35,26.6,27.82,28.65,28.71,30.61,29.01,27.92,27.58,28.23,27.86,27.54,29.03,28.17,29.24,28.55,28.22,27.54,29.58,29.85,28.12,29.17,31.41,32.21,32.22,31.27,32.0,31.73,38.25],"lo":[22.23,22.86,22.18,22.26,21.85,23.04,22.63,22.42,22.38,23.71,23.29,23.49,25.04,26.13,25.25,25.54,24.6,25.06,26.17,26.12,26.69,26.71,25.75,26.26,26.05,26.04,25.72,26.0,25.44,25.45,26.2,25.71,25.58,25.74,25.28,26.45,26.21,28.35,27.4,26.72,27.05,25.52,26.53,26.98,26.7,27.18,26.75,26.92,26.41,26.3,27.07,26.75,26.88,26.45,28.75,29.75,30.46,30.91,30.68,30.53,29.79],"c":[22.7,23.17,22.5,22.28,23.29,24.18,22.73,22.97,23.93,23.78,24.23,24.92,26.93,26.21,26.67,26.47,25.21,26.04,28.09,26.76,26.98,27.66,26.22,26.86,26.31,26.88,26.97,26.48,26.34,26.77,26.46,25.75,25.91,25.93,27.36,27.1,28.57,28.39,27.53,27.47,27.23,26.29,27.26,27.46,27.34,27.56,28.68,27.3,26.79,27.53,28.58,26.77,27.49,28.85,30.63,31.68,31.31,31.16,30.69,30.54,37.98],"je":1},"meta":{"hist":65,"h":1,"from":"2021-11-01","cut":"2022-02-02","end":"2022-02-03","o":[351.62,330.32,322.11,335.19,347.81,343.57,338.08,326.06,336.37,318.99,334.36,343.08,355.46,338.85,337.67,353.74,344.29,328.16,330.52,353.98,335.11,326.24,300.88,313.21,314.4,319.07,324.69,325.51,338.71,357.85,344.14,330.43,355.96,343.88,355.45,350.57,348.4,320.29,321.42,361.07,349.3,347.41,353.06,339.95,339.26,342.37,325.06,326.37,338.32,344.71,322.43,342.34,312.4,292.19,326.04,323.66,318.24,320.93,333.61,327.06,318.98,300.63,296.14,311.31,324.96,319.77],"hi":[356.31,337.7,344.1,350.84,361.48,346.48,340.06,338.03,351.58,348.49,351.11,367.07,356.66,340.74,360.46,355.82,344.64,339.93,357.23,365.45,341.72,326.74,312.4,323.55,325.65,324.27,326.09,345.13,348.01,368.18,346.07,361.13,360.09,367.83,356.78,365.32,350.59,333.49,351.41,361.6,352.6,358.56,355.56,343.24,340.78,343.97,325.87,348.54,343.12,345.57,338.38,351.35,318.08,323.3,332.12,331.09,319.0,323.91,337.95,332.71,326.14,301.85,319.33,328.4,326.46,326.82],"lo":[316.57,311.44,315.22,330.37,341.29,326.12,324.05,321.04,319.16,310.76,334.25,342.44,345.4,334.78,333.23,336.19,333.75,325.93,328.36,336.48,318.41,295.65,300.85,310.09,313.03,311.2,315.09,318.73,335.9,341.18,324.51,322.07,340.84,331.64,337.6,327.58,315.21,315.45,308.31,337.38,342.55,338.33,331.83,331.03,335.46,321.81,314.33,325.05,337.31,326.92,317.76,303.43,273.3,280.08,321.99,310.34,307.9,317.74,316.29,316.5,286.33,296.8,295.74,303.82,321.5,233.02],"c":[329.98,328.08,340.06,350.39,343.64,338.62,326.98,329.06,322.71,338.57,347.56,354.25,345.53,338.04,356.81,341.01,334.31,335.14,352.13,336.62,324.46,304.42,310.39,317.43,322.7,322.81,321.3,340.21,341.55,344.96,333.74,355.87,348.48,360.37,347.09,334.2,320.05,321.35,350.91,346.22,342.94,350.4,340.73,338.54,337.42,324.17,317.08,340.82,342.4,332.77,333.26,312.98,292.05,321.21,324.05,316.56,315.13,323.35,317.85,323.13,294.64,300.24,310.57,319.0,323.0,237.76],"je":1},"gold":{"hist":38,"h":24,"from":"2023-06-01","cut":"2024-03-01","end":"2024-08-22","o":[1975.47,1964.75,1955.6,1901.97,1944.96,1920.99,1936.55,1945.23,1945.78,1986.84,1959.55,1922.49,1902.16,1973.49,1954.99,1998.21,1924.33,1870.59,1859.08,1923.13,1979.15,2009.35,1996.42,1975.49,1987.64,2011.41,2031.86,2028.66,2078.06,2137.74,2106.12,2051.31,2045.76,1969.46,2031.66,2047.44,2039.95,2019.61,2092.04,2212.61,2155.65,2181.71,2268.14,2341.05,2382.84,2359.52,2294.17,2312.04,2367.64,2418.78,2387.43,2345.9,2414.87,2369.28,2373.71,2387.34,2414.29,2413.44,2378.99,2450.89,2460.97,2494.49],"hi":[2007.67,1992.74,1975.08,1943.22,1964.34,1945.1,2014.93,1968.98,1992.81,1990.5,1983.19,1941.94,1992.26,1975.1,2001.89,2003.38,1941.22,1883.75,1916.39,1991.73,2021.84,2031.0,1997.65,1995.24,2039.08,2059.95,2073.62,2082.63,2137.65,2145.07,2118.25,2057.84,2081.97,2043.97,2061.85,2070.12,2054.11,2113.85,2216.14,2229.18,2187.63,2268.3,2378.06,2383.26,2419.88,2383.0,2330.05,2373.86,2481.53,2428.14,2389.23,2434.06,2440.75,2404.36,2437.62,2418.56,2453.0,2431.29,2457.6,2501.67,2538.43,2614.55],"lo":[1890.97,1923.36,1891.48,1888.21,1906.38,1909.05,1929.66,1900.4,1928.86,1935.23,1910.15,1894.88,1901.33,1912.09,1919.05,1912.49,1859.35,1806.32,1853.64,1919.55,1973.33,1964.52,1950.26,1935.38,1982.33,2003.8,2003.35,1981.78,2023.71,2055.3,2010.98,2011.83,1941.04,1967.7,1988.5,2009.24,1978.78,2008.97,2083.79,2128.55,2148.41,2158.62,2257.65,2305.57,2318.29,2289.5,2289.99,2277.51,2352.92,2292.85,2312.24,2335.81,2300.95,2320.56,2326.79,2362.22,2401.91,2383.74,2340.29,2420.84,2419.55,2476.02],"c":[1958.0,1956.25,1895.1,1927.53,1920.72,1939.1,1948.93,1950.41,1982.54,1961.46,1918.92,1902.45,1975.9,1956.81,1994.79,1928.97,1868.11,1854.42,1911.47,1989.99,2011.31,1989.0,1964.74,1989.48,2017.39,2036.65,2026.82,2074.8,2124.35,2098.93,2050.27,2051.88,1963.08,2035.03,2047.66,2033.69,2016.11,2096.0,2203.64,2153.02,2175.07,2261.28,2351.0,2380.89,2345.82,2295.77,2301.64,2367.52,2426.56,2381.37,2333.71,2415.89,2367.3,2380.37,2383.16,2410.54,2408.38,2384.73,2445.13,2446.91,2509.69,2517.0],"je":5},"gme":{"hist":59,"h":15,"from":"2020-11-02","cut":"2021-01-27","end":"2021-02-18","o":[2.71,2.7,2.65,2.78,2.64,2.96,2.92,2.47,2.71,2.81,2.86,3.0,3.01,3.19,3.37,3.48,3.46,3.22,3.43,3.5,3.8,3.99,4.21,4.06,4.03,3.95,4.17,3.78,3.71,3.68,3.41,3.47,3.8,4.14,3.98,4.9,4.85,5.23,4.68,4.87,4.45,4.86,4.39,4.24,4.29,4.66,4.42,5.95,6.18,7.81,8.22,9.84,10.33,11.76,13.19,14.14,16.29,24.31,37.62,85.45,81.2,81.21,50.52,33.66,22.82,20.48,16.27,15.86,14.78,14.59,14.46,12.91,12.44,11.51],"hi":[2.81,2.76,2.78,2.8,2.96,3.05,2.92,2.84,2.85,3.03,3.02,3.04,3.24,3.57,3.59,3.58,3.55,3.52,3.62,3.79,4.1,4.17,4.21,4.25,4.09,4.28,4.33,3.99,3.9,3.78,3.58,3.85,4.35,4.2,4.74,5.07,5.38,5.58,5.34,5.14,4.88,4.89,4.48,4.44,4.6,4.73,6.17,6.69,7.95,8.8,10.34,10.48,12.11,13.55,14.44,17.42,24.83,38.38,91.16,88.38,82.15,84.78,50.78,34.61,23.2,20.96,17.27,16.08,15.2,14.76,15.34,12.97,12.45,11.83],"lo":[2.66,2.5,2.6,2.63,2.59,2.85,2.44,2.41,2.7,2.76,2.81,2.96,2.99,3.14,3.31,3.25,3.24,3.12,3.37,3.45,3.72,3.84,3.88,3.89,3.78,3.93,3.93,3.67,3.64,3.19,3.34,3.38,3.7,3.88,3.81,4.76,4.77,4.67,4.64,4.61,4.36,4.52,4.17,4.19,4.22,4.26,4.26,5.95,6.04,7.7,8.22,9.75,9.78,11.43,12.63,12.48,16.11,23.76,36.04,79.02,79.92,51.23,33.71,22.89,20.51,15.31,15.86,14.69,14.1,13.44,12.24,12.1,11.23,9.96],"c":[2.69,2.65,2.73,2.67,2.91,2.87,2.49,2.71,2.79,2.94,3.02,2.96,3.21,3.49,3.56,3.47,3.25,3.33,3.61,3.77,3.95,4.14,3.99,4.1,4.08,4.24,3.95,3.75,3.65,3.33,3.46,3.73,4.13,3.92,4.72,4.86,5.22,4.71,4.94,4.64,4.82,4.56,4.31,4.34,4.53,4.52,5.93,6.31,7.76,8.31,9.98,10.22,11.78,13.36,14.17,16.25,23.9,36.99,86.88,82.5,81.25,52.36,34.67,23.1,20.78,15.94,15.98,14.75,14.46,14.01,13.1,12.15,11.48,10.17],"je":1},"oil":{"hist":74,"h":1,"from":"2020-01-02","cut":"2020-04-17","end":"2020-04-20","o":[60.89,59.34,64.5,62.82,58.05,57.21,62.06,65.89,65.45,68.59,63.95,60.64,58.14,62.78,65.15,56.36,55.14,54.23,54.66,52.56,51.45,50.43,53.69,50.02,51.3,50.08,52.04,52.36,49.75,51.56,52.57,50.62,55.07,53.37,53.91,51.77,51.5,46.29,46.67,42.89,43.75,47.4,49.07,49.42,45.02,36.72,31.29,29.82,30.08,30.9,28.43,27.72,27.88,25.09,25.12,23.6,23.38,21.51,19.64,17.62,17.77,19.67,21.76,22.9,27.31,28.49,26.27,24.92,24.07,25.81,25.24,19.7,18.95,20.06,17.73],"hi":[62.86,63.1,66.96,63.51,62.31,60.04,67.59,67.91,67.56,70.72,64.48,62.12,62.2,63.53,65.9,57.27,57.15,59.21,54.88,52.87,51.81,52.22,55.13,53.25,52.43,50.78,53.77,52.64,53.41,53.12,52.71,54.88,58.44,53.88,55.9,51.98,52.95,47.91,47.74,44.42,47.55,49.4,50.71,50.21,45.21,37.27,33.45,32.3,31.23,32.65,31.15,27.94,28.09,25.23,26.42,24.21,23.79,21.91,20.55,18.11,20.15,22.1,22.64,27.14,28.57,28.88,26.68,26.09,25.39,26.77,25.53,20.72,20.49,20.89,17.73],"lo":[59.93,57.09,62.93,57.08,54.98,56.68,61.09,63.45,62.9,59.59,57.17,55.35,58.0,62.72,55.35,51.74,52.98,53.26,53.18,51.92,51.31,49.29,49.58,49.23,47.63,48.11,48.57,48.62,49.59,49.26,49.67,46.9,53.88,51.8,50.4,50.01,45.98,45.8,42.65,41.62,43.45,43.26,46.24,45.76,35.42,30.7,29.25,28.88,29.45,27.49,27.31,26.69,24.64,25.06,22.06,23.02,21.17,19.03,17.67,16.7,16.51,19.64,20.34,22.04,26.39,26.06,25.78,23.74,23.31,24.75,19.82,18.63,18.47,18.1,-40.32],"c":[61.18,63.05,63.27,59.25,56.02,59.56,64.61,64.94,66.89,62.36,58.52,56.89,61.93,62.85,56.49,54.19,53.7,56.25,53.93,52.76,51.56,51.65,49.61,52.16,49.35,50.32,51.1,50.44,52.09,50.57,52.05,54.66,56.9,53.85,51.38,51.43,46.88,46.27,42.71,43.82,46.75,48.61,49.96,45.9,36.47,31.13,29.37,30.52,30.73,28.61,28.7,27.3,25.43,25.1,23.54,23.36,21.62,19.54,17.74,17.69,20.09,21.87,22.61,26.35,28.34,26.08,26.01,25.34,24.46,24.82,20.11,18.74,19.87,18.27,-37.63],"je":1}};
+const NB = ' ', M = '−';
+const CASES = [
+  { id:'nvda', up:true, kick:`Nvidia · 24.${NB}Mai 2023`, q:'Was macht die Aktie morgen?', sub:'Heute Abend kommen die Quartalszahlen. Alle reden über KI.',
+    zone:'morgen', pill:`+24,4${NB}%`, a:`<span class="up">+24,4${NB}%</span> an einem Tag.`, ex:`Nvidia sagte rund 11${NB}Mrd.${NB}$ Umsatz voraus. Erwartet waren etwa 7${NB}Mrd.${NB}$.` },
+  { id:'meta', up:false, kick:`Meta · 2.${NB}Februar 2022`, q:'Was passiert morgen?', sub:'Nach Börsenschluss kommen die Quartalszahlen.',
+    zone:'morgen', pill:`${M}26,4${NB}%`, a:`<span class="dn">${M}26,4${NB}%</span> an einem Tag.`, ex:`Erstmals sanken die täglichen Facebook-Nutzer. Über 200${NB}Mrd.${NB}$ Börsenwert: weg.` },
+  { id:'gold', up:true, kick:`Gold · 1.${NB}März 2024`, q:'Ausbruch oder Abpraller?', sub:`Seit 2020 scheitert Gold immer wieder an der Zone um 2.100${NB}$.`,
+    zone:'knapp 6 Monate', pill:`+20${NB}%`, a:`<span class="up">+20${NB}%</span> in knapp 6 Monaten.`, ex:'Gold brach nach oben aus. Der alte Widerstand wurde zur Unterstützung.' },
+  { id:'gme', up:false, kick:`GameStop · 27.${NB}Januar 2021`, q:'Wie geht es weiter?', sub:'Reddit-Nutzer kaufen massenhaft. Die Aktie hat sich vervielfacht.',
+    zone:'3 Wochen', pill:`${M}88${NB}%`, pillPos:'tm', a:`<span class="dn">${M}88${NB}%</span> in 15 Handelstagen.`, ex:'Broker schränkten den Kauf ein. Der Short Squeeze brach zusammen.' },
+  { id:'oil', up:false, kick:`Rohöl WTI · Freitag, 17.${NB}April 2020`, q:`18${NB}$ pro Barrel. Und am Montag?`, sub:'Lockdowns, kaum Nachfrage, die Öllager laufen voll.',
+    zone:'Montag', pill:`${M}37,63${NB}$`, a:`<span class="dn">${M}37,63${NB}$.</span> Unter null.`, ex:'Erstmals überhaupt: Wer den Future hielt, hätte Öl abnehmen müssen.' },
+];
+const N = CASES.length;
+const $ = id => document.getElementById(id);
+const NS = 'http://www.w3.org/2000/svg';
+const W = 600, H = 340, PL = 18, PR = 18, PT = 30, PB = 40;
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const eOut = p => 1 - Math.pow(1 - p, 3);
+const eBack = p => { const c1 = 1.70158, c3 = c1 + 1; return p <= 0 ? 0 : 1 + c3 * Math.pow(p - 1, 3) + c1 * Math.pow(p - 1, 2); };
+const mk = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const datum = s => { const [y, m, d] = s.split('-'); return `${d}.${m}.${y.slice(2)}`; };
+
+/* ---------- Chart ---------- */
+function buildChart(svg, c) {
+  svg.textContent = '';
+  const d = D[c.id], hist = d.hist, h = d.h, n = hist + h;
+  const zoneSlots = Math.max(h + 6, Math.round(hist * .36));
+  const step = (W - PL - PR) / (hist + zoneSlots), xZone = PL + hist * step;
+  for (let i = 1; i <= 3; i++) { const y = PT + (H - PT - PB) * i / 4; mk('line', { x1: PL, x2: W - PR, y1: y, y2: y, stroke: css('--grid'), 'stroke-width': 1.5 }, svg); }
+  mk('rect', { x: xZone, y: 0, width: W - xZone, height: H, fill: css('--zone') }, svg);
+  mk('line', { x1: xZone, x2: xZone, y1: 12, y2: H - PB + 6, stroke: css('--line'), 'stroke-width': 2, 'stroke-dasharray': '6 6' }, svg);
+  mk('text', { x: (xZone + W - PR) / 2, y: H - 14, 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 700, fill: css('--faint') }, svg).textContent = c.zone;
+  mk('text', { x: PL, y: H - 14, 'font-size': 15, 'font-weight': 600, fill: css('--faint') }, svg).textContent = datum(d.from);
+  mk('text', { x: xZone - 8, y: H - 14, 'text-anchor': 'end', 'font-size': 15, 'font-weight': 600, fill: css('--faint') }, svg).textContent = datum(d.cut);
+  const zero = mk('g', { visibility: 'hidden' }, svg);
+  const zl = mk('line', { x1: PL, x2: W - PR, stroke: css('--ink'), 'stroke-width': 2, 'stroke-dasharray': '3 6', 'stroke-linecap': 'round' }, zero);
+  const zt = mk('text', { x: PL + 2, 'font-size': 17, 'font-weight': 800, fill: css('--ink'), stroke: css('--surface'), 'stroke-width': 6, 'paint-order': 'stroke' }, zero);
+  zt.textContent = `0${NB}$`;
+  const candles = [];
+  for (let i = 0; i < n; i++) { const g = mk('g', {}, svg); candles.push({ g, wick: mk('line', { 'stroke-linecap': 'round' }, g), body: mk('rect', { rx: 1 }, g) }); }
+  const q = mk('text', { x: (xZone + W - PR) / 2, y: PT + (H - PT - PB) / 2 + 22, 'text-anchor': 'middle', 'font-size': 64, 'font-weight': 800, fill: css('--line') }, svg);
+  q.textContent = '?';
+  const pill = mk('g', { opacity: 0 }, svg);
+  const pr = mk('rect', { rx: 15, height: 46, fill: c.up ? css('--up') : css('--dn') }, pill);
+  const pt = mk('text', { 'font-size': 26, 'font-weight': 800, fill: '#fff', 'text-anchor': 'middle' }, pill);
+  pt.textContent = c.pill;
+  const pw = pt.getComputedTextLength() + 34;
+  let px = W - PR - pw + 4, py = c.up ? H - PB - 46 - 4 : PT - 8;
+  if (c.pillPos === 'tm') { px = PL + (xZone - PL) * .5 - pw / 2; py = PT - 8; }
+  pr.setAttribute('x', px); pr.setAttribute('y', py); pr.setAttribute('width', pw);
+  pt.setAttribute('x', px + pw / 2); pt.setAttribute('y', py + 32);
+  const lo0 = Math.min(...d.lo.slice(0, hist)), hi0 = Math.max(...d.hi.slice(0, hist));
+  return { svg, d, hist, h, n, step, candles, zero, zl, zt, q, pill, px, py, pw, lo0, hi0 };
+}
+function drawChart(C, pr) {
+  const { d, hist, h, n, step, candles } = C;
+  let lo = C.lo0, hi = C.hi0; const g = [];
+  for (let j = 0; j < h; j++) {
+    const i = hist + j, p = eOut(clamp(pr * h - j));
+    if (p <= 0) { g.push(null); continue; }
+    const o = d.o[i], c = o + (d.c[i] - o) * p, top = o + (d.hi[i] - o) * p, bot = o + (d.lo[i] - o) * p;
+    g.push({ o, c, top, bot }); lo = Math.min(lo, bot); hi = Math.max(hi, top);
+  }
+  const under0 = lo < 0, pad = (hi - lo) * .08; lo -= pad; hi += pad;
+  const y = v => PT + (hi - v) / (hi - lo) * (H - PT - PB);
+  const bw = Math.max(2.5, step * .62), ww = Math.max(1.5, step * .16);
+  const up = css('--up'), dn = css('--dn');
+  for (let i = 0; i < n; i++) {
+    const cd = candles[i];
+    const k = i < hist ? { o: d.o[i], c: d.c[i], top: d.hi[i], bot: d.lo[i] } : g[i - hist];
+    if (!k) { cd.g.style.display = 'none'; continue; }
+    cd.g.style.display = '';
+    const x = PL + (i + .5) * step, col = k.c >= k.o ? up : dn;
+    cd.wick.setAttribute('x1', x); cd.wick.setAttribute('x2', x); cd.wick.setAttribute('y1', y(k.top)); cd.wick.setAttribute('y2', y(k.bot));
+    cd.wick.setAttribute('stroke', col); cd.wick.setAttribute('stroke-width', ww);
+    const yb = Math.min(y(k.o), y(k.c)), hb = Math.max(2, Math.abs(y(k.o) - y(k.c)));
+    cd.body.setAttribute('x', x - bw / 2); cd.body.setAttribute('y', yb); cd.body.setAttribute('width', bw); cd.body.setAttribute('height', hb); cd.body.setAttribute('fill', col);
+  }
+  if (under0) { const yz = y(0); C.zero.setAttribute('visibility', 'visible'); C.zl.setAttribute('y1', yz); C.zl.setAttribute('y2', yz); C.zt.setAttribute('y', yz - 9); }
+  else C.zero.setAttribute('visibility', 'hidden');
+  C.q.style.opacity = 1 - clamp(pr * 4);
+}
+function showPill(C, p) {
+  const s = .55 + .45 * eBack(p), cx = C.px + C.pw / 2, cy = C.py + 23;
+  C.pill.setAttribute('opacity', clamp(p * 2.5));
+  C.pill.setAttribute('transform', `translate(${cx} ${cy}) scale(${s}) translate(${-cx} ${-cy})`);
+}
+function animate(ms, f) {
+  return new Promise(res => {
+    if (reduce) { f(1); return res(); }
+    const t0 = performance.now();
+    const tick = now => { const p = clamp((now - t0) / ms); f(p); p < 1 ? requestAnimationFrame(tick) : res(); };
+    requestAnimationFrame(tick);
+  });
+}
+
+/* ---------- Ablauf ---------- */
+const params = new URLSearchParams(location.search);
+const rival = /^[0-5]$/.test(params.get('s') || '') ? Number(params.get('s')) : null;
+let idx = 0, score = 0, answers = [], C = null, busy = false;
+
+function dots() {
+  const el = $('dots'); el.textContent = '';
+  for (let i = 0; i < N; i++) { const d = document.createElement('i'); if (i < answers.length) d.className = answers[i] ? 'ok' : 'no'; else if (i === idx && !$('round').hidden) d.className = 'now'; el.appendChild(d); }
+}
+function screen(id) { for (const s of ['intro', 'round', 'end']) $(s).hidden = s !== id; window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); }
+
+function startRound() {
+  const c = CASES[idx];
+  screen('round');
+  $('rkick').textContent = `Runde ${idx + 1} von ${N} · ${c.kick}`;
+  $('rh1').textContent = c.q; $('rsub').textContent = c.sub;
+  for (const b of [$('bup'), $('bdn')]) { b.disabled = false; b.className = 'btn'; }
+  $('verdict').hidden = true; $('nextp').hidden = true;
+  C = buildChart($('chart'), c); drawChart(C, 0); showPill(C, 0);
+  $('next').textContent = idx === N - 1 ? 'Ergebnis ansehen' : 'Weiter';
+  busy = false; dots();
+}
+async function answer(up) {
+  if (busy || $('round').hidden) return; busy = true;
+  const c = CASES[idx], ok = up === c.up;
+  answers.push(ok); if (ok) score++;
+  const mine = up ? $('bup') : $('bdn'), other = up ? $('bdn') : $('bup');
+  for (const b of [mine, other]) b.disabled = true;
+  mine.classList.add(ok ? 'ok' : 'no');
+  if (!ok) other.classList.add('ok'); else other.classList.add('dim');
+  dots();
+  await animate(C.h > 1 ? 1400 : 800, p => drawChart(C, p));
+  await animate(450, p => showPill(C, p));
+  $('rh1').innerHTML = c.a; $('rsub').textContent = c.ex;
+  const v = $('verdict'); v.hidden = false;
+  v.innerHTML = ok ? '<span class="chip ok">✓ Richtig</span>' : `<span class="chip no">✕ Daneben</span><span style="color:var(--muted);font-weight:600">Es ${c.up ? 'stieg' : 'fiel'}.</span>`;
+  $('nextp').hidden = false; $('next').focus({ preventScroll: true });
+}
+function finish() {
+  screen('end'); dots();
+  $('score').innerHTML = `${score}<small>${NB}von ${N}</small>`;
+  $('eh1').textContent = score === 5 ? 'Perfekt. Du hast ein echtes Gespür für den Markt.'
+    : score === 4 ? 'Stark! Nur einmal daneben.'
+    : score === 3 ? 'Mehr als die Hälfte richtig. Nicht schlecht!'
+    : 'Die Börse ist schwer vorherzusagen. Genau dafür übt man ohne echtes Geld.';
+  if (rival !== null) {
+    const vs = $('vs'); vs.hidden = false;
+    vs.textContent = score > rival ? `Herausforderung gewonnen: ${score} gegen ${rival}.`
+      : score === rival ? `Unentschieden: ${score} zu ${rival}.` : `Knapp verloren: ${score} gegen ${rival}. Revanche?`;
+  } else $('vs').hidden = true;
+  const url = `${location.origin}${location.pathname}?s=${score}`;
+  const text = `Ich habe ${score} von ${N} Börsenmomenten richtig getippt. Schaffst du mehr? 📈📉`;
+  $('wa').href = 'https://wa.me/?text=' + encodeURIComponent(`${text} ${url}`);
+  $('share').onclick = async () => {
+    if (navigator.share) { try { await navigator.share({ title: 'Steigt oder fällt? Das Börsen-Quiz', text, url }); } catch (e) {} return; }
+    try { await navigator.clipboard.writeText(`${text} ${url}`); toast('Link kopiert'); } catch (e) { toast(url); }
+  };
+  const list = $('review'); list.textContent = '';
+  CASES.forEach((c, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="m ${answers[i] ? 'ok' : 'no'}">${answers[i] ? '✓' : '✕'}</span><span>${c.kick}</span><span class="r" style="color:var(${c.up ? '--upTxt' : '--dnTxt'})">${c.pill}</span>`;
+    list.appendChild(li);
+  });
+}
+function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove('on'), 2200); }
+
+$('start').onclick = () => { idx = 0; score = 0; answers = []; startRound(); };
+$('again').onclick = () => { idx = 0; score = 0; answers = []; startRound(); };
+$('bup').onclick = () => answer(true);
+$('bdn').onclick = () => answer(false);
+$('next').onclick = () => { idx++; idx < N ? startRound() : finish(); };
+document.addEventListener('keydown', e => {
+  if ($('round').hidden) return;
+  if (e.key === 'ArrowRight') answer(true); else if (e.key === 'ArrowLeft') answer(false);
+});
+if (rival !== null) { const b = $('challenge'); b.hidden = false; b.textContent = `Du wurdest herausgefordert: ${rival} von ${N} richtig. Schaffst du mehr?`; }
+// Vorschau auf der Startseite: Meta bis zum Stichtag
+(() => { const P = buildChart($('preview'), CASES[1]); drawChart(P, 0); })();
+dots();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  const P = buildChart($('preview'), CASES[1]); drawChart(P, 0);
+  if (!$('round').hidden && C) { const done = !$('nextp').hidden; C = buildChart($('chart'), CASES[idx]); drawChart(C, done ? 1 : 0); showPill(C, done ? 1 : 0); }
+});
+</script>
+</body>
+</html>
