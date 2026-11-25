@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kerzenmuster für Anfänger: Die 8 wichtigsten Candlesticks | InQuestly</title>
+<meta name="description" content="Hammer, Doji, Engulfing, Morgenstern &amp; Co.: die 8 wichtigsten Kerzenmuster einfach erklärt, mit Bildern, Bedeutung und typischen Fehlern beim Erkennen.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/blog/kerzenmuster.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/blog/kerzenmuster.html">
+<meta property="og:title" content="Kerzenmuster für Anfänger: Die 8 wichtigsten Candlesticks | InQuestly">
+<meta property="og:description" content="Hammer, Doji, Engulfing, Morgenstern &amp; Co.: die 8 wichtigsten Kerzenmuster einfach erklärt, mit Bildern, Bedeutung und typischen Fehlern beim Erkennen.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/blog/og-kerzenmuster.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg"><link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="InQuestly Blog" href="https://fotiadisapps.de/InQuestly/blog/feed.xml">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>:root {
+  --paper: #F6F1E4; --surface: #FFFFFF; --ink: #10261C; --muted: #55665C; --line: #E2DCCB; --accent: #5B4FE0; --accent-soft: #E9E7FD;
+  --up: #12916A; --down: #D9483B;
+  --display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #0B1A12; --surface: #12271B; --ink: #F1EEE3; --muted: #A4B5A9; --line: #24402F; --accent: #A3A4FA; --accent-soft: #23234A; --up: #3BC992; --down: #FF6B5E; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.7 var(--sans); }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.18; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); font-weight: 760; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.top { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 750 1.125rem/1 var(--display); }
+.brand img { width: 34px; height: 34px; border-radius: 8px; }
+.nav { display: flex; align-items: center; gap: 6px 18px; flex-wrap: wrap; font-size: .9375rem; }
+.nav a { color: var(--muted); text-decoration: none; } .nav a:hover { color: var(--ink); }
+.nav a.laden { color: #fff; background: var(--accent); padding: 8px 14px; border-radius: 10px; font-weight: 650; }
+.kicker { font: 800 .78rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+.lead { font-size: 1.2rem; color: var(--muted); margin-top: 16px; }
+.meta { color: var(--muted); font-size: .9rem; margin-top: 12px; }
+.artikel { max-width: 760px; padding-block: 36px 56px; }
+.krumen { font-size: .875rem; color: var(--muted); margin-bottom: 22px; }
+.krumen a { color: var(--muted); }
+.inhalt { margin: 28px 0; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; font-size: .97rem; }
+.inhalt ol { margin: 8px 0 0; padding-left: 22px; }
+.appbild { margin: 32px auto; max-width: 300px; text-align: center; }
+.appbild img { width: 100%; height: auto; border-radius: 28px; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(16,38,28,.14); display: block; }
+.appbild figcaption { font-size: .875rem; color: var(--muted); margin-top: 10px; }
+.text h2 { margin: 40px 0 12px; }
+.text h3 { margin: 26px 0 8px; }
+.text p + p, .text ul + p, .text ol + p, .text p + ul, .text p + ol { margin-top: 14px; }
+.text ul, .text ol { padding-left: 22px; margin: 14px 0; }
+.text li + li { margin-top: 6px; }
+.hinweis { margin: 22px 0; padding: 14px 18px; background: var(--accent-soft); border-radius: 12px; }
+.tabelle { overflow-x: auto; margin: 18px 0; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; background: var(--surface); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { font-weight: 700; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+details + details { margin-top: 10px; }
+summary { cursor: pointer; font-weight: 650; }
+details p { color: var(--muted); margin-top: 8px; }
+.hinweis-klein { color: var(--muted); font-size: .875rem; margin-top: 32px; }
+.cta { display: flex; gap: 18px; align-items: flex-start; margin: 32px 0; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.cta h2 { margin-bottom: 8px; font-size: 1.35rem; }
+.cta p { color: var(--muted); margin-bottom: 14px; }
+.cta img { flex: none; }
+.knopf { display: inline-block; background: var(--ink); color: var(--paper); text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 650; }
+.klein { color: var(--muted); font-size: .85rem; margin-left: 8px; }
+.mehr ul { padding-left: 20px; }
+.mehr h2 { margin-bottom: 10px; }
+.blogkopf { padding-block: 44px 20px; max-width: 760px; }
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; padding-bottom: 20px; }
+.karte { display: grid; gap: 8px; align-content: start; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 0 0 18px; color: var(--ink); text-decoration: none; overflow: hidden; }
+.karte img { width: 100%; height: auto; display: block; }
+.karte .kicker, .karte h2, .karte p, .karte .meta { margin: 0 18px; }
+.karte .kicker { margin-top: 10px; }
+.karte h2 { font-size: 1.25rem; }
+.karte p { color: var(--muted); font-size: .97rem; }
+.karte:hover h2 { color: var(--accent); }
+.foot { border-top: 1px solid var(--line); padding-block: 28px 48px; color: var(--muted); font-size: .92rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 620px) { .cta { flex-direction: column; } .lead { font-size: 1.1rem; } }
+.textbild { margin: 28px 0; }
+.textbild img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; background: #fff; }
+.textbild figcaption { font-size: .875rem; color: var(--muted); margin-top: 8px; }
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Kerzenmuster für Anfänger: Die 8 wichtigsten Candlesticks", "description": "Hammer, Doji, Engulfing, Morgenstern & Co.: die 8 wichtigsten Kerzenmuster einfach erklärt, mit Bildern, Bedeutung und typischen Fehlern beim Erkennen.", "datePublished": "2026-11-25", "dateModified": "2026-11-25", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-kerzenmuster.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/kerzenmuster.html", "keywords": "Kerzenmuster, Candlestick Muster, Kerzenmuster Hammer, Doji, Engulfing, Morgenstern, bullische Kerzenmuster, bärische Kerzenmuster, Kerzenchart lesen", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Kerzenmuster für Anfänger: Die 8 wichtigsten Candlesticks", "item": "https://fotiadisapps.de/InQuestly/blog/kerzenmuster.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welches Kerzenmuster ist das zuverlässigste?", "acceptedAnswer": {"@type": "Answer", "text": "Keines funktioniert für sich allein zuverlässig. Aussagekräftiger werden Muster an wichtigen Zonen, mit hohem Volumen und mit Bestätigung durch die nächste Kerze."}}, {"@type": "Question", "name": "Was bedeutet ein Doji?", "acceptedAnswer": {"@type": "Answer", "text": "Eröffnungs- und Schlusskurs liegen fast gleich auf. Käufer und Verkäufer halten sich die Waage. Nach einem starken Trend kann das auf nachlassende Kraft hindeuten."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Hammer und Hanging Man?", "acceptedAnswer": {"@type": "Answer", "text": "Beide sehen gleich aus: kleiner Körper oben, langer unterer Docht. Der Hammer erscheint nach einem Abwärtstrend und gilt als bullisch, der Hanging Man nach einem Aufwärtstrend und gilt als Warnsignal."}}, {"@type": "Question", "name": "Was sind bullische Kerzenmuster?", "acceptedAnswer": {"@type": "Answer", "text": "Muster, die auf steigende Kurse hindeuten, etwa Hammer, bullisches Engulfing, Morgenstern oder drei weiße Soldaten."}}, {"@type": "Question", "name": "Was sind bärische Kerzenmuster?", "acceptedAnswer": {"@type": "Answer", "text": "Muster, die auf fallende Kurse hindeuten, etwa Sternschnuppe, bärisches Engulfing, Abendstern oder drei schwarze Krähen."}}, {"@type": "Question", "name": "Gelten Kerzenmuster auch für Kryptowährungen und ETFs?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, Kerzencharts gibt es für alle frei gehandelten Märkte. Bei Kryptowährungen ohne festen Handelsschluss hängt die Tageskerze von der gewählten Zeitzone ab."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../icon-180.png" alt="" width="34" height="34">InQuestly</a>
+  <nav class="nav" aria-label="Hauptnavigation"><a href="../">Die App</a><a href="./">Blog</a><a href="../quiz.html">Börsen-Quiz</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis laden</a></nav>
+</div></header>
+<main>
+<article class="wrap artikel">
+  <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
+  <p class="kicker">Charttechnik</p>
+  <h1>Kerzenmuster für Anfänger: Die 8 wichtigsten Candlesticks</h1>
+  <p class="meta">25. November 2026 · 6 Min. Lesezeit · von Stathis Fotiadis</p>
+  <p class="lead">Eine einzelne Kerze erzählt, wie ein Handelstag verlief. Wer die wichtigsten Kerzenmuster kennt, erkennt Stimmungswechsel früher. Mit Bildern aus der App.</p>
+  <nav class="inhalt" aria-label="Inhalt"><b>Inhalt</b><ol><li><a href="#so-liest-du-eine-kerze">So liest du eine Kerze</a></li><li><a href="#die-8-muster-im-ueberblick">Die 8 Muster im Überblick</a></li><li><a href="#1-hammer">1. Hammer</a></li><li><a href="#2-sternschnuppe-und-doji">2. Sternschnuppe und Doji</a></li><li><a href="#3-libelle-und-grabstein">3. Libelle und Grabstein</a></li><li><a href="#4-engulfing">4. Engulfing</a></li><li><a href="#5-harami">5. Harami</a></li><li><a href="#6-morgenstern">6. Morgenstern</a></li><li><a href="#7-abendstern">7. Abendstern</a></li><li><a href="#8-drei-weisse-soldaten-und-drei-schwarze-kraehen">8. Drei weiße Soldaten und drei schwarze Krähen</a></li><li><a href="#typische-fehler-beim-erkennen">Typische Fehler beim Erkennen</a></li><li><a href="#kerzenmuster-und-chartmuster">Kerzenmuster und Chartmuster</a></li><li><a href="#kerzenmuster-ueben">Kerzenmuster üben</a></li></ol></nav>
+  
+  <div class="text">
+<p>Kerzencharts, englisch Candlesticks, sind die beliebteste Art, Kurse darzustellen. Jede Kerze fasst einen Zeitraum zusammen, etwa einen Tag. Bestimmte Formen aus einer, zwei oder drei Kerzen tauchen immer wieder auf. Diese <strong>Kerzenmuster</strong> verraten, ob Käufer oder Verkäufer gerade die Oberhand gewinnen.</p>
+<h2 id="so-liest-du-eine-kerze">So liest du eine Kerze</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-1.jpg" alt="Aufbau einer Kerze: Körper, Dochte, Eröffnung und Schluss (Gratis-Lektion „Kerzen lesen“)." width="720" height="549" loading="lazy"><figcaption>Aufbau einer Kerze: Körper, Dochte, Eröffnung und Schluss (Gratis-Lektion „Kerzen lesen“).</figcaption></figure>
+<ul><li><strong>Körper:</strong> der Bereich zwischen Eröffnungs- und Schlusskurs. Grün (oder hell) heißt, der Kurs schloss höher, als er eröffnete. Rot (oder dunkel) heißt, er schloss tiefer.</li><li><strong>Dochte</strong> (auch Schatten): die Linien über und unter dem Körper. Sie zeigen das Hoch und das Tief des Zeitraums.</li><li><strong>Lange Dochte</strong> zeigen, dass der Kurs weit gelaufen ist und dann zurückgedrängt wurde.</li></ul>
+<aside class="hinweis"><p>Ein Kerzenmuster zeigt die kurzfristige Stimmung. Aussagekraft bekommt es erst im Zusammenhang: Wo im Trend steht es? Liegt eine wichtige Unterstützung oder ein Widerstand in der Nähe? Wie hoch ist das Volumen?</p></aside>
+<h2 id="die-8-muster-im-ueberblick">Die 8 Muster im Überblick</h2>
+<div class="tabelle"><table><thead><tr><th>Muster</th><th>Kerzen</th><th>Signal</th><th>Wo es zählt</th></tr></thead><tbody><tr><td>Hammer</td><td>1</td><td>bullisch</td><td>nach einem Abwärtstrend</td></tr><tr><td>Sternschnuppe</td><td>1</td><td>bärisch</td><td>nach einem Aufwärtstrend</td></tr><tr><td>Doji (mit Libelle und Grabstein)</td><td>1</td><td>Unentschlossenheit</td><td>an möglichen Wendepunkten</td></tr><tr><td>Engulfing</td><td>2</td><td>Umkehr</td><td>am Ende eines Trends</td></tr><tr><td>Harami</td><td>2</td><td>mögliche Umkehr, schwächer</td><td>am Ende eines Trends</td></tr><tr><td>Morgenstern</td><td>3</td><td>bullisch</td><td>nach einem Abwärtstrend</td></tr><tr><td>Abendstern</td><td>3</td><td>bärisch</td><td>nach einem Aufwärtstrend</td></tr><tr><td>Drei weiße Soldaten / drei schwarze Krähen</td><td>3</td><td>starke Bewegung</td><td>als Umkehr oder Bestätigung</td></tr></tbody></table></div>
+<h2 id="1-hammer">1. Hammer</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-2.jpg" alt="Der Hammer: kleiner Körper oben, langer unterer Docht (Pro-Kurs „Kerzenmuster“)." width="720" height="465" loading="lazy"><figcaption>Der Hammer: kleiner Körper oben, langer unterer Docht (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p>Ein kleiner Körper am oberen Ende und ein langer unterer Docht, mindestens doppelt so lang wie der Körper. Der Kurs fiel während des Tages deutlich, doch Käufer drückten ihn bis zum Schluss fast wieder auf das Ausgangsniveau. Nach einem Abwärtstrend kann das eine Wende ankündigen. Bestätigt wird das Signal meist erst durch eine steigende Kerze am nächsten Tag. Die gleiche Form nach einem Aufwärtstrend heißt <strong>Hanging Man</strong> und gilt dort als Warnsignal.</p>
+<h2 id="2-sternschnuppe-und-doji">2. Sternschnuppe und Doji</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-3.jpg" alt="Sternschnuppe und Doji (Pro-Kurs „Kerzenmuster“)." width="720" height="465" loading="lazy"><figcaption>Sternschnuppe und Doji (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p>Die <strong>Sternschnuppe</strong> ist das Gegenstück zum Hammer: ein kleiner Körper unten, ein langer oberer Docht. Der Kurs stieg stark, doch Verkäufer drückten ihn zurück. Nach einem Aufwärtstrend ist das ein Warnsignal.</p>
+<p>Beim <strong>Doji</strong> liegen Eröffnung und Schluss fast gleich auf, der Körper ist nur ein Strich. Käufer und Verkäufer halten sich die Waage. Nach einem langen Trend kann das nachlassende Kraft anzeigen.</p>
+<h2 id="3-libelle-und-grabstein">3. Libelle und Grabstein</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-9.jpg" alt="Libellen-Doji und Grabstein-Doji (Pro-Kurs „Kerzenmuster“)." width="720" height="465" loading="lazy"><figcaption>Libellen-Doji und Grabstein-Doji (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p>Zwei besondere Doji-Formen: Beim <strong>Libellen-Doji</strong> (Dragonfly) liegen Eröffnung und Schluss am Hoch, darunter ein langer Docht. Am Tief eines Abwärtstrends gilt das als mögliches Kaufsignal. Beim <strong>Grabstein-Doji</strong> (Gravestone) liegen Eröffnung und Schluss am Tief, darüber ein langer Docht. Am Hoch eines Aufwärtstrends gilt das als Warnsignal.</p>
+<h2 id="4-engulfing">4. Engulfing</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-4.jpg" alt="Bullisches Engulfing: Die zweite Kerze verschluckt die erste (Pro-Kurs „Kerzenmuster“)." width="720" height="525" loading="lazy"><figcaption>Bullisches Engulfing: Die zweite Kerze verschluckt die erste (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p>Beim Engulfing („Verschlucken“) umschließt der Körper der zweiten Kerze den Körper der ersten vollständig. Ein <strong>bullisches Engulfing</strong> entsteht nach einem Abwärtstrend: Auf eine kleine rote folgt eine große grüne Kerze. Ein <strong>bärisches Engulfing</strong> ist das Spiegelbild nach einem Aufwärtstrend. Je größer die zweite Kerze und je höher das Volumen, desto stärker das Signal.</p>
+<h2 id="5-harami">5. Harami</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-5.jpg" alt="Harami: Die zweite Kerze liegt im Körper der ersten (Pro-Kurs „Kerzenmuster“)." width="720" height="465" loading="lazy"><figcaption>Harami: Die zweite Kerze liegt im Körper der ersten (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p>Harami heißt auf Japanisch „schwanger“: Die zweite, kleine Kerze liegt vollständig im Körper der ersten, großen. Der Schwung des Trends lässt nach. Das Signal ist schwächer als ein Engulfing und braucht fast immer eine Bestätigung durch die folgenden Kerzen.</p>
+<h2 id="6-morgenstern">6. Morgenstern</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-6.jpg" alt="Morgenstern: drei Kerzen am Ende eines Abwärtstrends (Pro-Kurs „Kerzenmuster“)." width="720" height="465" loading="lazy"><figcaption>Morgenstern: drei Kerzen am Ende eines Abwärtstrends (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p>Ein Dreier-Muster am Ende eines Abwärtstrends: Auf eine lange rote Kerze folgt eine kleine Kerze, oft mit einer Lücke nach unten, die Unentschlossenheit zeigt. Dann schließt eine lange grüne Kerze weit in den Körper der ersten hinein. Die Verkäufer verlieren die Kontrolle, die Käufer übernehmen.</p>
+<h2 id="7-abendstern">7. Abendstern</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-7.jpg" alt="Abendstern: das Gegenstück am Ende eines Aufwärtstrends (Pro-Kurs „Kerzenmuster“)." width="720" height="465" loading="lazy"><figcaption>Abendstern: das Gegenstück am Ende eines Aufwärtstrends (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p>Das Spiegelbild des Morgensterns am Ende eines Aufwärtstrends: lange grüne Kerze, kleine Kerze als Zögern, dann eine lange rote Kerze, die tief in den Körper der ersten fällt. Ein klassisches Warnsignal, besonders an einem Widerstand.</p>
+<h2 id="8-drei-weisse-soldaten-und-drei-schwarze-kraehen">8. Drei weiße Soldaten und drei schwarze Krähen</h2>
+<figure class="textbild"><img src="bild-kerzenmuster-8.jpg" alt="Drei weiße Soldaten und drei schwarze Krähen (Pro-Kurs „Kerzenmuster“)." width="720" height="465" loading="lazy"><figcaption>Drei weiße Soldaten und drei schwarze Krähen (Pro-Kurs „Kerzenmuster“).</figcaption></figure>
+<p><strong>Drei weiße Soldaten</strong> sind drei lange grüne Kerzen in Folge, jede schließt höher als die vorige und eröffnet innerhalb des vorherigen Körpers. Das zeigt anhaltenden Kaufdruck. <strong>Drei schwarze Krähen</strong> sind das Gegenstück mit drei langen roten Kerzen und deuten auf anhaltenden Verkaufsdruck hin.</p>
+<h2 id="typische-fehler-beim-erkennen">Typische Fehler beim Erkennen</h2>
+<ul><li><strong>Ohne Zusammenhang handeln:</strong> Ein Hammer mitten in einer Seitwärtsphase sagt wenig. Wichtig ist, wo im Trend das Muster steht.</li><li><strong>Nicht auf Bestätigung warten:</strong> Viele Muster gelten erst, wenn die nächste Kerze in die erwartete Richtung läuft.</li><li><strong>Zu kleine Zeiteinheiten:</strong> Im Minutenchart entstehen Muster ständig und sind oft Zufall. Tages- und Wochenkerzen sind aussagekräftiger.</li><li><strong>Volumen ignorieren:</strong> Ein Umkehrmuster mit hohem Volumen ist glaubwürdiger als eines ohne.</li><li><strong>Kein Plan fürs Risiko:</strong> Auch das schönste Muster kann scheitern. Stop und Positionsgröße gehören dazu, siehe <a href="chance-risiko-verhaeltnis.html">Chance-Risiko-Verhältnis</a>.</li></ul>
+<h2 id="kerzenmuster-und-chartmuster">Kerzenmuster und Chartmuster</h2>
+<p>Kerzenmuster zeigen die Stimmung weniger Tage, Chartmuster wie Schulter-Kopf-Schulter oder Flaggen die Entwicklung über Wochen. Am stärksten sind Signale, wenn beides zusammenpasst: etwa ein Hammer an der Unterstützung eines Doppelbodens. Die wichtigsten Formationen erklärt der Artikel <a href="chartmuster.html">Chartmuster</a>.</p>
+<h2 id="kerzenmuster-ueben">Kerzenmuster üben</h2>
+<p>Muster prägen sich ein, wenn du sie oft siehst. In InQuestly erklärt die Gratis-Lektion „Kerzen lesen“ im Kurs Charttechnik den Aufbau einer Kerze. Alle hier gezeigten Muster behandelt der Kurs „Kerzenmuster“ mit InQuestly Pro. Im Gratis-Spiel „Bulle oder Bär?“ übst du Formationen und Kerzen per Wischen, mit Erklärung nach jeder Runde.</p>
+<h2 id="haeufige-fragen">Häufige Fragen</h2>
+<details><summary>Welches Kerzenmuster ist das zuverlässigste?</summary><p>Keines funktioniert für sich allein zuverlässig. Aussagekräftiger werden Muster an wichtigen Zonen, mit hohem Volumen und mit Bestätigung durch die nächste Kerze.</p></details>
+<details><summary>Was bedeutet ein Doji?</summary><p>Eröffnungs- und Schlusskurs liegen fast gleich auf. Käufer und Verkäufer halten sich die Waage. Nach einem starken Trend kann das auf nachlassende Kraft hindeuten.</p></details>
+<details><summary>Was ist der Unterschied zwischen Hammer und Hanging Man?</summary><p>Beide sehen gleich aus: kleiner Körper oben, langer unterer Docht. Der Hammer erscheint nach einem Abwärtstrend und gilt als bullisch, der Hanging Man nach einem Aufwärtstrend und gilt als Warnsignal.</p></details>
+<details><summary>Was sind bullische Kerzenmuster?</summary><p>Muster, die auf steigende Kurse hindeuten, etwa Hammer, bullisches Engulfing, Morgenstern oder drei weiße Soldaten.</p></details>
+<details><summary>Was sind bärische Kerzenmuster?</summary><p>Muster, die auf fallende Kurse hindeuten, etwa Sternschnuppe, bärisches Engulfing, Abendstern oder drei schwarze Krähen.</p></details>
+<details><summary>Gelten Kerzenmuster auch für Kryptowährungen und ETFs?</summary><p>Ja, Kerzencharts gibt es für alle frei gehandelten Märkte. Bei Kryptowährungen ohne festen Handelsschluss hängt die Tageskerze von der gewählten Zeitzone ab.</p></details>
+  </div>
+  <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
+  <aside class="cta">
+  <img src="../mascot.svg" alt="" width="84" height="80">
+  <div><h2>Üben statt nur lesen</h2>
+  <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis im App Store</a> <span class="klein">mit In-App-Käufen · für iPhone</span></div>
+</aside>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="aktien-app-anfaenger.html">Aktien-App für Anfänger: Welche Börsen-App wofür?</a></li><li><a href="boerse-lernen-app.html">Börse lernen App: So findest du die richtige Lern-App</a></li><li><a href="bulle-und-baer.html">Bulle und Bär: Was die Begriffe an der Börse bedeuten</a></li></ul></section>
+</article>
+</main>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+</div></footer>
+</body>
+</html>
