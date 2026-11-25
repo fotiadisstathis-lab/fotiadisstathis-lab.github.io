@@ -87,6 +87,12 @@ section.band + section.band { border-top: 1px solid var(--line); }
 .price span { color: var(--muted); font-size: .9375rem; }
 .tag { justify-self: start; font: 700 .7rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 4px 8px; border-radius: 6px; }
 .note { color: var(--muted); font-size: .9375rem; margin-top: 16px; }
+.event { display: grid; gap: 8px; justify-items: start; margin-bottom: 28px; padding: 20px 22px; border-radius: 18px; background: var(--accent-soft); border: 1px solid var(--accent); }
+.event h3 { margin: 0; font-size: 1.35rem; }
+.event p { margin: 0; max-width: 62ch; }
+.event a { font-weight: 700; }
+.dez { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .95rem; }
+.dez a { font-weight: 600; }
 details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
 details + details { margin-top: 10px; }
 summary { cursor: pointer; font-weight: 650; }
@@ -132,6 +138,8 @@ details p { color: var(--muted); margin-top: 8px; }
       <a class="quizlink" href="quiz.html">Erst ausprobieren: Börsen-Quiz im Browser →</a>
 
     </div>
+    <!-- Prognose-Dezember: Hinweis nach dem 31.12.2026 entfernen -->
+    <p class="dez"><span class="tag">Dezember</span> <a href="#prognose-dezember">Prognose-Dezember: an jedem Börsentag eine Tagesprognose. Wie oft liegst du richtig?</a></p>
     <p class="trial"><b>Die Grundlagen sind dauerhaft kostenlos.</b> Pro kannst du einen Monat gratis testen – dein Fortschritt bleibt in jedem Fall erhalten.</p>
   </div>
   <div class="phone"><img src="shots/start.png" alt="Missionen mit Tagesziel, Tagesprognose und Tagesmissionen"></div>
@@ -162,6 +170,13 @@ details p { color: var(--muted); margin-top: 8px; }
 </div></section>
 
 <section class="band" id="prognose"><div class="wrap">
+  <!-- Prognose-Dezember: Kasten nach dem 31.12.2026 entfernen -->
+  <div class="event" id="prognose-dezember">
+    <span class="tag">1.–31. Dezember</span>
+    <h3>Prognose-Dezember</h3>
+    <p>An jedem Börsentag im Dezember eine neue Tagesprognose zu DAX, Bitcoin, Gold und Co.: Steigt der Kurs bis zum nächsten Schlusskurs oder fällt er? Die App zählt mit, wie oft du richtig liegst. Gewertet wird mit echten Schlusskursen, ohne echtes Geld.</p>
+    <a href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&amp;ct=website&amp;mt=8">Mitmachen in der App →</a>
+  </div>
   <div class="section-head"><h2>Prognose-Duell: „Ich hab’s dir doch gesagt!“</h2><p>Schreib in einem Satz, wohin sich ein Kurs bewegt – InQuestly prüft es am Stichtag mit dem echten Kurs.</p></div>
   <div class="cards">
     <div class="card"><h3>1. Prognose abgeben</h3><p>„Nvidia steigt diesen Monat“ oder „Gold fällt in 3 Monaten“ – für Aktien, ETFs, Indizes, Rohstoffe, Devisen und Krypto. Ziel in Prozent frei wählbar.</p></div>
@@ -232,6 +247,8 @@ details p { color: var(--muted); margin-top: 8px; }
     <li><a href="blog/chartmuster.html">Die 7 wichtigsten Chartmuster</a></li>
     <li><a href="blog/kerzenmuster.html">Kerzenmuster für Anfänger: die 8 wichtigsten Candlesticks</a></li>
     <li><a href="blog/bulle-und-baer.html">Bulle und Bär: Was die Begriffe bedeuten</a></li>
+    <li><a href="blog/dax-einfach-erklaert.html">Was ist der DAX? Einfach erklärt</a></li>
+    <li><a href="blog/aktienkurse-vorhersagen.html">Kann man Aktienkurse vorhersagen?</a></li>
   </ul>
   <p class="note"><a href="blog/">Alle Artikel im Blog →</a></p>
 </div></section>
