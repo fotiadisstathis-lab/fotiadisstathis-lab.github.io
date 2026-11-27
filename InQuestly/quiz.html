@@ -21,13 +21,16 @@
 <link rel="icon" href="favicon.svg">
 <link rel="apple-touch-icon" href="icon-180.png">
 <style>
-:root { --paper:#F4F6F9; --surface:#fff; --ink:#131A27; --muted:#586276; --faint:#8A93A6; --line:#DADFE7; --soft:#EEF1F5;
-  --accent:#2B59E8; --accentInk:#fff; --zone:#F3F5F8; --grid:#EEF0F4;
+@font-face { font-family: "IQ Nunito"; src: url("fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+
+:root { --paper:#FFFFFF; --surface:#fff; --ink:#20184A; --muted:#5C5780; --faint:#8E89AD; --line:#E4E0F7; --soft:#F3F1FF;
+  --accent:#5A46E6; --accentInk:#fff; --zone:#F6F5FF; --grid:#EFEDF9;
   --up:#34C759; --dn:#FF3B30; --upTxt:#1A7F4B; --dnTxt:#C9001A; --upBg:#E8F7EE; --dnBg:#FFECEC;
   --sans:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Arial, sans-serif;
-  --display:ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif; color-scheme:light; }
-@media (prefers-color-scheme: dark) { :root { --paper:#0C1018; --surface:#141A25; --ink:#E8ECF4; --muted:#9AA4B8; --faint:#6F7A90;
-  --line:#263043; --soft:#1B2331; --accent:#7D9BFF; --accentInk:#0C1018; --zone:#192130; --grid:#1D2636;
+  --display:ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif; color-scheme:light; }
+@media (prefers-color-scheme: dark) { :root { --paper:#0F0C26; --surface:#1B1744; --ink:#F3F1FF; --muted:#B9B3DD; --faint:#8E89AD;
+  --line:#2B2656; --soft:#17133A; --accent:#B3A9FF; --accentInk:#0F0C26; --zone:#17133A; --grid:#231F4C;
   --up:#30D158; --dn:#FF453A; --upTxt:#4ADE80; --dnTxt:#FF7A70; --upBg:#123323; --dnBg:#3A1517; color-scheme:dark; } }
 * { box-sizing:border-box; }
 html { -webkit-text-size-adjust:100%; }
@@ -102,7 +105,7 @@ h1 .up { color:var(--upTxt); } h1 .dn { color:var(--dnTxt); }
   </header>
 
   <section id="intro">
-    <p class="kick">Das Börsen-Quiz · 5 Runden</p>
+    <p class="kick">Börsen-Quiz in 5 Runden</p>
     <h1>Steigt oder fällt?</h1>
     <p class="sub">Fünf echte Börsenmomente, vom KI-Hype bis zum Ölpreis unter null. Du siehst den Chart bis zum Stichtag und tippst, wie es weiterging.</p>
     <div class="card"><svg class="chart" id="preview" viewBox="0 0 600 340" role="img" aria-label="Beispiel-Chart mit verdecktem Ausgang"></svg></div>

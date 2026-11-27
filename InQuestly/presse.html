@@ -11,13 +11,15 @@
 <meta property="og:url" content="https://fotiadisapps.de/InQuestly/presse.html">
 <meta property="og:image" content="https://fotiadisapps.de/InQuestly/icon-512.png">
 <link rel="icon" href="favicon.svg">
-<style>
-:root { --paper:#F4F6F9; --surface:#fff; --ink:#131A27; --muted:#586276; --line:#DADFE7; --accent:#2B59E8; --mark:#FFF1C7;
-  --sans:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Arial, sans-serif; --display: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif; }
-@media (prefers-color-scheme: dark) { :root { --paper:#0C1018; --surface:#141A25; --ink:#E8ECF4; --muted:#9AA4B8; --line:#263043; --accent:#7D9BFF; --mark:#4A3B12; color-scheme: dark; } }
+<style>@font-face { font-family: "IQ Nunito"; src: url("fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+
+:root { --paper:#FFFFFF; --surface:#fff; --ink:#20184A; --muted:#5C5780; --line:#E4E0F7; --accent:#5A46E6; --mark:#FFF1C7;
+  --sans:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Arial, sans-serif; --display: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) { :root { --paper:#0F0C26; --surface:#1B1744; --ink:#F3F1FF; --muted:#B9B3DD; --line:#2B2656; --accent:#B3A9FF; --mark:#4A3B12; color-scheme: dark; } }
 body { margin:0; background:var(--paper); color:var(--ink); font:400 1.0625rem/1.6 var(--sans); }
 main { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
-h1 { font:800 2.2rem/1.15 var(--display); margin:0 0 8px; } h2 { font:700 1.25rem/1.3 var(--display); margin:36px 0 10px; }
+h1 { font:900 clamp(2.4rem, 6vw, 3.6rem)/1.02 var(--display); letter-spacing:-.028em; margin:0 0 12px; } h2 { font:800 1.375rem/1.25 var(--display); letter-spacing:-.01em; margin:40px 0 10px; }
 a { color:var(--accent); } ul { padding-left:20px; } address { font-style:normal; line-height:1.7; }
 .nav { font-size:.9rem; color:var(--muted); margin:0 0 28px; line-height:1.9; } .nav a { text-decoration:none; }
 .lead { font-size:1.2rem; color:var(--muted); margin:0 0 8px; }
@@ -31,11 +33,22 @@ a { color:var(--accent); } ul { padding-left:20px; } address { font-style:normal
 .small { font-size:.9rem; color:var(--muted); }
 blockquote { margin:12px 0; padding:2px 16px; border-left:3px solid var(--line); color:var(--muted); }
 @media (max-width:520px) { .facts { grid-template-columns:1fr; gap:0 0; } .facts dd { margin:0 0 8px; } .shots { gap:8px; } .shots img { border-radius:10px; } }
+
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 90%, transparent); box-shadow: 0 1px 0 var(--line); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); view-transition-name: kopf; }
+.top .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 900 1.25rem/1 var(--display); letter-spacing: -0.02em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+.top nav { display: flex; align-items: center; gap: 8px 22px; font-size: .9375rem; font-weight: 600; }
+.top nav a { color: var(--ink); text-decoration: none; opacity: .85; }
+.top nav a.laden { opacity: 1; color: #fff; background: #5A46E6; padding: 10px 16px; border-radius: 999px; font: 800 .9375rem/1 var(--display); }
+@media (max-width: 640px) { .top nav a:not(.laden) { display: none; } }
+.foot { background: #20184A; color: #CFC9F2; padding: 40px 20px calc(40px + env(safe-area-inset-bottom)); font-size: .9375rem; }
+.foot .wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.foot a { color: #CFC9F2; text-decoration: none; } .foot a:hover { color: #fff; text-decoration: underline; }
 </style>
 <meta name="apple-itunes-app" content="app-id=6834527194">
 </head>
-<body><main>
-<p class="nav"><a href="index.html">← InQuestly</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="support.html">Support</a> · <a href="presse.html">Presse</a></p>
+<body><header class="top"><div class="wrap"><a class="brand" href="./"><img src="icon-180.png" alt="" width="36" height="36">InQuestly</a><nav aria-label="Hauptnavigation"><a href="./">Die App</a><a href="blog/">Blog</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&amp;ct=website&amp;mt=8">Gratis laden</a></nav></div></header><main>
 <h1>Presse</h1>
 <p class="lead">Börse lernen wie ein Spiel – fünf Minuten am Tag, ohne echtes Geld.</p>
 <p>Hier findest du alles für einen Artikel, einen Test oder ein Video über InQuestly: Kurzbeschreibung, Fakten, Bildmaterial und den direkten Kontakt zum Entwickler.</p>
@@ -79,5 +92,5 @@ blockquote { margin:12px 0; padding:2px 16px; border-left:3px solid var(--line);
 <li>Pro-Inhalte sind in der App als Pro gekennzeichnet.</li>
 </ul>
 <p class="small">© 2026 Fotiadis Apps · InQuestly ist eine beim Deutschen Patent- und Markenamt angemeldete Marke.</p>
-</main></body>
+</main><footer class="foot"><div class="wrap"><span>© 2026 Fotiadis Apps</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="support.html">Support</a><a href="blog/">Blog</a><a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></div></footer></body>
 </html>

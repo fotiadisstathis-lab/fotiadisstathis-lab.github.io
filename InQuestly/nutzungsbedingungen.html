@@ -5,21 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nutzungsbedingungen – InQuestly</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="favicon.svg">
+<link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" href="icon-180.png">
 <style>
-:root { --paper:#F4F6F9; --surface:#fff; --ink:#131A27; --muted:#586276; --line:#DADFE7; --accent:#2B59E8; --mark:#FFF1C7;
-  --sans:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Arial, sans-serif; --display: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif; }
-@media (prefers-color-scheme: dark) { :root { --paper:#0C1018; --surface:#141A25; --ink:#E8ECF4; --muted:#9AA4B8; --line:#263043; --accent:#7D9BFF; --mark:#4A3B12; color-scheme: dark; } }
-body { margin:0; background:var(--paper); color:var(--ink); font:400 1.0625rem/1.6 var(--sans); }
-main { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
-h1 { font:800 2.2rem/1.15 var(--display); margin:0 0 8px; } h2 { font:700 1.25rem/1.3 var(--display); margin:32px 0 8px; }
-a { color:var(--accent); } .draft { background:var(--mark); border-radius:10px; padding:12px 16px; margin:16px 0 24px; }
-mark { background:var(--mark); color:inherit; padding:0 .2em; border-radius:3px; } ul { padding-left:20px; }
-.nav { font-size:.9rem; color:var(--muted); margin:0 0 28px; line-height:1.9; } .nav a { text-decoration:none; } address { font-style:normal; line-height:1.7; }
+/* Rechtliches und Support im Look der Website: Weiß und Violett, runde Überschriften. Keine fremden Dateien. */
+@font-face { font-family: "IQ Nunito"; src: url("fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+:root { --violett: #5A46E6; --nacht: #20184A; --gelb: #FFC83A; --grund: #FFFFFF; --nebel: #F3F1FF; --text: #20184A; --text-2: #5C5780; --linie: #E4E0F7; --link: #5A46E6; --mark: #FFF1C7;
+  --rund: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif; --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+@media (prefers-color-scheme: dark) { :root { --grund: #0F0C26; --nebel: #17133A; --text: #F3F1FF; --text-2: #B9B3DD; --linie: #2B2656; --link: #B3A9FF; --mark: #4A3B12; color-scheme: dark; } }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--grund); color: var(--text); font: 400 1.0625rem/1.65 var(--schrift); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--gelb); outline-offset: 3px; border-radius: 8px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--grund) 90%, transparent); box-shadow: 0 1px 0 var(--linie); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); view-transition-name: kopf; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 900 1.25rem/1 var(--rund); letter-spacing: -0.02em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+.top nav { display: flex; align-items: center; gap: 8px 22px; font-size: .9375rem; font-weight: 600; }
+.top nav a { color: var(--text); text-decoration: none; opacity: .85; }
+.top nav a.laden { opacity: 1; color: #fff; background: var(--violett); padding: 10px 16px; border-radius: 999px; font: 800 .9375rem/1 var(--rund); }
+@media (max-width: 640px) { .top nav a:not(.laden) { display: none; } }
+main { max-width: 760px; margin: 0 auto; padding: 48px 20px 72px; }
+h1 { font: 900 clamp(2.4rem, 6vw, 3.6rem)/1.02 var(--rund); letter-spacing: -0.028em; margin: 0 0 14px; text-wrap: balance; }
+h2 { font: 800 1.375rem/1.25 var(--rund); letter-spacing: -0.01em; margin: 40px 0 10px; text-wrap: balance; }
+h3 { font: 800 1.125rem/1.3 var(--rund); margin: 28px 0 8px; }
+ul, ol { padding-left: 22px; } li + li { margin-top: 6px; }
+address { font-style: normal; line-height: 1.7; }
+.draft { background: var(--mark); border-radius: 14px; padding: 14px 18px; margin: 16px 0 24px; }
+mark { background: var(--mark); color: inherit; padding: 0 .2em; border-radius: 3px; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; border: 1px solid var(--linie); border-radius: 16px; overflow: hidden; font-size: .9375rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--linie); vertical-align: top; } tr:last-child td { border-bottom: 0; } th { background: var(--nebel); }
+.foot { background: var(--nacht); color: #CFC9F2; padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); font-size: .9375rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.foot a { color: #CFC9F2; text-decoration: none; } .foot a:hover { color: #fff; text-decoration: underline; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 </style>
 </head>
-<body><main>
-<p class="nav"><a href="index.html">← InQuestly</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> · <a href="haftungsausschluss.html">Haftungsausschluss</a> · <a href="support.html">Support</a></p>
+<body><header class="top"><div class="wrap"><a class="brand" href="./"><img src="icon-180.png" alt="" width="36" height="36">InQuestly</a><nav aria-label="Hauptnavigation"><a href="./">Die App</a><a href="blog/">Blog</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&amp;ct=website&amp;mt=8">Gratis laden</a></nav></div></header><main>
 <h1>Nutzungsbedingungen InQuestly</h1>
 
 <h2>1. Anbieter und Geltung</h2>
@@ -65,5 +89,5 @@ mark { background:var(--mark); color:inherit; padding:0 .2em; border-radius:3px;
 <p>Wir können diese Bedingungen anpassen, wenn sich die App oder die Rechtslage ändert. Über wesentliche Änderungen informieren wir in der App.</p>
 
 <p style="margin-top:32px;color:var(--muted)">Stand: November 2026 · <a href="datenschutz.html">Datenschutz</a></p>
-</main></body>
+</main><footer class="foot"><div class="wrap"><span>© 2026 Fotiadis Apps</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a><a href="haftungsausschluss.html">Haftungsausschluss</a><a href="support.html">Support</a><a href="blog/">Blog</a><a href="presse.html">Presse</a><a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></div></footer></body>
 </html>
