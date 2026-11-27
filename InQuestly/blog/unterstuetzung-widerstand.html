@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unterstützung und Widerstand einfach erklärt (mit Beispielen) | InQuestly</title>
+<meta name="description" content="Was sind Unterstützung und Widerstand im Chart? So zeichnest du die Zonen richtig ein, erkennst echte Ausbrüche und vermeidest typische Fehler.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/blog/unterstuetzung-widerstand.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/blog/unterstuetzung-widerstand.html">
+<meta property="og:title" content="Unterstützung und Widerstand einfach erklärt (mit Beispielen) | InQuestly">
+<meta property="og:description" content="Was sind Unterstützung und Widerstand im Chart? So zeichnest du die Zonen richtig ein, erkennst echte Ausbrüche und vermeidest typische Fehler.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/blog/og-unterstuetzung-widerstand.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg"><link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="InQuestly Blog" href="https://fotiadisapps.de/InQuestly/blog/feed.xml">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>:root {
+  --paper: #F6F1E4; --surface: #FFFFFF; --ink: #10261C; --muted: #55665C; --line: #E2DCCB; --accent: #5B4FE0; --accent-soft: #E9E7FD;
+  --up: #12916A; --down: #D9483B;
+  --display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #0B1A12; --surface: #12271B; --ink: #F1EEE3; --muted: #A4B5A9; --line: #24402F; --accent: #A3A4FA; --accent-soft: #23234A; --up: #3BC992; --down: #FF6B5E; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.7 var(--sans); }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.18; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); font-weight: 760; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.top { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 750 1.125rem/1 var(--display); }
+.brand img { width: 34px; height: 34px; border-radius: 8px; }
+.nav { display: flex; align-items: center; gap: 6px 18px; flex-wrap: wrap; font-size: .9375rem; }
+.nav a { color: var(--muted); text-decoration: none; } .nav a:hover { color: var(--ink); }
+.nav a.laden { color: #fff; background: var(--accent); padding: 8px 14px; border-radius: 10px; font-weight: 650; }
+.kicker { font: 800 .78rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+.lead { font-size: 1.2rem; color: var(--muted); margin-top: 16px; }
+.meta { color: var(--muted); font-size: .9rem; margin-top: 12px; }
+.artikel { max-width: 760px; padding-block: 36px 56px; }
+.krumen { font-size: .875rem; color: var(--muted); margin-bottom: 22px; }
+.krumen a { color: var(--muted); }
+.inhalt { margin: 28px 0; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; font-size: .97rem; }
+.inhalt ol { margin: 8px 0 0; padding-left: 22px; }
+.appbild { margin: 32px auto; max-width: 300px; text-align: center; }
+.appbild img { width: 100%; height: auto; border-radius: 28px; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(16,38,28,.14); display: block; }
+.appbild figcaption { font-size: .875rem; color: var(--muted); margin-top: 10px; }
+.text h2 { margin: 40px 0 12px; }
+.text h3 { margin: 26px 0 8px; }
+.text p + p, .text ul + p, .text ol + p, .text p + ul, .text p + ol { margin-top: 14px; }
+.text ul, .text ol { padding-left: 22px; margin: 14px 0; }
+.text li + li { margin-top: 6px; }
+.hinweis { margin: 22px 0; padding: 14px 18px; background: var(--accent-soft); border-radius: 12px; }
+.tabelle { overflow-x: auto; margin: 18px 0; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; background: var(--surface); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { font-weight: 700; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+details + details { margin-top: 10px; }
+summary { cursor: pointer; font-weight: 650; }
+details p { color: var(--muted); margin-top: 8px; }
+.hinweis-klein { color: var(--muted); font-size: .875rem; margin-top: 32px; }
+.cta { display: flex; gap: 18px; align-items: flex-start; margin: 32px 0; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.cta h2 { margin-bottom: 8px; font-size: 1.35rem; }
+.cta p { color: var(--muted); margin-bottom: 14px; }
+.cta img { flex: none; }
+.knopf { display: inline-block; background: var(--ink); color: var(--paper); text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 650; }
+.klein { color: var(--muted); font-size: .85rem; margin-left: 8px; }
+.mehr ul { padding-left: 20px; }
+.mehr h2 { margin-bottom: 10px; }
+.blogkopf { padding-block: 44px 20px; max-width: 760px; }
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; padding-bottom: 20px; }
+.karte { display: grid; gap: 8px; align-content: start; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 0 0 18px; color: var(--ink); text-decoration: none; overflow: hidden; }
+.karte img { width: 100%; height: auto; display: block; }
+.karte .kicker, .karte h2, .karte p, .karte .meta { margin: 0 18px; }
+.karte .kicker { margin-top: 10px; }
+.karte h2 { font-size: 1.25rem; }
+.karte p { color: var(--muted); font-size: .97rem; }
+.karte:hover h2 { color: var(--accent); }
+.foot { border-top: 1px solid var(--line); padding-block: 28px 48px; color: var(--muted); font-size: .92rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 620px) { .cta { flex-direction: column; } .lead { font-size: 1.1rem; } }
+.textbild { margin: 28px 0; }
+.textbild img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; background: #fff; }
+.textbild figcaption { font-size: .875rem; color: var(--muted); margin-top: 8px; }
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Unterstützung und Widerstand einfach erklärt (mit Beispielen)", "description": "Was sind Unterstützung und Widerstand im Chart? So zeichnest du die Zonen richtig ein, erkennst echte Ausbrüche und vermeidest typische Fehler.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-unterstuetzung-widerstand.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/unterstuetzung-widerstand.html", "keywords": "Unterstützung und Widerstand, Support und Resistance, Unterstützung Widerstand erkennen, Unterstützung einzeichnen, Charttechnik lernen, Ausbruch, Rollentausch", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Unterstützung und Widerstand einfach erklärt (mit Beispielen)", "item": "https://fotiadisapps.de/InQuestly/blog/unterstuetzung-widerstand.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist eine Unterstützung im Chart?", "acceptedAnswer": {"@type": "Answer", "text": "Ein Preisbereich, an dem der Kurs in der Vergangenheit mehrmals nach oben gedreht hat, weil dort viele Käufer zugegriffen haben. Man spricht auch von Support."}}, {"@type": "Question", "name": "Was ist ein Widerstand an der Börse?", "acceptedAnswer": {"@type": "Answer", "text": "Ein Preisbereich, an dem Anstiege mehrmals gestoppt wurden, weil dort viele verkauft haben. Englisch heißt er Resistance."}}, {"@type": "Question", "name": "Wie zeichne ich Unterstützung und Widerstand ein?", "acceptedAnswer": {"@type": "Answer", "text": "Im Tages- oder Wochenchart deutliche Hochs und Tiefs suchen, die mehrmals getestet wurden, und dort eine schmale Zone statt einer exakten Linie einzeichnen."}}, {"@type": "Question", "name": "Was bedeutet Rollentausch?", "acceptedAnswer": {"@type": "Answer", "text": "Ein gebrochener Widerstand wird oft zur neuen Unterstützung und eine gebrochene Unterstützung zum neuen Widerstand."}}, {"@type": "Question", "name": "Woran erkenne ich einen echten Ausbruch?", "acceptedAnswer": {"@type": "Answer", "text": "Typisch sind ein Schlusskurs jenseits der Zone, deutlich höheres Volumen und dass der Kurs sich auch nach einem Rücksetzer hält. Sicherheit gibt es nie."}}, {"@type": "Question", "name": "Wo setze ich den Stop bei einer Unterstützung?", "acceptedAnswer": {"@type": "Answer", "text": "Mit etwas Abstand unter der Zone, nicht direkt auf der Linie, und so, dass ein Fehltrade nur einen kleinen Teil deines Kontos kostet."}}, {"@type": "Question", "name": "Funktionieren Unterstützung und Widerstand immer?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Sie zeigen, wo eine Reaktion wahrscheinlicher ist, aber Nachrichten und starke Trends können jede Zone brechen. Deshalb gehört zu jedem Trade ein Stop."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../icon-180.png" alt="" width="34" height="34">InQuestly</a>
+  <nav class="nav" aria-label="Hauptnavigation"><a href="../">Die App</a><a href="./">Blog</a><a href="../quiz.html">Börsen-Quiz</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis laden</a></nav>
+</div></header>
+<main>
+<article class="wrap artikel">
+  <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
+  <p class="kicker">Charttechnik</p>
+  <h1>Unterstützung und Widerstand einfach erklärt (mit Beispielen)</h1>
+  <p class="meta">27. November 2026 · 5 Min. Lesezeit · von Stathis Fotiadis</p>
+  <p class="lead">Unterstützung und Widerstand sind die wichtigsten Linien im Chart. Hier lernst du, wo sie entstehen, wie du sie als Zone einzeichnest und woran du einen echten Ausbruch von einer Falle unterscheidest.</p>
+  <nav class="inhalt" aria-label="Inhalt"><b>Inhalt</b><ol><li><a href="#warum-entstehen-unterstuetzung-und-widerstand">Warum entstehen Unterstützung und Widerstand?</a></li><li><a href="#unterstuetzung-und-widerstand-richtig-einzeichnen">Unterstützung und Widerstand richtig einzeichnen</a></li><li><a href="#rollentausch-aus-widerstand-wird-unterstuetzung">Rollentausch: Aus Widerstand wird Unterstützung</a></li><li><a href="#echter-ausbruch-oder-falle">Echter Ausbruch oder Falle?</a></li><li><a href="#so-nutzen-trader-die-zonen">So nutzen Trader die Zonen</a></li><li><a href="#typische-fehler">Typische Fehler</a></li><li><a href="#unterstuetzung-und-widerstand-in-formationen">Unterstützung und Widerstand in Formationen</a></li><li><a href="#ueben-ohne-echtes-geld">Üben ohne echtes Geld</a></li></ol></nav>
+  <figure class="appbild"><img src="bild-unterstuetzung-widerstand.jpg" alt="Lektion „Unterstützung“ aus dem Gratis-Kurs Charttechnik &amp; Muster in InQuestly." width="540" loading="lazy"><figcaption>Lektion „Unterstützung“ aus dem Gratis-Kurs Charttechnik &amp; Muster in InQuestly.</figcaption></figure>
+  <div class="text">
+<p><strong>Unterstützung</strong> und <strong>Widerstand</strong> (englisch Support und Resistance) sind Preisbereiche, an denen ein Kurs in der Vergangenheit immer wieder gedreht hat. An einer Unterstützung haben viele Käufer zugegriffen und den Fall gestoppt. An einem Widerstand haben viele verkauft und den Anstieg gebremst. Kaum ein Werkzeug der Charttechnik wird so oft genutzt, und kaum eines ist so leicht zu lernen.</p>
+<aside class="hinweis"><p>Kurz gesagt: Eine Unterstützung ist ein „Boden“ unter dem Kurs, ein Widerstand ein „Deckel“ darüber. Beide sind eher Zonen als exakte Linien.</p></aside>
+<h2 id="warum-entstehen-unterstuetzung-und-widerstand">Warum entstehen Unterstützung und Widerstand?</h2>
+<p>Hinter jeder Zone stehen Menschen und ihre Erinnerung an einen Preis:</p>
+<ul><li><strong>Käufer, die einen Einstieg verpasst haben,</strong> warten darauf, dass der Kurs auf das alte Niveau zurückkommt, und kaufen dann.</li><li><strong>Anleger, die mit Verlust im Markt sind,</strong> verkaufen oft, sobald sie ihren Einstiegskurs wieder erreichen. Das bremst Anstiege.</li><li><strong>Runde Zahlen</strong> wie 100 €, 1.000 Punkte oder 20.000 Punkte im DAX ziehen Aufmerksamkeit und Orders an.</li><li><strong>Viele schauen auf dieselben Linien.</strong> Weil viele Marktteilnehmer dieselben Hochs und Tiefs sehen, liegen dort besonders viele Kauf- und Verkaufsaufträge.</li></ul>
+<h2 id="unterstuetzung-und-widerstand-richtig-einzeichnen">Unterstützung und Widerstand richtig einzeichnen</h2>
+<ol><li><strong>Mit einem größeren Zeitraum anfangen.</strong> Im Tages- oder Wochenchart sind die wichtigen Zonen klarer als im Minutenchart.</li><li><strong>Deutliche Wendepunkte suchen.</strong> Markiere Tiefs, an denen der Kurs mehrmals nach oben gedreht hat, und Hochs, an denen er mehrmals gefallen ist.</li><li><strong>Eine Zone statt einer Linie zeichnen.</strong> Kurse drehen selten auf den Cent genau. Ein schmales Band über die Dochte und Kerzenkörper ist realistischer.</li><li><strong>Nicht zu viele Linien.</strong> Zwei oder drei wichtige Zonen über und unter dem aktuellen Kurs reichen. Wer jede kleine Schwankung markiert, sieht am Ende nichts mehr.</li><li><strong>Das Volumen prüfen.</strong> Zonen, an denen besonders viel gehandelt wurde, sind meist wichtiger.</li></ol>
+<div class="tabelle"><table><thead><tr><th>Merkmal</th><th>macht eine Zone wichtiger</th></tr></thead><tbody><tr><td>Anzahl der Berührungen</td><td>Der Kurs hat dort mehrmals gedreht.</td></tr><tr><td>Zeitraum</td><td>Die Zone ist im Wochen- oder Monatschart sichtbar.</td></tr><tr><td>Volumen</td><td>An der Zone wurde überdurchschnittlich viel gehandelt.</td></tr><tr><td>Runde Zahl</td><td>Die Zone liegt bei einem auffälligen Preis wie 50 € oder 100 €.</td></tr><tr><td>Alter Rekord</td><td>Die Zone ist ein Allzeithoch oder ein Mehrjahrestief.</td></tr></tbody></table></div>
+<h2 id="rollentausch-aus-widerstand-wird-unterstuetzung">Rollentausch: Aus Widerstand wird Unterstützung</h2>
+<p>Bricht der Kurs über einen Widerstand, wird diese Zone häufig zur neuen Unterstützung. Wer vorher dort verkauft hat, ärgert sich und kauft beim Rücksetzer zurück. Umgekehrt wird eine gebrochene Unterstützung oft zum neuen Widerstand. Dieser <strong>Rollentausch</strong> ist einer der Gründe, warum Trader nach einem Ausbruch auf einen Rücklauf an die alte Zone warten, den sogenannten <strong>Pullback</strong>.</p>
+<h2 id="echter-ausbruch-oder-falle">Echter Ausbruch oder Falle?</h2>
+<p>Nicht jeder Ausbruch hält. Steigt der Kurs kurz über einen Widerstand und fällt dann wieder darunter, spricht man von einer <strong>Bullenfalle</strong>. Das Gegenstück unter einer Unterstützung heißt <strong>Bärenfalle</strong>. Diese Hinweise sprechen eher für einen echten Ausbruch:</p>
+<ul><li>Der Kurs <strong>schließt</strong> über dem Widerstand, nicht nur ein Docht ragt darüber.</li><li>Das <strong>Volumen</strong> ist beim Ausbruch deutlich höher als im Durchschnitt.</li><li>Der Kurs hält sich in den folgenden Tagen über der Zone, auch nach einem Rücksetzer.</li></ul>
+<p>Eine Garantie gibt es nie. Deshalb gehört zu jedem Trade ein Stop, dazu mehr unten.</p>
+<h2 id="so-nutzen-trader-die-zonen">So nutzen Trader die Zonen</h2>
+<div class="tabelle"><table><thead><tr><th>Situation</th><th>typische Idee</th><th>Stop</th></tr></thead><tbody><tr><td>Kurs läuft an eine Unterstützung</td><td>Kauf, wenn der Kurs dort dreht</td><td>knapp unter der Zone</td></tr><tr><td>Kurs läuft an einen Widerstand</td><td>Gewinne mitnehmen oder abwarten</td><td>–</td></tr><tr><td>Ausbruch über einen Widerstand</td><td>Kauf beim Ausbruch oder beim Pullback</td><td>unter der alten Widerstandszone</td></tr><tr><td>Bruch einer Unterstützung</td><td>Position schließen, nicht nachkaufen</td><td>–</td></tr></tbody></table></div>
+<p>Wie weit der Stop entfernt sein darf und wie viele Aktien du kaufst, entscheiden das <a href="chance-risiko-verhaeltnis.html">Chance-Risiko-Verhältnis</a> und die <a href="positionsgroesse-berechnen.html">Positionsgröße</a>. Ein Trade lohnt sich meist nur, wenn das Kursziel deutlich weiter weg ist als der Stop.</p>
+<h2 id="typische-fehler">Typische Fehler</h2>
+<ul><li><strong>Linien auf den Cent genau zeichnen</strong> und dann überrascht sein, wenn der Kurs ein paar Cent darunter dreht.</li><li><strong>Den Stop genau auf die Unterstützung legen.</strong> Dort liegen viele Stops, ein kurzer Rutsch darunter löst sie aus. Etwas Abstand ist sinnvoller.</li><li><strong>Einer Zone blind vertrauen.</strong> Je öfter eine Unterstützung getestet wird, desto mehr Käufer sind schon verbraucht. Irgendwann bricht sie.</li><li><strong>Nachrichten ignorieren.</strong> Zahlen, Zinsentscheide oder Krisen können jede Zone über Nacht bedeutungslos machen, oft mit einer <a href="kursluecken-gap-typen.html">Kurslücke</a>.</li></ul>
+<h2 id="unterstuetzung-und-widerstand-in-formationen">Unterstützung und Widerstand in Formationen</h2>
+<p>Viele <a href="chartmuster.html">Chartmuster</a> bestehen aus nichts anderem als Unterstützungen und Widerständen: Der Doppelboden ist eine doppelt getestete Unterstützung, das Rechteck eine Seitwärtsphase zwischen beiden. Auch <a href="kerzenmuster.html">Kerzenmuster</a> wie der Hammer sind an einer Unterstützung aussagekräftiger als mitten im Nirgendwo.</p>
+<h2 id="ueben-ohne-echtes-geld">Üben ohne echtes Geld</h2>
+<p>Zonen erkennen ist Übungssache. In InQuestly erklärt die Lektion „Unterstützung“ im Gratis-Kurs Charttechnik &amp; Muster die Grundidee an einem Chart. Danach trainierst du sie in den Gratis-Spielen „Bulle oder Bär?“ und „Muster-Detektiv“: Wohin geht der Kurs, nachdem er eine Zone erreicht hat? Nach jeder Antwort erklärt die App, warum. Die Kursverläufe zum Üben sind nachgebildet, echtes Geld ist nie im Spiel.</p>
+<h2 id="haeufige-fragen">Häufige Fragen</h2>
+<details><summary>Was ist eine Unterstützung im Chart?</summary><p>Ein Preisbereich, an dem der Kurs in der Vergangenheit mehrmals nach oben gedreht hat, weil dort viele Käufer zugegriffen haben. Man spricht auch von Support.</p></details>
+<details><summary>Was ist ein Widerstand an der Börse?</summary><p>Ein Preisbereich, an dem Anstiege mehrmals gestoppt wurden, weil dort viele verkauft haben. Englisch heißt er Resistance.</p></details>
+<details><summary>Wie zeichne ich Unterstützung und Widerstand ein?</summary><p>Im Tages- oder Wochenchart deutliche Hochs und Tiefs suchen, die mehrmals getestet wurden, und dort eine schmale Zone statt einer exakten Linie einzeichnen.</p></details>
+<details><summary>Was bedeutet Rollentausch?</summary><p>Ein gebrochener Widerstand wird oft zur neuen Unterstützung und eine gebrochene Unterstützung zum neuen Widerstand.</p></details>
+<details><summary>Woran erkenne ich einen echten Ausbruch?</summary><p>Typisch sind ein Schlusskurs jenseits der Zone, deutlich höheres Volumen und dass der Kurs sich auch nach einem Rücksetzer hält. Sicherheit gibt es nie.</p></details>
+<details><summary>Wo setze ich den Stop bei einer Unterstützung?</summary><p>Mit etwas Abstand unter der Zone, nicht direkt auf der Linie, und so, dass ein Fehltrade nur einen kleinen Teil deines Kontos kostet.</p></details>
+<details><summary>Funktionieren Unterstützung und Widerstand immer?</summary><p>Nein. Sie zeigen, wo eine Reaktion wahrscheinlicher ist, aber Nachrichten und starke Trends können jede Zone brechen. Deshalb gehört zu jedem Trade ein Stop.</p></details>
+  </div>
+  <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
+  <aside class="cta">
+  <img src="../mascot.svg" alt="" width="84" height="80">
+  <div><h2>Üben statt nur lesen</h2>
+  <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis im App Store</a> <span class="klein">mit In-App-Käufen · für iPhone</span></div>
+</aside>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="kgv-einfach-erklaert.html">KGV einfach erklärt: Wann ist eine Aktie günstig?</a></li><li><a href="rsi-einfach-erklaert.html">RSI einfach erklärt: Überkauft, überverkauft und Divergenz</a></li><li><a href="aktien-app-anfaenger.html">Aktien-App für Anfänger: Welche Börsen-App wofür?</a></li></ul></section>
+</article>
+</main>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+</div></footer>
+</body>
+</html>

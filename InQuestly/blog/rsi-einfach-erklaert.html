@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RSI einfach erklärt: Überkauft, überverkauft und Divergenz | InQuestly</title>
+<meta name="description" content="Was zeigt der RSI-Indikator? Formel, Einstellung (14 Tage), die Grenzen 70 und 30, Divergenzen und typische Fehler, einfach erklärt mit Rechenbeispiel.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html">
+<meta property="og:title" content="RSI einfach erklärt: Überkauft, überverkauft und Divergenz | InQuestly">
+<meta property="og:description" content="Was zeigt der RSI-Indikator? Formel, Einstellung (14 Tage), die Grenzen 70 und 30, Divergenzen und typische Fehler, einfach erklärt mit Rechenbeispiel.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/blog/og-rsi-einfach-erklaert.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg"><link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="InQuestly Blog" href="https://fotiadisapps.de/InQuestly/blog/feed.xml">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>:root {
+  --paper: #F6F1E4; --surface: #FFFFFF; --ink: #10261C; --muted: #55665C; --line: #E2DCCB; --accent: #5B4FE0; --accent-soft: #E9E7FD;
+  --up: #12916A; --down: #D9483B;
+  --display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #0B1A12; --surface: #12271B; --ink: #F1EEE3; --muted: #A4B5A9; --line: #24402F; --accent: #A3A4FA; --accent-soft: #23234A; --up: #3BC992; --down: #FF6B5E; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.7 var(--sans); }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.18; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); font-weight: 760; letter-spacing: -0.01em; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.top { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 750 1.125rem/1 var(--display); }
+.brand img { width: 34px; height: 34px; border-radius: 8px; }
+.nav { display: flex; align-items: center; gap: 6px 18px; flex-wrap: wrap; font-size: .9375rem; }
+.nav a { color: var(--muted); text-decoration: none; } .nav a:hover { color: var(--ink); }
+.nav a.laden { color: #fff; background: var(--accent); padding: 8px 14px; border-radius: 10px; font-weight: 650; }
+.kicker { font: 800 .78rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+.lead { font-size: 1.2rem; color: var(--muted); margin-top: 16px; }
+.meta { color: var(--muted); font-size: .9rem; margin-top: 12px; }
+.artikel { max-width: 760px; padding-block: 36px 56px; }
+.krumen { font-size: .875rem; color: var(--muted); margin-bottom: 22px; }
+.krumen a { color: var(--muted); }
+.inhalt { margin: 28px 0; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; font-size: .97rem; }
+.inhalt ol { margin: 8px 0 0; padding-left: 22px; }
+.appbild { margin: 32px auto; max-width: 300px; text-align: center; }
+.appbild img { width: 100%; height: auto; border-radius: 28px; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(16,38,28,.14); display: block; }
+.appbild figcaption { font-size: .875rem; color: var(--muted); margin-top: 10px; }
+.text h2 { margin: 40px 0 12px; }
+.text h3 { margin: 26px 0 8px; }
+.text p + p, .text ul + p, .text ol + p, .text p + ul, .text p + ol { margin-top: 14px; }
+.text ul, .text ol { padding-left: 22px; margin: 14px 0; }
+.text li + li { margin-top: 6px; }
+.hinweis { margin: 22px 0; padding: 14px 18px; background: var(--accent-soft); border-radius: 12px; }
+.tabelle { overflow-x: auto; margin: 18px 0; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; background: var(--surface); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { font-weight: 700; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+details + details { margin-top: 10px; }
+summary { cursor: pointer; font-weight: 650; }
+details p { color: var(--muted); margin-top: 8px; }
+.hinweis-klein { color: var(--muted); font-size: .875rem; margin-top: 32px; }
+.cta { display: flex; gap: 18px; align-items: flex-start; margin: 32px 0; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.cta h2 { margin-bottom: 8px; font-size: 1.35rem; }
+.cta p { color: var(--muted); margin-bottom: 14px; }
+.cta img { flex: none; }
+.knopf { display: inline-block; background: var(--ink); color: var(--paper); text-decoration: none; padding: 12px 18px; border-radius: 12px; font-weight: 650; }
+.klein { color: var(--muted); font-size: .85rem; margin-left: 8px; }
+.mehr ul { padding-left: 20px; }
+.mehr h2 { margin-bottom: 10px; }
+.blogkopf { padding-block: 44px 20px; max-width: 760px; }
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; padding-bottom: 20px; }
+.karte { display: grid; gap: 8px; align-content: start; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 0 0 18px; color: var(--ink); text-decoration: none; overflow: hidden; }
+.karte img { width: 100%; height: auto; display: block; }
+.karte .kicker, .karte h2, .karte p, .karte .meta { margin: 0 18px; }
+.karte .kicker { margin-top: 10px; }
+.karte h2 { font-size: 1.25rem; }
+.karte p { color: var(--muted); font-size: .97rem; }
+.karte:hover h2 { color: var(--accent); }
+.foot { border-top: 1px solid var(--line); padding-block: 28px 48px; color: var(--muted); font-size: .92rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+@media (max-width: 620px) { .cta { flex-direction: column; } .lead { font-size: 1.1rem; } }
+.textbild { margin: 28px 0; }
+.textbild img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; background: #fff; }
+.textbild figcaption { font-size: .875rem; color: var(--muted); margin-top: 8px; }
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "RSI einfach erklärt: Überkauft, überverkauft und Divergenz", "description": "Was zeigt der RSI-Indikator? Formel, Einstellung (14 Tage), die Grenzen 70 und 30, Divergenzen und typische Fehler, einfach erklärt mit Rechenbeispiel.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-rsi-einfach-erklaert.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html", "keywords": "RSI, RSI Indikator, RSI einfach erklärt, Relative Stärke Index, überkauft überverkauft, RSI Divergenz, RSI 14, Indikatoren Trading", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "RSI einfach erklärt: Überkauft, überverkauft und Divergenz", "item": "https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist der RSI einfach erklärt?", "acceptedAnswer": {"@type": "Answer", "text": "Der Relative-Stärke-Index vergleicht die durchschnittlichen Gewinne und Verluste der letzten Tage und zeigt das Ergebnis auf einer Skala von 0 bis 100."}}, {"@type": "Question", "name": "Was bedeutet ein RSI über 70?", "acceptedAnswer": {"@type": "Answer", "text": "Der Kurs gilt als überkauft, weil er zuletzt stark gestiegen ist. Das ist kein sicheres Verkaufssignal, in starken Trends bleibt der RSI oft lange über 70."}}, {"@type": "Question", "name": "Was bedeutet ein RSI unter 30?", "acceptedAnswer": {"@type": "Answer", "text": "Der Kurs gilt als überverkauft, weil er zuletzt stark gefallen ist. Eine Gegenbewegung ist möglich, aber nicht sicher."}}, {"@type": "Question", "name": "Welche RSI-Einstellung ist die beste?", "acceptedAnswer": {"@type": "Answer", "text": "Am verbreitetsten ist der Standard von 14 Perioden. Kürzere Einstellungen reagieren schneller und liefern mehr Fehlsignale, längere sind träger."}}, {"@type": "Question", "name": "Was ist eine RSI-Divergenz?", "acceptedAnswer": {"@type": "Answer", "text": "Kurs und RSI laufen auseinander, etwa ein höheres Hoch im Kurs bei einem tieferen Hoch im RSI. Das kann auf nachlassenden Schwung hindeuten, bestätigt aber keine Wende."}}, {"@type": "Question", "name": "Wer hat den RSI erfunden?", "acceptedAnswer": {"@type": "Answer", "text": "J. Welles Wilder Jr., der ihn 1978 in seinem Buch „New Concepts in Technical Trading Systems“ vorstellte."}}, {"@type": "Question", "name": "Kann man nur mit dem RSI traden?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht sinnvoll. Der RSI ist ein Werkzeug unter vielen und funktioniert am besten zusammen mit Trend, Unterstützung und Widerstand und einem festen Risiko pro Trade."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../icon-180.png" alt="" width="34" height="34">InQuestly</a>
+  <nav class="nav" aria-label="Hauptnavigation"><a href="../">Die App</a><a href="./">Blog</a><a href="../quiz.html">Börsen-Quiz</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis laden</a></nav>
+</div></header>
+<main>
+<article class="wrap artikel">
+  <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
+  <p class="kicker">Indikatoren</p>
+  <h1>RSI einfach erklärt: Überkauft, überverkauft und Divergenz</h1>
+  <p class="meta">27. November 2026 · 4 Min. Lesezeit · von Stathis Fotiadis</p>
+  <p class="lead">Der RSI gehört zu den beliebtesten Indikatoren. Er zeigt, wie stark die Aufwärts- und Abwärtsbewegungen der letzten Tage waren. Hier lernst du, wie er berechnet wird, was 70 und 30 bedeuten und warum „überkauft“ kein Verkaufssignal ist.</p>
+  <nav class="inhalt" aria-label="Inhalt"><b>Inhalt</b><ol><li><a href="#so-wird-der-rsi-berechnet">So wird der RSI berechnet</a></li><li><a href="#ueberkauft-und-ueberverkauft-die-grenzen-70-und-30">Überkauft und überverkauft: die Grenzen 70 und 30</a></li><li><a href="#divergenzen-wenn-kurs-und-rsi-auseinanderlaufen">Divergenzen: wenn Kurs und RSI auseinanderlaufen</a></li><li><a href="#so-nutzen-trader-den-rsi-sinnvoll">So nutzen Trader den RSI sinnvoll</a></li><li><a href="#typische-fehler-mit-dem-rsi">Typische Fehler mit dem RSI</a></li><li><a href="#indikatoren-ueben-ohne-echtes-geld">Indikatoren üben ohne echtes Geld</a></li></ol></nav>
+  <figure class="appbild"><img src="bild-rsi-einfach-erklaert.jpg" alt="Üben in InQuestly: Chart-Trainer und Spiele, die Grundlagen sind gratis." width="540" loading="lazy"><figcaption>Üben in InQuestly: Chart-Trainer und Spiele, die Grundlagen sind gratis.</figcaption></figure>
+  <div class="text">
+<p>Der <strong>RSI</strong> (Relative-Stärke-Index) misst, wie stark ein Kurs in den letzten Tagen gestiegen oder gefallen ist. Er wurde 1978 von J. Welles Wilder Jr. vorgestellt und schwankt immer zwischen 0 und 100. Hohe Werte bedeuten, dass zuletzt die Anstiege überwogen haben, niedrige Werte, dass die Verluste überwogen haben.</p>
+<aside class="hinweis"><p>Wichtig vorweg: Der RSI misst die Stärke der vergangenen Bewegung. Er sagt nicht voraus, wohin der Kurs als Nächstes geht.</p></aside>
+<h2 id="so-wird-der-rsi-berechnet">So wird der RSI berechnet</h2>
+<ol><li>Für jeden Tag des Zeitraums (meist <strong>14 Tage</strong>) wird notiert, wie viel der Kurs gestiegen oder gefallen ist.</li><li>Daraus entstehen der <strong>durchschnittliche Gewinn</strong> der Aufwärtstage und der <strong>durchschnittliche Verlust</strong> der Abwärtstage. Wilder verwendet dafür einen geglätteten Durchschnitt.</li><li>Die <strong>relative Stärke (RS)</strong> ist das Verhältnis: durchschnittlicher Gewinn ÷ durchschnittlicher Verlust.</li><li>Der RSI rechnet das in eine Skala von 0 bis 100 um:</li></ol>
+<aside class="hinweis"><p>RSI = 100 − 100 ÷ (1 + RS)</p></aside>
+<p>Ein Beispiel: Der durchschnittliche Gewinn beträgt 1,20 €, der durchschnittliche Verlust 0,60 €. Dann ist RS = 1,20 ÷ 0,60 = 2 und der RSI = 100 − 100 ÷ 3 = <strong>66,7</strong>. Die Aufwärtsbewegungen waren also deutlich stärker als die Abwärtsbewegungen.</p>
+<div class="tabelle"><table><thead><tr><th>durchschnittlicher Gewinn</th><th>durchschnittlicher Verlust</th><th>RS</th><th>RSI</th></tr></thead><tbody><tr><td>1,00 €</td><td>1,00 €</td><td>1</td><td>50</td></tr><tr><td>1,20 €</td><td>0,60 €</td><td>2</td><td>66,7</td></tr><tr><td>1,50 €</td><td>0,50 €</td><td>3</td><td>75</td></tr><tr><td>0,50 €</td><td>1,50 €</td><td>0,33</td><td>25</td></tr></tbody></table></div>
+<h2 id="ueberkauft-und-ueberverkauft-die-grenzen-70-und-30">Überkauft und überverkauft: die Grenzen 70 und 30</h2>
+<ul><li><strong>Über 70</strong> gilt ein Wert als <strong>überkauft</strong>: Der Kurs ist in kurzer Zeit stark gestiegen.</li><li><strong>Unter 30</strong> gilt er als <strong>überverkauft</strong>: Der Kurs ist in kurzer Zeit stark gefallen.</li><li><strong>Um 50</strong> halten sich Anstiege und Verluste ungefähr die Waage.</li></ul>
+<p>Manche Trader nutzen strengere Grenzen wie 80 und 20, um weniger, aber deutlichere Signale zu bekommen.</p>
+<aside class="hinweis"><p>„Überkauft“ heißt nicht „muss fallen“. In einem starken Aufwärtstrend kann der RSI wochenlang über 70 bleiben, während der Kurs weiter steigt. Wer dann verkauft, steigt zu früh aus.</p></aside>
+<h2 id="divergenzen-wenn-kurs-und-rsi-auseinanderlaufen">Divergenzen: wenn Kurs und RSI auseinanderlaufen</h2>
+<p>Eine <strong>Divergenz</strong> entsteht, wenn der Kurs und der RSI in unterschiedliche Richtungen zeigen:</p>
+<div class="tabelle"><table><thead><tr><th>Divergenz</th><th>Kurs</th><th>RSI</th><th>mögliche Bedeutung</th></tr></thead><tbody><tr><td>bärisch</td><td>macht ein höheres Hoch</td><td>macht ein tieferes Hoch</td><td>Der Aufwärtsschwung lässt nach.</td></tr><tr><td>bullisch</td><td>macht ein tieferes Tief</td><td>macht ein höheres Tief</td><td>Der Verkaufsdruck lässt nach.</td></tr></tbody></table></div>
+<p>Eine Divergenz ist ein Hinweis, keine Bestätigung. Erst wenn der Kurs zum Beispiel eine <a href="unterstuetzung-widerstand.html">Unterstützung oder einen Widerstand</a> bricht oder ein passendes <a href="kerzenmuster.html">Kerzenmuster</a> bildet, sehen viele Trader die Wende als bestätigt an.</p>
+<h2 id="so-nutzen-trader-den-rsi-sinnvoll">So nutzen Trader den RSI sinnvoll</h2>
+<ul><li><strong>Mit dem Trend handeln:</strong> Im Aufwärtstrend achten viele auf Rücksetzer, bei denen der RSI in die Nähe von 40 fällt und wieder dreht, statt auf Verkaufssignale über 70.</li><li><strong>Die 50 als Filter:</strong> Liegt der RSI dauerhaft über 50, überwiegt die Kaufkraft, darunter die Verkaufskraft.</li><li><strong>Mit anderen Werkzeugen kombinieren:</strong> Der RSI ist am aussagekräftigsten zusammen mit Trend, Zonen und Volumen, etwa bei den <a href="chartmuster.html">Chartmustern</a>.</li><li><strong>Zeitrahmen beachten:</strong> Ein RSI im Stundenchart reagiert viel schneller als im Wochenchart und liefert entsprechend mehr Fehlsignale.</li></ul>
+<h2 id="typische-fehler-mit-dem-rsi">Typische Fehler mit dem RSI</h2>
+<ul><li><strong>Jedes Überkauft als Verkaufssignal nehmen.</strong> Gerade in starken Trends kostet das viel Geld.</li><li><strong>Die Einstellung ständig ändern,</strong> bis der Indikator die Vergangenheit perfekt erklärt. Das hilft für die Zukunft nicht.</li><li><strong>Ohne Stop handeln.</strong> Auch das schönste Signal kann scheitern. Wie du dein Risiko begrenzt, zeigen die Artikel <a href="chance-risiko-verhaeltnis.html">Chance-Risiko-Verhältnis</a> und <a href="positionsgroesse-berechnen.html">Positionsgröße berechnen</a>.</li></ul>
+<h2 id="indikatoren-ueben-ohne-echtes-geld">Indikatoren üben ohne echtes Geld</h2>
+<p>In InQuestly erklärt die Lektion „Indikatoren &amp; Volumen“ im Gratis-Kurs Charttechnik &amp; Muster, was Indikatoren wie der RSI zeigen. Vertiefen kannst du den RSI zusammen mit MACD, Bollinger-Bändern und Stochastik im Kurs „Indikatoren lesen“, der zu InQuestly Pro gehört. Die Kursverläufe zum Üben sind nachgebildet, echtes Geld ist nie im Spiel.</p>
+<h2 id="haeufige-fragen">Häufige Fragen</h2>
+<details><summary>Was ist der RSI einfach erklärt?</summary><p>Der Relative-Stärke-Index vergleicht die durchschnittlichen Gewinne und Verluste der letzten Tage und zeigt das Ergebnis auf einer Skala von 0 bis 100.</p></details>
+<details><summary>Was bedeutet ein RSI über 70?</summary><p>Der Kurs gilt als überkauft, weil er zuletzt stark gestiegen ist. Das ist kein sicheres Verkaufssignal, in starken Trends bleibt der RSI oft lange über 70.</p></details>
+<details><summary>Was bedeutet ein RSI unter 30?</summary><p>Der Kurs gilt als überverkauft, weil er zuletzt stark gefallen ist. Eine Gegenbewegung ist möglich, aber nicht sicher.</p></details>
+<details><summary>Welche RSI-Einstellung ist die beste?</summary><p>Am verbreitetsten ist der Standard von 14 Perioden. Kürzere Einstellungen reagieren schneller und liefern mehr Fehlsignale, längere sind träger.</p></details>
+<details><summary>Was ist eine RSI-Divergenz?</summary><p>Kurs und RSI laufen auseinander, etwa ein höheres Hoch im Kurs bei einem tieferen Hoch im RSI. Das kann auf nachlassenden Schwung hindeuten, bestätigt aber keine Wende.</p></details>
+<details><summary>Wer hat den RSI erfunden?</summary><p>J. Welles Wilder Jr., der ihn 1978 in seinem Buch „New Concepts in Technical Trading Systems“ vorstellte.</p></details>
+<details><summary>Kann man nur mit dem RSI traden?</summary><p>Nicht sinnvoll. Der RSI ist ein Werkzeug unter vielen und funktioniert am besten zusammen mit Trend, Unterstützung und Widerstand und einem festen Risiko pro Trade.</p></details>
+  </div>
+  <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
+  <aside class="cta">
+  <img src="../mascot.svg" alt="" width="84" height="80">
+  <div><h2>Üben statt nur lesen</h2>
+  <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis im App Store</a> <span class="klein">mit In-App-Käufen · für iPhone</span></div>
+</aside>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="kgv-einfach-erklaert.html">KGV einfach erklärt: Wann ist eine Aktie günstig?</a></li><li><a href="unterstuetzung-widerstand.html">Unterstützung und Widerstand einfach erklärt (mit Beispielen)</a></li><li><a href="aktien-app-anfaenger.html">Aktien-App für Anfänger: Welche Börsen-App wofür?</a></li></ul></section>
+</article>
+</main>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+</div></footer>
+</body>
+</html>
