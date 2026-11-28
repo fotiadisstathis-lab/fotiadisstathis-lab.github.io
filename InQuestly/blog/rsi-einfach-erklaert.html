@@ -97,6 +97,17 @@ details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
 details p { color: var(--text-2); padding: 0 0 20px; }
 .hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
 
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
 /* Aufruf zur App */
 .cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
 .cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
@@ -135,7 +146,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "RSI einfach erklärt: Überkauft, überverkauft und Divergenz", "description": "Was zeigt der RSI-Indikator? Formel, Einstellung (14 Tage), die Grenzen 70 und 30, Divergenzen und typische Fehler, einfach erklärt mit Rechenbeispiel.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-rsi-einfach-erklaert.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html", "keywords": "RSI, RSI Indikator, RSI einfach erklärt, Relative Stärke Index, überkauft überverkauft, RSI Divergenz, RSI 14, Indikatoren Trading", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "RSI einfach erklärt: Überkauft, überverkauft und Divergenz", "item": "https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist der RSI einfach erklärt?", "acceptedAnswer": {"@type": "Answer", "text": "Der Relative-Stärke-Index vergleicht die durchschnittlichen Gewinne und Verluste der letzten Tage und zeigt das Ergebnis auf einer Skala von 0 bis 100."}}, {"@type": "Question", "name": "Was bedeutet ein RSI über 70?", "acceptedAnswer": {"@type": "Answer", "text": "Der Kurs gilt als überkauft, weil er zuletzt stark gestiegen ist. Das ist kein sicheres Verkaufssignal, in starken Trends bleibt der RSI oft lange über 70."}}, {"@type": "Question", "name": "Was bedeutet ein RSI unter 30?", "acceptedAnswer": {"@type": "Answer", "text": "Der Kurs gilt als überverkauft, weil er zuletzt stark gefallen ist. Eine Gegenbewegung ist möglich, aber nicht sicher."}}, {"@type": "Question", "name": "Welche RSI-Einstellung ist die beste?", "acceptedAnswer": {"@type": "Answer", "text": "Am verbreitetsten ist der Standard von 14 Perioden. Kürzere Einstellungen reagieren schneller und liefern mehr Fehlsignale, längere sind träger."}}, {"@type": "Question", "name": "Was ist eine RSI-Divergenz?", "acceptedAnswer": {"@type": "Answer", "text": "Kurs und RSI laufen auseinander, etwa ein höheres Hoch im Kurs bei einem tieferen Hoch im RSI. Das kann auf nachlassenden Schwung hindeuten, bestätigt aber keine Wende."}}, {"@type": "Question", "name": "Wer hat den RSI erfunden?", "acceptedAnswer": {"@type": "Answer", "text": "J. Welles Wilder Jr., der ihn 1978 in seinem Buch „New Concepts in Technical Trading Systems“ vorstellte."}}, {"@type": "Question", "name": "Kann man nur mit dem RSI traden?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht sinnvoll. Der RSI ist ein Werkzeug unter vielen und funktioniert am besten zusammen mit Trend, Unterstützung und Widerstand und einem festen Risiko pro Trade."}}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "RSI einfach erklärt: Überkauft, überverkauft und Divergenz", "description": "Was zeigt der RSI-Indikator? Formel, Einstellung (14 Tage), die Grenzen 70 und 30, Divergenzen und typische Fehler, einfach erklärt mit Rechenbeispiel.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-rsi-einfach-erklaert.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html", "keywords": "RSI, RSI Indikator, RSI einfach erklärt, Relative Stärke Index, überkauft überverkauft, RSI Divergenz, RSI 14, Indikatoren Trading", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "RSI einfach erklärt: Überkauft, überverkauft und Divergenz", "item": "https://fotiadisapps.de/InQuestly/blog/rsi-einfach-erklaert.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist der RSI einfach erklärt?", "acceptedAnswer": {"@type": "Answer", "text": "Der Relative-Stärke-Index vergleicht die durchschnittlichen Gewinne und Verluste der letzten Tage und zeigt das Ergebnis auf einer Skala von 0 bis 100."}}, {"@type": "Question", "name": "Was bedeutet ein RSI über 70?", "acceptedAnswer": {"@type": "Answer", "text": "Der Kurs gilt als überkauft, weil er zuletzt stark gestiegen ist. Das ist kein sicheres Verkaufssignal, in starken Trends bleibt der RSI oft lange über 70."}}, {"@type": "Question", "name": "Was bedeutet ein RSI unter 30?", "acceptedAnswer": {"@type": "Answer", "text": "Der Kurs gilt als überverkauft, weil er zuletzt stark gefallen ist. Eine Gegenbewegung ist möglich, aber nicht sicher."}}, {"@type": "Question", "name": "Welche RSI-Einstellung ist die beste?", "acceptedAnswer": {"@type": "Answer", "text": "Am verbreitetsten ist der Standard von 14 Perioden. Kürzere Einstellungen reagieren schneller und liefern mehr Fehlsignale, längere sind träger."}}, {"@type": "Question", "name": "Was ist eine RSI-Divergenz?", "acceptedAnswer": {"@type": "Answer", "text": "Kurs und RSI laufen auseinander, etwa ein höheres Hoch im Kurs bei einem tieferen Hoch im RSI. Das kann auf nachlassenden Schwung hindeuten, bestätigt aber keine Wende."}}, {"@type": "Question", "name": "Wer hat den RSI erfunden?", "acceptedAnswer": {"@type": "Answer", "text": "J. Welles Wilder Jr., der ihn 1978 in seinem Buch „New Concepts in Technical Trading Systems“ vorstellte."}}, {"@type": "Question", "name": "Kann man nur mit dem RSI traden?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht sinnvoll. Der RSI ist ein Werkzeug unter vielen und funktioniert am besten zusammen mit Trend, Unterstützung und Widerstand und einem festen Risiko pro Trade."}}]}]</script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -145,7 +156,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <main>
 <article class="wrap artikel">
   <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
-  <p class="kicker">Indikatoren</p>
+  <p class="kicker">Indikatoren &amp; Kennzahlen</p>
   <h1>RSI einfach erklärt: Überkauft, überverkauft und Divergenz</h1>
   <p class="meta">Von Stathis Fotiadis am 27. November 2026. Lesezeit 4 Minuten.</p>
   <p class="lead">Der RSI gehört zu den beliebtesten Indikatoren. Er zeigt, wie stark die Aufwärts- und Abwärtsbewegungen der letzten Tage waren. Hier lernst du, wie er berechnet wird, was 70 und 30 bedeuten und warum „überkauft“ kein Verkaufssignal ist.</p>
@@ -182,6 +193,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <details><summary>Wer hat den RSI erfunden?</summary><p>J. Welles Wilder Jr., der ihn 1978 in seinem Buch „New Concepts in Technical Trading Systems“ vorstellte.</p></details>
 <details><summary>Kann man nur mit dem RSI traden?</summary><p>Nicht sinnvoll. Der RSI ist ein Werkzeug unter vielen und funktioniert am besten zusammen mit Trend, Unterstützung und Widerstand und einem festen Risiko pro Trade.</p></details>
   </div>
+  
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
   <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
   <aside class="cta">
   <img src="../app/drache-lern.svg" alt="" width="104" height="99">
@@ -189,11 +205,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
   <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
   <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
 </aside>
-  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="doji-kerze.html">Doji-Kerze: Bedeutung und die 4 wichtigsten Arten</a></li><li><a href="hammer-kerze.html">Hammer-Kerze: Bedeutung, Farbe und Trading</a></li><li><a href="kerzenchart-lesen.html">Kerzenchart lesen: So verstehst du jede Kerze</a></li></ul></section>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="gleitender-durchschnitt.html">Gleitender Durchschnitt: SMA, EMA und die 200-Tage-Linie einfach erklärt</a></li><li><a href="kgv-einfach-erklaert.html">KGV einfach erklärt: Wann ist eine Aktie günstig?</a></li><li><a href="doppeltop-doppelboden.html">Doppeltop und Doppelboden: Formationen erkennen und Kursziel berechnen</a></li></ul></section>
 </article>
 </main>
 <footer class="foot"><div class="wrap">
-  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
 </div></footer>
 </body>
 </html>

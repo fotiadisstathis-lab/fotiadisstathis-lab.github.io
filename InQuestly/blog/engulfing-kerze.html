@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Engulfing-Kerze: Bedeutung und Erkennen | InQuestly</title>
+<meta name="description" content="Engulfing-Kerze einfach erklärt: So erkennst du Bullish und Bearish Engulfing, was das Muster aussagt und warum es ohne Bestätigung oft täuscht.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/blog/engulfing-kerze.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/blog/engulfing-kerze.html">
+<meta property="og:title" content="Engulfing-Kerze: Bedeutung und Erkennen | InQuestly">
+<meta property="og:description" content="Engulfing-Kerze einfach erklärt: So erkennst du Bullish und Bearish Engulfing, was das Muster aussagt und warum es ohne Bestätigung oft täuscht.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/blog/og-engulfing-kerze.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg"><link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="InQuestly Blog" href="https://fotiadisapps.de/InQuestly/blog/feed.xml">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>/* InQuestly Blog im Look der Website (Store-Look v67): Weiß und Violett, runde Überschriften, App-Bilder im Handyrahmen. Keine fremden Dateien. */
+@font-face { font-family: "IQ Nunito"; src: url("../fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+:root {
+  --violett: #5A46E6; --nacht: #20184A; --gruen: #15A055; --gelb: #FFC83A; --steigt: #22B35A; --faellt: #F0443A;
+  --grund: #FFFFFF; --nebel: #F3F1FF; --text: #20184A; --text-2: #5C5780; --linie: #E4E0F7; --karte: #FFFFFF; --link: #5A46E6;
+  --rund: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif;
+  --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --raus: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --grund: #0F0C26; --nebel: #17133A; --text: #F3F1FF; --text-2: #B9B3DD; --linie: #2B2656; --karte: #1B1744; --link: #B3A9FF; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--grund); color: var(--text); font: 400 1.125rem/1.7 var(--schrift); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+:focus-visible { outline: 3px solid var(--gelb); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { font-family: var(--rund); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); line-height: 1.02; letter-spacing: -0.028em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.25rem; font-weight: 800; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Kopfzeile wie auf der Startseite */
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--grund) 90%, transparent); box-shadow: 0 1px 0 var(--linie);
+  backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); view-transition-name: kopf; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 900 1.25rem/1 var(--rund); letter-spacing: -0.02em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: 0 2px 8px rgba(0, 0, 0, .14); }
+.nav { display: flex; align-items: center; gap: 8px 22px; font-size: .9375rem; font-weight: 600; }
+.nav a { color: var(--text); text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.nav a.laden { opacity: 1; color: #fff; background: var(--violett); padding: 10px 16px; border-radius: 999px; font: 800 .9375rem/1 var(--rund); text-decoration: none; transition: transform .15s var(--raus); }
+.nav a.laden:active { transform: scale(.97); }
+@media (max-width: 640px) { .nav a:not(.laden) { display: none; } }
+
+/* Artikel */
+.artikel { max-width: 760px; padding-block: 44px 72px; }
+.krumen { font-size: .875rem; color: var(--text-2); margin-bottom: 26px; }
+.krumen a { color: var(--text-2); }
+.kicker { display: inline-block; font: 800 .875rem/1 var(--rund); color: var(--violett); background: var(--nebel); padding: 8px 12px; border-radius: 999px; margin: 0 0 18px; }
+@media (prefers-color-scheme: dark) { .kicker { color: #C9C2FF; } }
+.lead { font-size: 1.25rem; line-height: 1.55; color: var(--text-2); margin-top: 20px; }
+.meta { color: var(--text-2); font-size: .9375rem; margin-top: 16px; }
+.inhalt { margin: 34px 0; padding: 20px 24px; background: var(--nebel); border-radius: 22px; font-size: 1rem; }
+.inhalt b { font: 900 1.0625rem/1 var(--rund); }
+.inhalt ol { margin: 10px 0 0; padding-left: 22px; }
+.inhalt li + li { margin-top: 4px; }
+.appbild { margin: 44px auto; max-width: 290px; text-align: center; }
+.appbild img { width: 100%; height: auto; border-radius: 42px; border: 10px solid #0E0D16; box-shadow: 0 30px 60px rgba(32, 24, 74, .22), 0 8px 18px rgba(32, 24, 74, .12); display: block; background: #F2F2F7; }
+.appbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 16px; }
+.text h2 { margin: 56px 0 14px; }
+.text h3 { margin: 32px 0 10px; }
+.text p + p, .text ul + p, .text ol + p, .text p + ul, .text p + ol, .text .tabelle + p { margin-top: 16px; }
+.text ul, .text ol { padding-left: 24px; margin: 16px 0; }
+.text li + li { margin-top: 8px; }
+.text li::marker { color: var(--violett); font-weight: 800; }
+.text strong, .text b { font-weight: 700; }
+.hinweis { margin: 28px 0; padding: 18px 22px; background: var(--nebel); border-left: 5px solid var(--violett); border-radius: 6px 18px 18px 6px; }
+.tabelle { overflow-x: auto; margin: 22px 0; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 1rem; border: 1px solid var(--linie); border-radius: 18px; overflow: hidden; background: var(--karte); }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { background: var(--nebel); font: 800 .9375rem/1.3 var(--rund); }
+.textbild { margin: 34px 0; }
+.textbild img { width: 100%; height: auto; border-radius: 24px; display: block; background: #fff; box-shadow: 0 18px 40px rgba(32, 24, 74, .12); }
+.textbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 12px; }
+
+/* Häufige Fragen */
+details { border-bottom: 1px solid var(--linie); }
+.text h2 + details, details:first-of-type { border-top: 1px solid var(--linie); }
+summary { list-style: none; cursor: pointer; padding: 18px 44px 18px 0; position: relative; font: 800 1.125rem/1.35 var(--rund); letter-spacing: -0.01em; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: ""; position: absolute; right: 8px; top: 50%; width: 12px; height: 12px; margin-top: -9px; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg); opacity: .55; transition: transform .3s var(--raus); }
+details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
+details p { color: var(--text-2); padding: 0 0 20px; }
+.hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
+
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
+/* Aufruf zur App */
+.cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
+.cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
+.cta p { color: #E4E0FF; margin-bottom: 18px; }
+.cta img { flex: none; width: 104px; height: auto; }
+.knopf { display: inline-flex; align-items: center; background: #fff; color: var(--nacht); text-decoration: none; padding: 14px 22px; border-radius: 999px; font: 800 1rem/1 var(--rund); box-shadow: 0 8px 22px rgba(20, 10, 80, .25); transition: transform .15s var(--raus); }
+.knopf:hover { transform: translateY(-2px); }
+.cta .klein { color: #E4E0FF; font-size: .875rem; margin-left: 12px; }
+@media (max-width: 600px) { .cta { flex-direction: column; align-items: flex-start; padding: 26px; } .cta .klein { display: block; margin: 12px 0 0; } .lead { font-size: 1.125rem; } }
+
+/* Weiterlesen */
+.mehr { margin-top: 8px; }
+.mehr h2 { margin-bottom: 8px; font-size: 1.5rem; }
+.mehr ul { list-style: none; padding: 0; margin: 0; }
+.mehr li a { display: block; padding: 14px 0; border-bottom: 1px solid var(--linie); text-decoration: none; color: var(--text); font-weight: 600; transition: color .2s, padding-left .25s var(--raus); }
+.mehr li a:hover { color: var(--link); padding-left: 6px; }
+
+/* Übersicht */
+.blogkopf { padding-block: 64px 28px; max-width: 820px; }
+.blogkopf h1 { font-size: clamp(2.8rem, 7vw, 5rem); }
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px 24px; padding-bottom: 24px; }
+.karte { display: grid; gap: 10px; align-content: start; color: var(--text); text-decoration: none; }
+.karte img { width: 100%; height: auto; display: block; border-radius: 22px; box-shadow: 0 12px 30px rgba(32, 24, 74, .12); transition: transform .35s var(--raus), box-shadow .35s var(--raus); }
+.karte .kicker { justify-self: start; margin: 8px 0 0; }
+.karte h2 { font-size: 1.375rem; line-height: 1.15; }
+.karte p { color: var(--text-2); font-size: 1rem; line-height: 1.55; }
+.karte .meta { margin: 0; font-size: .875rem; }
+.karte:hover img { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(32, 24, 74, .18); }
+.karte:hover h2 { color: var(--link); }
+
+/* Fuß wie auf der Startseite */
+.foot { background: var(--nacht); color: #CFC9F2; margin-top: 56px; padding: 44px 0 calc(44px + env(safe-area-inset-bottom)); font-size: .9375rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.foot a { color: #CFC9F2; text-decoration: none; }
+.foot a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Engulfing-Kerze: Bedeutung, Erkennen und typische Fehler", "description": "Engulfing-Kerze einfach erklärt: So erkennst du Bullish und Bearish Engulfing, was das Muster aussagt und warum es ohne Bestätigung oft täuscht.", "datePublished": "2026-11-28", "dateModified": "2026-11-28", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-engulfing-kerze.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/engulfing-kerze.html", "keywords": "Engulfing, Engulfing Kerze, Bullish Engulfing, Bearish Engulfing, umhüllende Kerze, Kerzenmuster, Candlestick Engulfing, Harami", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Engulfing-Kerze: Bedeutung, Erkennen und typische Fehler", "item": "https://fotiadisapps.de/InQuestly/blog/engulfing-kerze.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist eine Engulfing-Kerze?", "acceptedAnswer": {"@type": "Answer", "text": "Ein Muster aus zwei Kerzen, bei dem der Körper der zweiten Kerze den Körper der ersten vollständig umschließt. Es zeigt, dass eine Seite des Marktes die Kontrolle übernommen hat."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Bullish und Bearish Engulfing?", "acceptedAnswer": {"@type": "Answer", "text": "Beim Bullish Engulfing umschließt eine grüne Kerze eine rote, meist nach einem Rückgang. Beim Bearish Engulfing umschließt eine rote Kerze eine grüne, meist nach einem Anstieg."}}, {"@type": "Question", "name": "Zählen beim Engulfing die Dochte?", "acceptedAnswer": {"@type": "Answer", "text": "Bei der klassischen Definition nicht. Entscheidend ist, dass der Körper der zweiten Kerze den Körper der ersten umschließt."}}, {"@type": "Question", "name": "Wie zuverlässig ist ein Engulfing?", "acceptedAnswer": {"@type": "Answer", "text": "Allein nicht sehr. Mehr Gewicht hat es nach einem klaren Trend, an einer Unterstützung oder einem Widerstand, mit höherem Volumen und mit Bestätigung durch die nächste Kerze."}}, {"@type": "Question", "name": "Was ist ein Harami?", "acceptedAnswer": {"@type": "Answer", "text": "Das Gegenstück zum Engulfing: Die zweite, kleine Kerze liegt innerhalb des Körpers der ersten. Es deutet eher auf nachlassenden Schwung hin als auf einen Wechsel."}}, {"@type": "Question", "name": "Welche Zeiteinheit eignet sich für Engulfing-Muster?", "acceptedAnswer": {"@type": "Answer", "text": "Für Einsteiger Tageskerzen. In sehr kurzen Zeiteinheiten entstehen viele Muster ohne Aussagekraft."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../icon-180.png" alt="" width="34" height="34">InQuestly</a>
+  <nav class="nav" aria-label="Hauptnavigation"><a href="../">Die App</a><a href="./">Blog</a><a href="../quiz.html">Börsen-Quiz</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis laden</a></nav>
+</div></header>
+<main>
+<article class="wrap artikel">
+  <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
+  <p class="kicker">Charttechnik</p>
+  <h1>Engulfing-Kerze: Bedeutung, Erkennen und typische Fehler</h1>
+  <p class="meta">Von Stathis Fotiadis am 28. November 2026. Lesezeit 4 Minuten.</p>
+  <p class="lead">Eine Kerze verschluckt die vorherige komplett: Das Engulfing-Muster zeigt, dass eine Seite die Kontrolle übernommen hat. Wann es zählt und wann nicht.</p>
+  <nav class="inhalt" aria-label="Inhalt"><b>Inhalt</b><ol><li><a href="#bullish-und-bearish-engulfing">Bullish und Bearish Engulfing</a></li><li><a href="#ein-beispiel-mit-zahlen">Ein Beispiel mit Zahlen</a></li><li><a href="#was-das-muster-aussagt">Was das Muster aussagt</a></li><li><a href="#wann-ein-engulfing-mehr-gewicht-hat">Wann ein Engulfing mehr Gewicht hat</a></li><li><a href="#verwandte-muster">Verwandte Muster</a></li><li><a href="#haeufige-fehler">Häufige Fehler</a></li><li><a href="#engulfing-erkennen-ueben">Engulfing erkennen üben</a></li></ol></nav>
+  <figure class="appbild"><img src="bild-engulfing-kerze.jpg" alt="„Bulle oder Bär?“ in InQuestly: Kerzenchart ansehen und entscheiden, bullisch oder bärisch. Das Spiel ist gratis." width="540" height="1174" loading="lazy"><figcaption>„Bulle oder Bär?“ in InQuestly: Kerzenchart ansehen und entscheiden, bullisch oder bärisch. Das Spiel ist gratis.</figcaption></figure>
+  <div class="text">
+<p>Ein <strong>Engulfing</strong> (englisch für „verschlingend“) ist ein Kerzenmuster aus zwei Kerzen: Der Körper der zweiten Kerze umschließt den Körper der ersten vollständig. Es gehört zu den bekanntesten Umkehrsignalen im <a href="kerzenchart-lesen.html">Kerzenchart</a>. Wichtig ist dabei weniger die Form allein als der Ort, an dem sie entsteht.</p>
+<h2 id="bullish-und-bearish-engulfing">Bullish und Bearish Engulfing</h2>
+<div class="tabelle"><table><thead><tr><th>Muster</th><th>Vorher</th><th>Erste Kerze</th><th>Zweite Kerze</th><th>Mögliche Aussage</th></tr></thead><tbody><tr><td>Bullish Engulfing</td><td>Abwärtstrend oder Rücksetzer</td><td>rot, eher klein</td><td>grün, Körper umschließt den roten Körper</td><td>Käufer übernehmen, mögliche Wende nach oben</td></tr><tr><td>Bearish Engulfing</td><td>Aufwärtstrend oder Anstieg</td><td>grün, eher klein</td><td>rot, Körper umschließt den grünen Körper</td><td>Verkäufer übernehmen, mögliche Wende nach unten</td></tr></tbody></table></div>
+<p>Entscheidend sind die <strong>Körper</strong>, also die Spanne zwischen Eröffnung und Schluss. Die Dochte zählen bei der klassischen Definition nicht mit. Manche Lehrbücher verlangen zusätzlich, dass die zweite Kerze jenseits des Vortagesschlusses eröffnet. Bei Aktien, die über Nacht kaum springen, ist das nicht immer erfüllt; viele Trader werten das Muster dann trotzdem.</p>
+<h2 id="ein-beispiel-mit-zahlen">Ein Beispiel mit Zahlen</h2>
+<div class="tabelle"><table><thead><tr><th>Tag</th><th>Eröffnung</th><th>Hoch</th><th>Tief</th><th>Schluss</th><th>Kerze</th></tr></thead><tbody><tr><td>Dienstag</td><td>52,00 €</td><td>52,30 €</td><td>50,90 €</td><td>51,20 €</td><td>rot, Körper 0,80 €</td></tr><tr><td>Mittwoch</td><td>51,00 €</td><td>53,10 €</td><td>50,70 €</td><td>52,80 €</td><td>grün, Körper 1,80 €</td></tr></tbody></table></div>
+<p>Die Aktie fällt seit zwei Wochen. Am Dienstag entsteht eine kleine rote Kerze. Am Mittwoch eröffnet der Kurs bei 51,00 €, also unter dem Dienstagsschluss von 51,20 €, und schließt bei 52,80 €, über der Dienstagseröffnung von 52,00 €. Der grüne Körper von 51,00 € bis 52,80 € umschließt den roten von 51,20 € bis 52,00 € vollständig: ein <strong>Bullish Engulfing</strong>.</p>
+<h2 id="was-das-muster-aussagt">Was das Muster aussagt</h2>
+<p>Am ersten Tag haben die Verkäufer noch die Oberhand. Am zweiten Tag drehen die Käufer den Kurs so stark, dass er über der Eröffnung des Vortags schließt. Das ist ein Stimmungswechsel innerhalb von zwei Tagen. Ob daraus eine Trendwende wird, zeigt sich erst in den Tagen danach.</p>
+<h2 id="wann-ein-engulfing-mehr-gewicht-hat">Wann ein Engulfing mehr Gewicht hat</h2>
+<ul><li><strong>Am richtigen Ort:</strong> nach einem klaren Trend und an einer <a href="unterstuetzung-widerstand.html">Unterstützung oder einem Widerstand</a>. Mitten in einer Seitwärtsphase sagt das Muster wenig.</li><li><strong>Deutlicher Größenunterschied:</strong> Je klarer die zweite Kerze die erste umschließt, desto stärker der Wechsel.</li><li><strong>Höheres Volumen</strong> am zweiten Tag: Mehr Handel bedeutet, dass viele Marktteilnehmer den Wechsel tragen.</li><li><strong>Bestätigung:</strong> eine weitere Kerze in die neue Richtung, etwa ein Schluss über dem Hoch der Engulfing-Kerze.</li></ul>
+<aside class="hinweis"><p>Ein Engulfing ist ein Hinweis, kein Kaufsignal. Wer danach handelt, legt vorher fest, wo die Idee falsch ist, zum Beispiel unter dem Tief des Musters, und wie viel er dabei höchstens riskiert. Wie das geht, erklärt der Artikel <a href="positionsgroesse-berechnen.html">Positionsgröße berechnen</a>.</p></aside>
+<h2 id="verwandte-muster">Verwandte Muster</h2>
+<ul><li><strong><a href="hammer-kerze.html">Hammer</a>:</strong> eine einzelne Kerze mit langem unterem Docht nach einem Rückgang. Folgt auf einen Hammer ein Bullish Engulfing, stützen sich beide Signale gegenseitig.</li><li><strong><a href="doji-kerze.html">Doji</a>:</strong> Unentschlossenheit. Ein Doji vor einem Engulfing zeigt oft, dass der alte Trend an Kraft verliert.</li><li><strong>Harami:</strong> das Gegenstück zum Engulfing. Hier liegt die zweite, kleine Kerze innerhalb des Körpers der ersten großen. Es deutet eher auf nachlassenden Schwung hin als auf einen Wechsel.</li></ul>
+<p>Einen Überblick über die wichtigsten Formen bietet der Artikel <a href="kerzenmuster.html">Die 8 wichtigsten Kerzenmuster</a>. Größere Formationen über Wochen erklärt <a href="chartmuster.html">Chartmuster erkennen</a>.</p>
+<h2 id="haeufige-fehler">Häufige Fehler</h2>
+<ul><li><strong>Dochte statt Körper vergleichen.</strong> Für das Muster zählen die Körper.</li><li><strong>Den Trend davor ignorieren.</strong> Ein Bullish Engulfing mitten in einem Aufwärtstrend ist keine Umkehr, sondern einfach ein starker Tag.</li><li><strong>Zu kleine Zeiteinheiten.</strong> Im Minutenchart entstehen ständig Engulfing-Muster, die meisten ohne Bedeutung. Für Einsteiger sind Tageskerzen aussagekräftiger.</li><li><strong>Ohne Plan handeln.</strong> Auch gute Muster scheitern häufig. Ohne festen Ausstieg wird aus einem Fehlsignal schnell ein großer Verlust.</li></ul>
+<h2 id="engulfing-erkennen-ueben">Engulfing erkennen üben</h2>
+<p>In InQuestly gehört das Engulfing zum Kurs „Kerzenmuster“ mit InQuestly Pro. Den Blick für Kerzen trainierst du schon im Gratis-Spiel „Bulle oder Bär?“: Chart ansehen, bullisch oder bärisch wählen, danach folgt die Erklärung. Die Kursverläufe zum Üben sind nachgebildet, echtes Geld ist nie im Spiel.</p>
+<h2 id="haeufige-fragen">Häufige Fragen</h2>
+<details><summary>Was ist eine Engulfing-Kerze?</summary><p>Ein Muster aus zwei Kerzen, bei dem der Körper der zweiten Kerze den Körper der ersten vollständig umschließt. Es zeigt, dass eine Seite des Marktes die Kontrolle übernommen hat.</p></details>
+<details><summary>Was ist der Unterschied zwischen Bullish und Bearish Engulfing?</summary><p>Beim Bullish Engulfing umschließt eine grüne Kerze eine rote, meist nach einem Rückgang. Beim Bearish Engulfing umschließt eine rote Kerze eine grüne, meist nach einem Anstieg.</p></details>
+<details><summary>Zählen beim Engulfing die Dochte?</summary><p>Bei der klassischen Definition nicht. Entscheidend ist, dass der Körper der zweiten Kerze den Körper der ersten umschließt.</p></details>
+<details><summary>Wie zuverlässig ist ein Engulfing?</summary><p>Allein nicht sehr. Mehr Gewicht hat es nach einem klaren Trend, an einer Unterstützung oder einem Widerstand, mit höherem Volumen und mit Bestätigung durch die nächste Kerze.</p></details>
+<details><summary>Was ist ein Harami?</summary><p>Das Gegenstück zum Engulfing: Die zweite, kleine Kerze liegt innerhalb des Körpers der ersten. Es deutet eher auf nachlassenden Schwung hin als auf einen Wechsel.</p></details>
+<details><summary>Welche Zeiteinheit eignet sich für Engulfing-Muster?</summary><p>Für Einsteiger Tageskerzen. In sehr kurzen Zeiteinheiten entstehen viele Muster ohne Aussagekraft.</p></details>
+  </div>
+  
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
+  <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
+  <aside class="cta">
+  <img src="../app/drache-lern.svg" alt="" width="104" height="99">
+  <div><h2>Üben statt nur lesen</h2>
+  <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
+</aside>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="kerzenmuster.html">Kerzenmuster für Anfänger: Die 8 wichtigsten Candlesticks</a></li><li><a href="doppeltop-doppelboden.html">Doppeltop und Doppelboden: Formationen erkennen und Kursziel berechnen</a></li><li><a href="doji-kerze.html">Doji-Kerze: Bedeutung und die 4 wichtigsten Arten</a></li></ul></section>
+</article>
+</main>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+</div></footer>
+</body>
+</html>

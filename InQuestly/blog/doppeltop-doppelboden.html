@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doppeltop und Doppelboden erklärt | InQuestly</title>
+<meta name="description" content="Doppeltop und Doppelboden einfach erklärt: So erkennst du die M- und die W-Formation, wann sie bestätigt sind und wie du das Kursziel berechnest.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/blog/doppeltop-doppelboden.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/blog/doppeltop-doppelboden.html">
+<meta property="og:title" content="Doppeltop und Doppelboden erklärt | InQuestly">
+<meta property="og:description" content="Doppeltop und Doppelboden einfach erklärt: So erkennst du die M- und die W-Formation, wann sie bestätigt sind und wie du das Kursziel berechnest.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/blog/og-doppeltop-doppelboden.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg"><link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="InQuestly Blog" href="https://fotiadisapps.de/InQuestly/blog/feed.xml">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>/* InQuestly Blog im Look der Website (Store-Look v67): Weiß und Violett, runde Überschriften, App-Bilder im Handyrahmen. Keine fremden Dateien. */
+@font-face { font-family: "IQ Nunito"; src: url("../fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+:root {
+  --violett: #5A46E6; --nacht: #20184A; --gruen: #15A055; --gelb: #FFC83A; --steigt: #22B35A; --faellt: #F0443A;
+  --grund: #FFFFFF; --nebel: #F3F1FF; --text: #20184A; --text-2: #5C5780; --linie: #E4E0F7; --karte: #FFFFFF; --link: #5A46E6;
+  --rund: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif;
+  --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --raus: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --grund: #0F0C26; --nebel: #17133A; --text: #F3F1FF; --text-2: #B9B3DD; --linie: #2B2656; --karte: #1B1744; --link: #B3A9FF; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--grund); color: var(--text); font: 400 1.125rem/1.7 var(--schrift); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+:focus-visible { outline: 3px solid var(--gelb); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { font-family: var(--rund); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); line-height: 1.02; letter-spacing: -0.028em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.25rem; font-weight: 800; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Kopfzeile wie auf der Startseite */
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--grund) 90%, transparent); box-shadow: 0 1px 0 var(--linie);
+  backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); view-transition-name: kopf; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 900 1.25rem/1 var(--rund); letter-spacing: -0.02em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: 0 2px 8px rgba(0, 0, 0, .14); }
+.nav { display: flex; align-items: center; gap: 8px 22px; font-size: .9375rem; font-weight: 600; }
+.nav a { color: var(--text); text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.nav a.laden { opacity: 1; color: #fff; background: var(--violett); padding: 10px 16px; border-radius: 999px; font: 800 .9375rem/1 var(--rund); text-decoration: none; transition: transform .15s var(--raus); }
+.nav a.laden:active { transform: scale(.97); }
+@media (max-width: 640px) { .nav a:not(.laden) { display: none; } }
+
+/* Artikel */
+.artikel { max-width: 760px; padding-block: 44px 72px; }
+.krumen { font-size: .875rem; color: var(--text-2); margin-bottom: 26px; }
+.krumen a { color: var(--text-2); }
+.kicker { display: inline-block; font: 800 .875rem/1 var(--rund); color: var(--violett); background: var(--nebel); padding: 8px 12px; border-radius: 999px; margin: 0 0 18px; }
+@media (prefers-color-scheme: dark) { .kicker { color: #C9C2FF; } }
+.lead { font-size: 1.25rem; line-height: 1.55; color: var(--text-2); margin-top: 20px; }
+.meta { color: var(--text-2); font-size: .9375rem; margin-top: 16px; }
+.inhalt { margin: 34px 0; padding: 20px 24px; background: var(--nebel); border-radius: 22px; font-size: 1rem; }
+.inhalt b { font: 900 1.0625rem/1 var(--rund); }
+.inhalt ol { margin: 10px 0 0; padding-left: 22px; }
+.inhalt li + li { margin-top: 4px; }
+.appbild { margin: 44px auto; max-width: 290px; text-align: center; }
+.appbild img { width: 100%; height: auto; border-radius: 42px; border: 10px solid #0E0D16; box-shadow: 0 30px 60px rgba(32, 24, 74, .22), 0 8px 18px rgba(32, 24, 74, .12); display: block; background: #F2F2F7; }
+.appbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 16px; }
+.text h2 { margin: 56px 0 14px; }
+.text h3 { margin: 32px 0 10px; }
+.text p + p, .text ul + p, .text ol + p, .text p + ul, .text p + ol, .text .tabelle + p { margin-top: 16px; }
+.text ul, .text ol { padding-left: 24px; margin: 16px 0; }
+.text li + li { margin-top: 8px; }
+.text li::marker { color: var(--violett); font-weight: 800; }
+.text strong, .text b { font-weight: 700; }
+.hinweis { margin: 28px 0; padding: 18px 22px; background: var(--nebel); border-left: 5px solid var(--violett); border-radius: 6px 18px 18px 6px; }
+.tabelle { overflow-x: auto; margin: 22px 0; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 1rem; border: 1px solid var(--linie); border-radius: 18px; overflow: hidden; background: var(--karte); }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { background: var(--nebel); font: 800 .9375rem/1.3 var(--rund); }
+.textbild { margin: 34px 0; }
+.textbild img { width: 100%; height: auto; border-radius: 24px; display: block; background: #fff; box-shadow: 0 18px 40px rgba(32, 24, 74, .12); }
+.textbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 12px; }
+
+/* Häufige Fragen */
+details { border-bottom: 1px solid var(--linie); }
+.text h2 + details, details:first-of-type { border-top: 1px solid var(--linie); }
+summary { list-style: none; cursor: pointer; padding: 18px 44px 18px 0; position: relative; font: 800 1.125rem/1.35 var(--rund); letter-spacing: -0.01em; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: ""; position: absolute; right: 8px; top: 50%; width: 12px; height: 12px; margin-top: -9px; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg); opacity: .55; transition: transform .3s var(--raus); }
+details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
+details p { color: var(--text-2); padding: 0 0 20px; }
+.hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
+
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
+/* Aufruf zur App */
+.cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
+.cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
+.cta p { color: #E4E0FF; margin-bottom: 18px; }
+.cta img { flex: none; width: 104px; height: auto; }
+.knopf { display: inline-flex; align-items: center; background: #fff; color: var(--nacht); text-decoration: none; padding: 14px 22px; border-radius: 999px; font: 800 1rem/1 var(--rund); box-shadow: 0 8px 22px rgba(20, 10, 80, .25); transition: transform .15s var(--raus); }
+.knopf:hover { transform: translateY(-2px); }
+.cta .klein { color: #E4E0FF; font-size: .875rem; margin-left: 12px; }
+@media (max-width: 600px) { .cta { flex-direction: column; align-items: flex-start; padding: 26px; } .cta .klein { display: block; margin: 12px 0 0; } .lead { font-size: 1.125rem; } }
+
+/* Weiterlesen */
+.mehr { margin-top: 8px; }
+.mehr h2 { margin-bottom: 8px; font-size: 1.5rem; }
+.mehr ul { list-style: none; padding: 0; margin: 0; }
+.mehr li a { display: block; padding: 14px 0; border-bottom: 1px solid var(--linie); text-decoration: none; color: var(--text); font-weight: 600; transition: color .2s, padding-left .25s var(--raus); }
+.mehr li a:hover { color: var(--link); padding-left: 6px; }
+
+/* Übersicht */
+.blogkopf { padding-block: 64px 28px; max-width: 820px; }
+.blogkopf h1 { font-size: clamp(2.8rem, 7vw, 5rem); }
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px 24px; padding-bottom: 24px; }
+.karte { display: grid; gap: 10px; align-content: start; color: var(--text); text-decoration: none; }
+.karte img { width: 100%; height: auto; display: block; border-radius: 22px; box-shadow: 0 12px 30px rgba(32, 24, 74, .12); transition: transform .35s var(--raus), box-shadow .35s var(--raus); }
+.karte .kicker { justify-self: start; margin: 8px 0 0; }
+.karte h2 { font-size: 1.375rem; line-height: 1.15; }
+.karte p { color: var(--text-2); font-size: 1rem; line-height: 1.55; }
+.karte .meta { margin: 0; font-size: .875rem; }
+.karte:hover img { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(32, 24, 74, .18); }
+.karte:hover h2 { color: var(--link); }
+
+/* Fuß wie auf der Startseite */
+.foot { background: var(--nacht); color: #CFC9F2; margin-top: 56px; padding: 44px 0 calc(44px + env(safe-area-inset-bottom)); font-size: .9375rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.foot a { color: #CFC9F2; text-decoration: none; }
+.foot a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Doppeltop und Doppelboden: Formationen erkennen und Kursziel berechnen", "description": "Doppeltop und Doppelboden einfach erklärt: So erkennst du die M- und die W-Formation, wann sie bestätigt sind und wie du das Kursziel berechnest.", "datePublished": "2026-11-28", "dateModified": "2026-11-28", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-doppeltop-doppelboden.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/doppeltop-doppelboden.html", "keywords": "Doppeltop, Doppelboden, Double Top, Double Bottom, M-Formation, W-Formation, Nackenlinie, Kursziel berechnen, Umkehrformation, Dreifachtop", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Doppeltop und Doppelboden: Formationen erkennen und Kursziel berechnen", "item": "https://fotiadisapps.de/InQuestly/blog/doppeltop-doppelboden.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist ein Doppeltop?", "acceptedAnswer": {"@type": "Answer", "text": "Eine Umkehrformation in Form eines M: Der Kurs scheitert zweimal an ungefähr derselben Hochmarke. Bestätigt ist sie, wenn der Kurs unter das Zwischentief fällt, die Nackenlinie."}}, {"@type": "Question", "name": "Was ist ein Doppelboden?", "acceptedAnswer": {"@type": "Answer", "text": "Das Gegenstück in Form eines W: zwei Tiefs auf ähnlicher Höhe. Bestätigt ist er mit dem Ausbruch über das Zwischenhoch."}}, {"@type": "Question", "name": "Wie berechnet man das Kursziel beim Doppeltop?", "acceptedAnswer": {"@type": "Answer", "text": "Die Höhe der Formation, also der Abstand zwischen Hoch und Nackenlinie, wird vom Ausbruchspunkt nach unten abgetragen. Das ist eine Faustregel, keine Garantie."}}, {"@type": "Question", "name": "Ist ein Doppeltop bärisch?", "acceptedAnswer": {"@type": "Answer", "text": "Nach einem Aufwärtstrend gilt es als bärisches Umkehrsignal, aber erst nach dem Bruch der Nackenlinie."}}, {"@type": "Question", "name": "Was ist der Unterschied zum Dreifachtop?", "acceptedAnswer": {"@type": "Answer", "text": "Beim Dreifachtop scheitert der Kurs dreimal an derselben Hochmarke. Aufbau und Bestätigung funktionieren genauso."}}, {"@type": "Question", "name": "Wie lange dauert ein Doppelboden?", "acceptedAnswer": {"@type": "Answer", "text": "Im Tageschart liegen zwischen den beiden Tiefs meist einige Wochen. Sehr kurze Formationen sind oft nur Rauschen."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../icon-180.png" alt="" width="34" height="34">InQuestly</a>
+  <nav class="nav" aria-label="Hauptnavigation"><a href="../">Die App</a><a href="./">Blog</a><a href="../quiz.html">Börsen-Quiz</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis laden</a></nav>
+</div></header>
+<main>
+<article class="wrap artikel">
+  <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
+  <p class="kicker">Charttechnik</p>
+  <h1>Doppeltop und Doppelboden: Formationen erkennen und Kursziel berechnen</h1>
+  <p class="meta">Von Stathis Fotiadis am 28. November 2026. Lesezeit 3 Minuten.</p>
+  <p class="lead">Zweimal am selben Hoch gescheitert, zweimal am selben Tief gehalten: Doppeltop und Doppelboden gehören zu den bekanntesten Umkehrformationen. So liest du sie richtig.</p>
+  <nav class="inhalt" aria-label="Inhalt"><b>Inhalt</b><ol><li><a href="#so-ist-ein-doppeltop-aufgebaut">So ist ein Doppeltop aufgebaut</a></li><li><a href="#kursziel-berechnen">Kursziel berechnen</a></li><li><a href="#woran-du-eine-starke-formation-erkennst">Woran du eine starke Formation erkennst</a></li><li><a href="#pullback-und-fehlsignale">Pullback und Fehlsignale</a></li><li><a href="#verwandte-formationen">Verwandte Formationen</a></li><li><a href="#formationen-erkennen-ueben">Formationen erkennen üben</a></li></ol></nav>
+  <figure class="appbild"><img src="bild-doppeltop-doppelboden.jpg" alt="„Muster-Detektiv“ in InQuestly: Welche Formation steckt im Übungschart? Das Spiel ist gratis." width="540" height="1174" loading="lazy"><figcaption>„Muster-Detektiv“ in InQuestly: Welche Formation steckt im Übungschart? Das Spiel ist gratis.</figcaption></figure>
+  <div class="text">
+<p>Ein <strong>Doppeltop</strong> (englisch Double Top) entsteht, wenn ein Kurs zweimal an ungefähr derselben Hochmarke scheitert. Im Chart sieht das aus wie ein <strong>M</strong>. Das Gegenstück ist der <strong>Doppelboden</strong> (Double Bottom): zwei Tiefs auf ähnlicher Höhe, die Form eines <strong>W</strong>. Beide gelten als Umkehrformationen, sie können also das Ende eines Trends anzeigen.</p>
+<h2 id="so-ist-ein-doppeltop-aufgebaut">So ist ein Doppeltop aufgebaut</h2>
+<ol><li>Ein Aufwärtstrend führt zu einem ersten Hoch.</li><li>Der Kurs fällt bis zu einem Zwischentief zurück.</li><li>Ein zweiter Anstieg scheitert ungefähr am ersten Hoch.</li><li>Der Kurs fällt unter das Zwischentief.</li></ol>
+<p>Die waagerechte Linie durch das Zwischentief heißt <strong>Nackenlinie</strong>. Erst wenn der Kurs sie nach unten durchbricht, gilt das Doppeltop als <strong>bestätigt</strong>. Vorher sind es einfach zwei Hochs, und der Aufwärtstrend kann weiterlaufen.</p>
+<p>Beim Doppelboden ist es spiegelbildlich: zwei Tiefs auf ähnlicher Höhe, dazwischen ein Zwischenhoch. Die Nackenlinie liegt am Zwischenhoch, bestätigt ist die Formation mit dem Ausbruch nach oben.</p>
+<h2 id="kursziel-berechnen">Kursziel berechnen</h2>
+<p>Eine verbreitete Faustregel: Die Höhe der Formation wird vom Ausbruchspunkt aus abgetragen.</p>
+<div class="tabelle"><table><thead><tr><th>Schritt</th><th>Doppeltop</th><th>Doppelboden</th></tr></thead><tbody><tr><td>Hochs bzw. Tiefs</td><td>120 € und 119,50 €</td><td>80 € und 80,40 €</td></tr><tr><td>Nackenlinie</td><td>Zwischentief bei 110 €</td><td>Zwischenhoch bei 90 €</td></tr><tr><td>Höhe der Formation</td><td>120 € − 110 € = 10 €</td><td>90 € − 80 € = 10 €</td></tr><tr><td>Rechnerisches Kursziel</td><td>110 € − 10 € = 100 €</td><td>90 € + 10 € = 100 €</td></tr></tbody></table></div>
+<aside class="hinweis"><p>Das Kursziel ist eine Orientierung, kein Versprechen. Oft wird es nicht erreicht, manchmal deutlich überschritten. Nutze es, um das <a href="chance-risiko-verhaeltnis.html">Chance-Risiko-Verhältnis</a> einer Idee einzuschätzen, nicht als Prognose.</p></aside>
+<h2 id="woran-du-eine-starke-formation-erkennst">Woran du eine starke Formation erkennst</h2>
+<ul><li><strong>Ein klarer Trend davor.</strong> Ein Doppeltop ohne vorherigen Anstieg ist keine Umkehr.</li><li><strong>Genug Abstand zwischen den Hochs oder Tiefs.</strong> Liegen nur wenige Kerzen dazwischen, ist es oft nur Rauschen. Im Tageschart liegen meist einige Wochen dazwischen.</li><li><strong>Ähnliche Höhe.</strong> Die beiden Hochs oder Tiefs liegen nah beieinander, sie müssen aber nicht auf den Cent gleich sein.</li><li><strong>Volumen.</strong> Beim Doppeltop ist das Volumen am zweiten Hoch oft niedriger als am ersten, ein Zeichen nachlassender Kaufkraft. Beim Bruch der Nackenlinie steigt es häufig an.</li></ul>
+<h2 id="pullback-und-fehlsignale">Pullback und Fehlsignale</h2>
+<p>Nach dem Bruch kehrt der Kurs häufig noch einmal an die Nackenlinie zurück. Diesen <strong>Pullback</strong> nutzen manche als zweite Gelegenheit, denn die alte Unterstützung wirkt jetzt oft als Widerstand. Wie dieser Rollentausch funktioniert, erklärt der Artikel <a href="unterstuetzung-widerstand.html">Unterstützung und Widerstand</a>.</p>
+<p>Fehlsignale sind häufig: Der Kurs bricht kurz unter die Nackenlinie und steigt danach über das Doppelhoch hinaus. Wer handelt, legt deshalb vorher einen Ausstieg fest, beim Doppeltop zum Beispiel über dem zweiten Hoch, und begrenzt das Risiko pro Trade über die <a href="positionsgroesse-berechnen.html">Positionsgröße</a>.</p>
+<h2 id="verwandte-formationen">Verwandte Formationen</h2>
+<ul><li><strong>Dreifachtop und Dreifachboden:</strong> wie Doppeltop und Doppelboden, nur mit drei Hochs oder Tiefs auf ähnlicher Höhe.</li><li><strong><a href="schulter-kopf-schulter.html">Schulter-Kopf-Schulter</a>:</strong> drei Hochs, das mittlere am höchsten. Ebenfalls eine Umkehrformation mit Nackenlinie und demselben Prinzip beim Kursziel.</li><li><strong>Bullenfalle und Bärenfalle:</strong> scheinbare Ausbrüche, die sofort scheitern. Mehr dazu im Artikel <a href="bulle-und-baer.html">Bulle und Bär</a>.</li></ul>
+<p>Einen Überblick über die sieben wichtigsten Formationen gibt der Artikel <a href="chartmuster.html">Chartmuster erkennen</a>.</p>
+<h2 id="formationen-erkennen-ueben">Formationen erkennen üben</h2>
+<p>Im Gratis-Spiel „Muster-Detektiv“ in InQuestly suchst du Formationen in Übungscharts und erfährst nach jeder Runde, woran du sie erkennst. Die Grundlagen zu Trends und Zonen erklärt der Gratis-Kurs Charttechnik &amp; Muster. Die Kursverläufe zum Üben sind nachgebildet, echtes Geld ist nie im Spiel.</p>
+<h2 id="haeufige-fragen">Häufige Fragen</h2>
+<details><summary>Was ist ein Doppeltop?</summary><p>Eine Umkehrformation in Form eines M: Der Kurs scheitert zweimal an ungefähr derselben Hochmarke. Bestätigt ist sie, wenn der Kurs unter das Zwischentief fällt, die Nackenlinie.</p></details>
+<details><summary>Was ist ein Doppelboden?</summary><p>Das Gegenstück in Form eines W: zwei Tiefs auf ähnlicher Höhe. Bestätigt ist er mit dem Ausbruch über das Zwischenhoch.</p></details>
+<details><summary>Wie berechnet man das Kursziel beim Doppeltop?</summary><p>Die Höhe der Formation, also der Abstand zwischen Hoch und Nackenlinie, wird vom Ausbruchspunkt nach unten abgetragen. Das ist eine Faustregel, keine Garantie.</p></details>
+<details><summary>Ist ein Doppeltop bärisch?</summary><p>Nach einem Aufwärtstrend gilt es als bärisches Umkehrsignal, aber erst nach dem Bruch der Nackenlinie.</p></details>
+<details><summary>Was ist der Unterschied zum Dreifachtop?</summary><p>Beim Dreifachtop scheitert der Kurs dreimal an derselben Hochmarke. Aufbau und Bestätigung funktionieren genauso.</p></details>
+<details><summary>Wie lange dauert ein Doppelboden?</summary><p>Im Tageschart liegen zwischen den beiden Tiefs meist einige Wochen. Sehr kurze Formationen sind oft nur Rauschen.</p></details>
+  </div>
+  
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
+  <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
+  <aside class="cta">
+  <img src="../app/drache-lern.svg" alt="" width="104" height="99">
+  <div><h2>Üben statt nur lesen</h2>
+  <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
+</aside>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="schulter-kopf-schulter.html">Schulter-Kopf-Schulter-Formation: erkennen und Kursziel berechnen</a></li><li><a href="chartmuster.html">Chartmuster erkennen: Die 7 wichtigsten Formationen einfach erklärt</a></li><li><a href="engulfing-kerze.html">Engulfing-Kerze: Bedeutung, Erkennen und typische Fehler</a></li></ul></section>
+</article>
+</main>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+</div></footer>
+</body>
+</html>

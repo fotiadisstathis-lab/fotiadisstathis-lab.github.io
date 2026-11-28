@@ -97,6 +97,17 @@ details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
 details p { color: var(--text-2); padding: 0 0 20px; }
 .hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
 
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
 /* Aufruf zur App */
 .cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
 .cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
@@ -135,7 +146,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Positionsgröße berechnen: Die 1-Prozent-Regel erklärt", "description": "Wie viele Aktien solltest du kaufen? So berechnest du die Positionsgröße mit der 1-Prozent-Regel, mit Formel, Rechenbeispiel und Verlustserien-Tabelle.", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-positionsgroesse-berechnen.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/positionsgroesse-berechnen.html", "keywords": "Positionsgröße berechnen, 1-Prozent-Regel, Risikomanagement, Money Management, Stop-Loss, Trading lernen", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Positionsgröße berechnen: Die 1-Prozent-Regel erklärt", "item": "https://fotiadisapps.de/InQuestly/blog/positionsgroesse-berechnen.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Muss es genau 1 % sein?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Viele Trader riskieren 0,5 bis 2 % pro Trade. Wichtig ist, dass der Wert vorher feststeht und klein genug ist, um eine Verlustserie zu überstehen."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Positionswert und Risiko?", "acceptedAnswer": {"@type": "Answer", "text": "Der Positionswert ist das Geld, das in der Aktie steckt. Das Risiko ist der Betrag, den du verlierst, wenn der Stop greift. Im Beispiel stecken 2.500 € in der Position, riskiert sind 100 €."}}, {"@type": "Question", "name": "Was passiert bei einer Kurslücke unter den Stop?", "acceptedAnswer": {"@type": "Answer", "text": "Dann wird zum nächsten möglichen Kurs verkauft, und der Verlust kann größer sein als geplant. Deshalb sollte das Risiko pro Trade klein bleiben."}}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Positionsgröße berechnen: Die 1-Prozent-Regel erklärt", "description": "Wie viele Aktien solltest du kaufen? So berechnest du die Positionsgröße mit der 1-Prozent-Regel, mit Formel, Rechenbeispiel und Verlustserien-Tabelle.", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-positionsgroesse-berechnen.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/positionsgroesse-berechnen.html", "keywords": "Positionsgröße berechnen, 1-Prozent-Regel, Risikomanagement, Money Management, Stop-Loss, Trading lernen", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Positionsgröße berechnen: Die 1-Prozent-Regel erklärt", "item": "https://fotiadisapps.de/InQuestly/blog/positionsgroesse-berechnen.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Muss es genau 1 % sein?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Viele Trader riskieren 0,5 bis 2 % pro Trade. Wichtig ist, dass der Wert vorher feststeht und klein genug ist, um eine Verlustserie zu überstehen."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Positionswert und Risiko?", "acceptedAnswer": {"@type": "Answer", "text": "Der Positionswert ist das Geld, das in der Aktie steckt. Das Risiko ist der Betrag, den du verlierst, wenn der Stop greift. Im Beispiel stecken 2.500 € in der Position, riskiert sind 100 €."}}, {"@type": "Question", "name": "Was passiert bei einer Kurslücke unter den Stop?", "acceptedAnswer": {"@type": "Answer", "text": "Dann wird zum nächsten möglichen Kurs verkauft, und der Verlust kann größer sein als geplant. Deshalb sollte das Risiko pro Trade klein bleiben."}}]}]</script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -145,7 +156,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <main>
 <article class="wrap artikel">
   <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
-  <p class="kicker">Risikomanagement</p>
+  <p class="kicker">Trading &amp; Risiko</p>
   <h1>Positionsgröße berechnen: Die 1-Prozent-Regel erklärt</h1>
   <p class="meta">Von Stathis Fotiadis am 24. November 2026. Lesezeit 3 Minuten.</p>
   <p class="lead">Wie viel du bei einem Fehltrade verlierst, entscheidet nicht der Einstieg, sondern die Positionsgröße. So rechnen Profis sie in drei Schritten aus.</p>
@@ -173,6 +184,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <details><summary>Was ist der Unterschied zwischen Positionswert und Risiko?</summary><p>Der Positionswert ist das Geld, das in der Aktie steckt. Das Risiko ist der Betrag, den du verlierst, wenn der Stop greift. Im Beispiel stecken 2.500 € in der Position, riskiert sind 100 €.</p></details>
 <details><summary>Was passiert bei einer Kurslücke unter den Stop?</summary><p>Dann wird zum nächsten möglichen Kurs verkauft, und der Verlust kann größer sein als geplant. Deshalb sollte das Risiko pro Trade klein bleiben.</p></details>
   </div>
+  
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
   <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
   <aside class="cta">
   <img src="../app/drache-lern.svg" alt="" width="104" height="99">
@@ -180,11 +196,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
   <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
   <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
 </aside>
-  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="chance-risiko-verhaeltnis.html">CRV berechnen: Chance-Risiko-Verhältnis einfach erklärt</a></li><li><a href="trading-lernen.html">Trading lernen für Anfänger: kostenlos und ohne Risiko üben</a></li><li><a href="doji-kerze.html">Doji-Kerze: Bedeutung und die 4 wichtigsten Arten</a></li></ul></section>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="chance-risiko-verhaeltnis.html">CRV berechnen: Chance-Risiko-Verhältnis einfach erklärt</a></li><li><a href="trading-lernen.html">Trading lernen für Anfänger: kostenlos und ohne Risiko üben</a></li><li><a href="aktienkurse-vorhersagen.html">Kann man Aktienkurse vorhersagen? Was Prognosen leisten</a></li></ul></section>
 </article>
 </main>
 <footer class="foot"><div class="wrap">
-  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
 </div></footer>
 </body>
 </html>

@@ -97,6 +97,17 @@ details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
 details p { color: var(--text-2); padding: 0 0 20px; }
 .hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
 
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
 /* Aufruf zur App */
 .cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
 .cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
@@ -135,7 +146,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Aktien-App für Anfänger: Welche Börsen-App wofür?", "description": "Aktien-App, Börsen-App oder Lern-App? Was Broker-, Kurs- und Lern-Apps können, worauf Anfänger achten sollten und in welcher Reihenfolge du startest.", "datePublished": "2026-11-25", "dateModified": "2026-11-25", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-aktien-app-anfaenger.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/aktien-app-anfaenger.html", "keywords": "Aktien App, Aktien App für Anfänger, Börsen App, Börsen App kostenlos, Börsen App Vergleich, Trading App Anfänger, ETF App", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Aktien-App für Anfänger: Welche Börsen-App wofür?", "item": "https://fotiadisapps.de/InQuestly/blog/aktien-app-anfaenger.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welche Aktien-App ist für Anfänger am besten?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Ziel ab: Zum Kaufen brauchst du eine Broker-App, zum Verstehen eine Lern-App. Viele starten mit einer Lern-App und eröffnen das Depot erst später."}}, {"@type": "Question", "name": "Gibt es kostenlose Börsen-Apps?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Viele Kurs- und Lern-Apps sind kostenlos oder haben einen Gratis-Teil. Bei Broker-Apps fallen meist Gebühren oder Spreads pro Order an."}}, {"@type": "Question", "name": "Ist eine Aktien-App sicher?", "acceptedAnswer": {"@type": "Answer", "text": "Bei regulierten Brokern liegen Wertpapiere als Sondervermögen im Depot, Guthaben sind über die gesetzliche Einlagensicherung bis 100.000 € geschützt. Vor Kursverlusten schützt das nicht."}}, {"@type": "Question", "name": "Kann ich mit einer App ohne Geld Aktien üben?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Lern-Apps, Börsenspiele und Simulatoren funktionieren ohne echtes Geld. Mehr dazu im Artikel Börsenspiel-App und Aktien-Simulator."}}, {"@type": "Question", "name": "Brauche ich für InQuestly ein Depot?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. InQuestly ist kein Broker. Du lernst und übst ohne Depot und ohne echtes Geld."}}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Aktien-App für Anfänger: Welche Börsen-App wofür?", "description": "Aktien-App, Börsen-App oder Lern-App? Was Broker-, Kurs- und Lern-Apps können, worauf Anfänger achten sollten und in welcher Reihenfolge du startest.", "datePublished": "2026-11-25", "dateModified": "2026-11-25", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-aktien-app-anfaenger.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/aktien-app-anfaenger.html", "keywords": "Aktien App, Aktien App für Anfänger, Börsen App, Börsen App kostenlos, Börsen App Vergleich, Trading App Anfänger, ETF App", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Aktien-App für Anfänger: Welche Börsen-App wofür?", "item": "https://fotiadisapps.de/InQuestly/blog/aktien-app-anfaenger.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Welche Aktien-App ist für Anfänger am besten?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt vom Ziel ab: Zum Kaufen brauchst du eine Broker-App, zum Verstehen eine Lern-App. Viele starten mit einer Lern-App und eröffnen das Depot erst später."}}, {"@type": "Question", "name": "Gibt es kostenlose Börsen-Apps?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Viele Kurs- und Lern-Apps sind kostenlos oder haben einen Gratis-Teil. Bei Broker-Apps fallen meist Gebühren oder Spreads pro Order an."}}, {"@type": "Question", "name": "Ist eine Aktien-App sicher?", "acceptedAnswer": {"@type": "Answer", "text": "Bei regulierten Brokern liegen Wertpapiere als Sondervermögen im Depot, Guthaben sind über die gesetzliche Einlagensicherung bis 100.000 € geschützt. Vor Kursverlusten schützt das nicht."}}, {"@type": "Question", "name": "Kann ich mit einer App ohne Geld Aktien üben?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Lern-Apps, Börsenspiele und Simulatoren funktionieren ohne echtes Geld. Mehr dazu im Artikel Börsenspiel-App und Aktien-Simulator."}}, {"@type": "Question", "name": "Brauche ich für InQuestly ein Depot?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. InQuestly ist kein Broker. Du lernst und übst ohne Depot und ohne echtes Geld."}}]}]</script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -145,7 +156,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <main>
 <article class="wrap artikel">
   <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
-  <p class="kicker">Ratgeber</p>
+  <p class="kicker">Einstieg</p>
   <h1>Aktien-App für Anfänger: Welche Börsen-App wofür?</h1>
   <p class="meta">Von Stathis Fotiadis am 25. November 2026. Lesezeit 3 Minuten.</p>
   <p class="lead">„Aktien-App“ kann drei sehr verschiedene Dinge bedeuten: handeln, beobachten oder lernen. So findest du heraus, welche App du als Anfänger wirklich brauchst.</p>
@@ -176,6 +187,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <details><summary>Kann ich mit einer App ohne Geld Aktien üben?</summary><p>Ja. Lern-Apps, Börsenspiele und Simulatoren funktionieren ohne echtes Geld. Mehr dazu im Artikel <a href="boersenspiel.html">Börsenspiel-App und Aktien-Simulator</a>.</p></details>
 <details><summary>Brauche ich für InQuestly ein Depot?</summary><p>Nein. InQuestly ist kein Broker. Du lernst und übst ohne Depot und ohne echtes Geld.</p></details>
   </div>
+  
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
   <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
   <aside class="cta">
   <img src="../app/drache-lern.svg" alt="" width="104" height="99">
@@ -183,11 +199,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
   <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
   <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
 </aside>
-  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="boerse-lernen-app.html">Börse lernen App: So findest du die richtige Lern-App</a></li><li><a href="doji-kerze.html">Doji-Kerze: Bedeutung und die 4 wichtigsten Arten</a></li><li><a href="hammer-kerze.html">Hammer-Kerze: Bedeutung, Farbe und Trading</a></li></ul></section>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="boerse-lernen-app.html">Börse lernen App: So findest du die richtige Lern-App</a></li><li><a href="bulle-und-baer.html">Bulle und Bär: Was die Begriffe an der Börse bedeuten</a></li><li><a href="boerse-lernen-einstieg.html">Börse lernen: Der Einstieg in 7 Schritten</a></li></ul></section>
 </article>
 </main>
 <footer class="foot"><div class="wrap">
-  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
 </div></footer>
 </body>
 </html>

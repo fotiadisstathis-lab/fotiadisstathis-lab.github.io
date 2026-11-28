@@ -97,6 +97,17 @@ details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
 details p { color: var(--text-2); padding: 0 0 20px; }
 .hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
 
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
 /* Aufruf zur App */
 .cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
 .cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
@@ -135,7 +146,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "KGV einfach erklärt: Wann ist eine Aktie günstig?", "description": "Was ist das KGV (Kurs-Gewinn-Verhältnis), wie berechnest du es und was sagt es über eine Aktie? Mit Formel, Rechenbeispiel und typischen Fehlern.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-kgv-einfach-erklaert.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/kgv-einfach-erklaert.html", "keywords": "KGV, KGV berechnen, KGV einfach erklärt, Kurs-Gewinn-Verhältnis, KGV Aktie, gutes KGV, Gewinnrendite, Shiller-KGV, Aktienbewertung", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "KGV einfach erklärt: Wann ist eine Aktie günstig?", "item": "https://fotiadisapps.de/InQuestly/blog/kgv-einfach-erklaert.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist das KGV einfach erklärt?", "acceptedAnswer": {"@type": "Answer", "text": "Das Kurs-Gewinn-Verhältnis zeigt, wie viele Jahresgewinne du für eine Aktie bezahlst. Ein KGV von 20 heißt: Der Kurs entspricht dem 20-Fachen des Gewinns je Aktie."}}, {"@type": "Question", "name": "Wie berechne ich das KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Aktienkurs geteilt durch den Gewinn je Aktie. Bei 100 € Kurs und 5 € Gewinn je Aktie beträgt das KGV 20."}}, {"@type": "Question", "name": "Was ist ein gutes KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt von Branche, Wachstum und Zinsniveau ab. Sinnvoll ist der Vergleich mit ähnlichen Unternehmen und mit dem eigenen Durchschnitt der Aktie."}}, {"@type": "Question", "name": "Ist ein niedriges KGV immer gut?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Ein niedriges KGV kann auch zeigen, dass Anleger mit sinkenden Gewinnen rechnen oder dass ein Sondereffekt den Gewinn aufbläht."}}, {"@type": "Question", "name": "Was ist das Shiller-KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Eine Variante, die den Kurs durch den Durchschnitt der inflationsbereinigten Gewinne der letzten zehn Jahre teilt. Sie glättet Ausreißer und wird oft für ganze Märkte genutzt."}}, {"@type": "Question", "name": "Was bedeutet ein negatives KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Das Unternehmen hat Verlust gemacht. Dann ist das KGV für die Bewertung nicht aussagekräftig."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen KGV und Gewinnrendite?", "acceptedAnswer": {"@type": "Answer", "text": "Die Gewinnrendite ist der Kehrwert des KGV. Ein KGV von 20 entspricht einer Gewinnrendite von 5 %."}}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "KGV einfach erklärt: Wann ist eine Aktie günstig?", "description": "Was ist das KGV (Kurs-Gewinn-Verhältnis), wie berechnest du es und was sagt es über eine Aktie? Mit Formel, Rechenbeispiel und typischen Fehlern.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-kgv-einfach-erklaert.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/kgv-einfach-erklaert.html", "keywords": "KGV, KGV berechnen, KGV einfach erklärt, Kurs-Gewinn-Verhältnis, KGV Aktie, gutes KGV, Gewinnrendite, Shiller-KGV, Aktienbewertung", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "KGV einfach erklärt: Wann ist eine Aktie günstig?", "item": "https://fotiadisapps.de/InQuestly/blog/kgv-einfach-erklaert.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist das KGV einfach erklärt?", "acceptedAnswer": {"@type": "Answer", "text": "Das Kurs-Gewinn-Verhältnis zeigt, wie viele Jahresgewinne du für eine Aktie bezahlst. Ein KGV von 20 heißt: Der Kurs entspricht dem 20-Fachen des Gewinns je Aktie."}}, {"@type": "Question", "name": "Wie berechne ich das KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Aktienkurs geteilt durch den Gewinn je Aktie. Bei 100 € Kurs und 5 € Gewinn je Aktie beträgt das KGV 20."}}, {"@type": "Question", "name": "Was ist ein gutes KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Das hängt von Branche, Wachstum und Zinsniveau ab. Sinnvoll ist der Vergleich mit ähnlichen Unternehmen und mit dem eigenen Durchschnitt der Aktie."}}, {"@type": "Question", "name": "Ist ein niedriges KGV immer gut?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Ein niedriges KGV kann auch zeigen, dass Anleger mit sinkenden Gewinnen rechnen oder dass ein Sondereffekt den Gewinn aufbläht."}}, {"@type": "Question", "name": "Was ist das Shiller-KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Eine Variante, die den Kurs durch den Durchschnitt der inflationsbereinigten Gewinne der letzten zehn Jahre teilt. Sie glättet Ausreißer und wird oft für ganze Märkte genutzt."}}, {"@type": "Question", "name": "Was bedeutet ein negatives KGV?", "acceptedAnswer": {"@type": "Answer", "text": "Das Unternehmen hat Verlust gemacht. Dann ist das KGV für die Bewertung nicht aussagekräftig."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen KGV und Gewinnrendite?", "acceptedAnswer": {"@type": "Answer", "text": "Die Gewinnrendite ist der Kehrwert des KGV. Ein KGV von 20 entspricht einer Gewinnrendite von 5 %."}}]}]</script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -145,7 +156,7 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <main>
 <article class="wrap artikel">
   <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
-  <p class="kicker">Fundamentaldaten</p>
+  <p class="kicker">Indikatoren &amp; Kennzahlen</p>
   <h1>KGV einfach erklärt: Wann ist eine Aktie günstig?</h1>
   <p class="meta">Von Stathis Fotiadis am 27. November 2026. Lesezeit 4 Minuten.</p>
   <p class="lead">Das KGV ist die bekannteste Kennzahl, um Aktien zu bewerten. Es zeigt, wie viele Jahresgewinne du für eine Aktie bezahlst. Hier lernst du, wie du es berechnest, richtig vergleichst und wo es dich in die Irre führen kann.</p>
@@ -184,6 +195,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
 <details><summary>Was bedeutet ein negatives KGV?</summary><p>Das Unternehmen hat Verlust gemacht. Dann ist das KGV für die Bewertung nicht aussagekräftig.</p></details>
 <details><summary>Was ist der Unterschied zwischen KGV und Gewinnrendite?</summary><p>Die Gewinnrendite ist der Kehrwert des KGV. Ein KGV von 20 entspricht einer Gewinnrendite von 5 %.</p></details>
   </div>
+  
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
   <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
   <aside class="cta">
   <img src="../app/drache-lern.svg" alt="" width="104" height="99">
@@ -191,11 +207,11 @@ details p { color: var(--text-2); padding: 0 0 20px; }
   <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
   <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
 </aside>
-  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="doji-kerze.html">Doji-Kerze: Bedeutung und die 4 wichtigsten Arten</a></li><li><a href="hammer-kerze.html">Hammer-Kerze: Bedeutung, Farbe und Trading</a></li><li><a href="kerzenchart-lesen.html">Kerzenchart lesen: So verstehst du jede Kerze</a></li></ul></section>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="gleitender-durchschnitt.html">Gleitender Durchschnitt: SMA, EMA und die 200-Tage-Linie einfach erklärt</a></li><li><a href="rsi-einfach-erklaert.html">RSI einfach erklärt: Überkauft, überverkauft und Divergenz</a></li><li><a href="doppeltop-doppelboden.html">Doppeltop und Doppelboden: Formationen erkennen und Kursziel berechnen</a></li></ul></section>
 </article>
 </main>
 <footer class="foot"><div class="wrap">
-  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a>
 </div></footer>
 </body>
 </html>
