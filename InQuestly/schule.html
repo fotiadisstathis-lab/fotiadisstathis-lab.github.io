@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InQuestly im Unterricht – für Lehrkräfte</title>
+<meta name="description" content="Börse und Geldanlage im Unterricht üben, ohne echtes Geld: Wochen-Challenge als Klassenwettbewerb, Prognose-Duelle und Kurse zu Sparen, ETFs, Risiko und Charts.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/schule.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="InQuestly im Unterricht">
+<meta property="og:description" content="Für Wirtschaft, WBS und Politik: Wochen-Challenge als Klassenwettbewerb, Prognose-Duelle und Kurse zu Sparen, ETFs, Risiko und Charts.">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/schule.html">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/og-start.jpg">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="favicon.svg"><link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<style>
+/* Seite für Lehrkräfte im Look der Website: Weiß und Violett, runde Überschriften, Drache. Keine fremden Dateien. */
+@font-face { font-family: "IQ Nunito"; src: url("fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+:root { --violett: #5A46E6; --nacht: #20184A; --gruen: #15A055; --gelb: #FFC83A; --grund: #FFFFFF; --nebel: #F3F1FF; --text: #20184A; --text-2: #5C5780; --linie: #E4E0F7; --karte: #FFFFFF; --link: #5A46E6;
+  --rund: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif; --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; --raus: cubic-bezier(.2, .8, .2, 1); }
+@media (prefers-color-scheme: dark) { :root { --grund: #0F0C26; --nebel: #17133A; --text: #F3F1FF; --text-2: #B9B3DD; --linie: #2B2656; --karte: #1B1744; --link: #B3A9FF; color-scheme: dark; } }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--grund); color: var(--text); font: 400 1.0625rem/1.65 var(--schrift); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--gelb); outline-offset: 3px; border-radius: 8px; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--grund) 90%, transparent); box-shadow: 0 1px 0 var(--linie); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); view-transition-name: kopf; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 900 1.25rem/1 var(--rund); letter-spacing: -0.02em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+.top nav { display: flex; align-items: center; gap: 8px 22px; font-size: .9375rem; font-weight: 600; }
+.top nav a { color: var(--text); text-decoration: none; opacity: .85; }
+.top nav a.laden { opacity: 1; color: #fff; background: var(--violett); padding: 10px 16px; border-radius: 999px; font: 800 .9375rem/1 var(--rund); }
+@media (max-width: 640px) { .top nav a:not(.laden) { display: none; } }
+main { max-width: 760px; margin: 0 auto; padding: 44px 20px 72px; }
+h1, h2, h3 { font-family: var(--rund); font-weight: 900; letter-spacing: -0.02em; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.02; letter-spacing: -0.028em; }
+h2 { font-size: clamp(1.5rem, 3vw, 1.875rem); line-height: 1.15; margin: 56px 0 14px; }
+h3 { font-size: 1.25rem; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em; }
+ul { padding-left: 22px; margin: 14px 0 0; } li + li { margin-top: 8px; } li::marker { color: var(--violett); }
+.kicker { display: inline-block; font: 800 .875rem/1 var(--rund); color: var(--violett); background: var(--nebel); padding: 8px 12px; border-radius: 999px; margin: 0 0 18px; }
+@media (prefers-color-scheme: dark) { .kicker { color: #C9C2FF; } }
+.lead { font-size: 1.25rem; line-height: 1.55; color: var(--text-2); margin-top: 18px; }
+.einleitung { margin-top: 18px; }
+
+/* Fakten wie auf der Presseseite */
+.card { background: var(--karte); border: 1px solid var(--linie); border-radius: 22px; padding: 20px 22px; margin: 32px 0 0; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 10px 22px; margin: 0; }
+.facts dt { color: var(--text-2); }
+.facts dd { margin: 0; }
+@media (max-width: 520px) { .facts { grid-template-columns: 1fr; gap: 0; } .facts dd { margin: 0 0 12px; } .facts dd:last-child { margin-bottom: 0; } }
+
+/* Drei Formate für den Unterricht */
+.methode { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 26px 0; border-top: 1px solid var(--linie); }
+.methode:last-of-type { border-bottom: 1px solid var(--linie); }
+.nr { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--violett); color: #fff; font: 900 1.375rem/1 var(--rund); }
+.methode h3 { margin: 10px 0 10px; }
+.methode p + p { margin-top: 12px; }
+.tipp { padding: 14px 18px; background: var(--nebel); border-radius: 16px; font-size: 1rem; }
+.tipp b { font-family: var(--rund); font-weight: 900; }
+@media (max-width: 520px) { .methode { grid-template-columns: 1fr; gap: 12px; } .methode h3 { margin-top: 0; } }
+
+/* Themen und passende Lektionen */
+.themen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.thema { background: var(--karte); border: 1px solid var(--linie); border-radius: 20px; padding: 18px 20px; }
+.thema h4 { margin: 0; font: 900 1.125rem/1.2 var(--rund); letter-spacing: -0.01em; }
+.thema .kurs { margin-top: 6px; color: var(--text-2); font-size: .9375rem; }
+.thema ul { margin-top: 10px; font-size: 1rem; }
+.thema li + li { margin-top: 4px; }
+.marke { display: inline-block; margin-left: 4px; padding: 3px 8px; border-radius: 999px; font: 800 .75rem/1.2 var(--rund); vertical-align: 1px; }
+.marke.frei { background: #E3F6EA; color: #0F7A40; }
+.marke.pro { background: var(--nebel); color: var(--violett); }
+@media (prefers-color-scheme: dark) { .marke.frei { background: #123A26; color: #4FD889; } .marke.pro { color: #C9C2FF; } }
+@media (max-width: 600px) { .themen { grid-template-columns: 1fr; } }
+
+/* Links zum Nachlesen */
+.liste { list-style: none; padding: 0; margin: 8px 0 0; }
+.liste li + li { margin: 0; }
+.liste a { display: block; padding: 13px 0; border-bottom: 1px solid var(--linie); color: var(--text); text-decoration: none; font-weight: 600; transition: color .2s, padding-left .25s var(--raus); }
+.liste a span { display: block; font-weight: 400; font-size: .9375rem; color: var(--text-2); }
+.liste a:hover { color: var(--link); padding-left: 6px; }
+
+.knopf { display: inline-flex; align-items: center; margin-top: 18px; background: var(--violett); color: #fff; text-decoration: none; padding: 14px 22px; border-radius: 999px; font: 800 1rem/1 var(--rund); transition: transform .15s var(--raus); }
+.knopf:hover { transform: translateY(-2px); }
+.klein { color: var(--text-2); font-size: .875rem; }
+
+/* Ruhiger Aufruf zur App wie im Blog */
+.cta { display: flex; gap: 24px; align-items: center; margin: 56px 0 0; padding: 30px 32px; background: var(--nebel); border-radius: 30px; }
+.cta img { flex: none; width: 104px; height: auto; }
+.cta h2 { margin: 0 0 8px; font-size: 1.75rem; }
+.cta p { color: var(--text-2); }
+.cta .knopf { margin-right: 12px; }
+@media (max-width: 600px) { .cta { flex-direction: column; align-items: flex-start; padding: 26px; } .lead { font-size: 1.125rem; } }
+
+.foot { background: var(--nacht); color: #CFC9F2; padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); font-size: .9375rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.foot a { color: #CFC9F2; text-decoration: none; } .foot a:hover { color: #fff; text-decoration: underline; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+</style>
+</head>
+<body><header class="top"><div class="wrap"><a class="brand" href="./"><img src="icon-180.png" alt="" width="36" height="36">InQuestly</a><nav aria-label="Hauptnavigation"><a href="./">Die App</a><a href="blog/">Blog</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&amp;ct=schule&amp;mt=8">Gratis laden</a></nav></div></header><main>
+<p class="kicker">Für Lehrkräfte</p>
+<h1>InQuestly im Unterricht</h1>
+<p class="lead">Börse und Geldanlage verstehen, ohne echtes Geld. So setzt du InQuestly in Wirtschaft, WBS oder Politik in der Sekundarstufe ein.</p>
+<p class="einleitung">InQuestly ist eine Lern-App für das iPhone: kurze Lektionen mit Quiz, Chart-Spiele und Prognosen gegeneinander. Drei Formate passen besonders gut in den Unterricht.</p>
+
+<div class="card"><dl class="facts">
+<dt>Kosten</dt><dd>Kostenlos mit In-App-Käufen. Die vier Grundlagenkurse mit 32 Lektionen sind dauerhaft gratis.</dd>
+<dt>Altersfreigabe</dt><dd>4+ im App Store</dd>
+<dt>Konto</dt><dd>Nicht nötig, auch keine E-Mail-Adresse. Der Fortschritt bleibt auf dem iPhone und in der eigenen iCloud.</dd>
+<dt>Geld</dt><dd>Kein echtes Geld. In der App werden keine Wertpapiere gehandelt, gespielt wird um Punkte.</dd>
+<dt>Gerät</dt><dd>iPhone (iOS). Das <a href="quiz.html">Börsen-Quiz</a> läuft in jedem Browser.</dd>
+<dt>Sprachen</dt><dd>Deutsch und Englisch</dd>
+</dl></div>
+
+<h2>So nutzt du die App im Unterricht</h2>
+
+<section class="methode" aria-labelledby="m1"><span class="nr" aria-hidden="true">1</span><div>
+<h3 id="m1">Wochen-Challenge als Klassenwettbewerb</h3>
+<p>Jeden Montag startet eine neue Challenge mit 25 Aufgaben aus allen Bereichen, von Charts über Kennzahlen bis zu News. Alle bekommen dieselben Aufgaben, deshalb lassen sich die Ergebnisse direkt vergleichen. Es gibt einen Versuch pro Woche und 8 Minuten Zeit.</p>
+<p class="tipp"><b>So geht’s:</b> Legt einen Zeitraum fest, etwa bis Freitag. Danach nennt jede und jeder die eigene Punktzahl, und ihr besprecht die schwierigsten Aufgaben gemeinsam. Wer abbricht, hat den Versuch verbraucht. Die Aufgaben sind anspruchsvoll und passen gut nach den Grundlagenkursen.</p>
+</div></section>
+
+<section class="methode" aria-labelledby="m2"><span class="nr" aria-hidden="true">2</span><div>
+<h3 id="m2">Prognose-Duelle zwischen Schülerinnen und Schülern</h3>
+<p>Eine Person schreibt eine Prognose in einem Satz, etwa „Der DAX steigt bis Freitag“, und wählt Zeitraum und Ziel. Sie schickt die Prognose per Link an jemanden aus der Klasse, der dagegenhält. Am Stichtag wertet die App mit dem echten Schlusskurs aus. Gespielt wird um Punkte, nie um Geld.</p>
+<p class="tipp"><b>So geht’s:</b> Lasst beide ihre Begründung vorher aufschreiben. Nach dem Stichtag sprecht ihr darüber, was den Kurs bewegt hat und ob die Begründung oder der Zufall entschieden hat. Passend dazu: der Artikel <a href="blog/aktienkurse-vorhersagen.html">Kann man Aktienkurse vorhersagen?</a></p>
+</div></section>
+
+<section class="methode" aria-labelledby="m3"><span class="nr" aria-hidden="true">3</span><div>
+<h3 id="m3">Kurse passend zum Thema</h3>
+<p>Jede Lektion besteht aus kurzen Lernkarten und endet mit einem Quiz. Das passt als Einstieg in ein Thema oder als Hausaufgabe. Zum Anfang eignet sich der Kurs Börsen-Basics mit „Was ist eine Aktie?“ und „Wie funktioniert die Börse?“.</p>
+<div class="themen">
+  <div class="thema"><h4>Sparen</h4><p class="kurs">Investieren 101 <span class="marke frei">gratis</span></p>
+    <ul><li>Zinseszins &amp; Sparplan</li><li>Altersvorsorge mit ETFs</li></ul></div>
+  <div class="thema"><h4>ETFs</h4><p class="kurs">Investieren 101 und Börsen-Basics <span class="marke frei">gratis</span></p>
+    <ul><li>ETFs verstehen</li><li>Indizes</li><li>Dein Start: Depot, Kosten &amp; Fehler</li><li>Portfolio &amp; Rebalancing</li></ul></div>
+  <div class="thema"><h4>Risiko</h4><p class="kurs">Investieren 101 und Börsen-Basics <span class="marke frei">gratis</span></p>
+    <ul><li>Risiko &amp; Streuung</li><li>Marktphasen &amp; Stimmung</li></ul>
+    <p class="kurs">Zur Vertiefung: Strategie &amp; Psychologie <span class="marke pro">Pro</span></p>
+    <ul><li>Psychologie</li><li>Risikomanagement für Profis</li></ul></div>
+  <div class="thema"><h4>Charts lesen</h4><p class="kurs">Charttechnik &amp; Muster <span class="marke frei">gratis</span></p>
+    <ul><li>Kerzen lesen</li><li>Trends &amp; Zonen</li><li>Chartarten &amp; Zeiteinheiten</li><li>Umkehrformationen</li></ul></div>
+</div>
+</div></section>
+
+<h2>Zum Nachlesen</h2>
+<p>Kostenlose Artikel aus dem Blog, gut als Material für die Stunde:</p>
+<ul class="liste">
+  <li><a href="blog/lexikon.html">Börsenlexikon<span>Die wichtigsten Begriffe von Aktie bis Zinseszins, kurz erklärt</span></a></li>
+  <li><a href="blog/etf-einfach-erklaert.html">Was ist ein ETF?<span>Index, Kosten, Sparplan und Risiko einfach erklärt</span></a></li>
+  <li><a href="blog/investieren-lernen.html">Investieren lernen<span>Der Fahrplan für Einsteiger, mit Zinseszins und Streuung</span></a></li>
+  <li><a href="blog/kerzenchart-lesen.html">Kerzenchart lesen<span>So verstehst du jede Kerze</span></a></li>
+  <li><a href="quiz.html">Börsen-Quiz im Browser<span>Zum Einstieg ohne Installation, auf jedem Gerät</span></a></li>
+</ul>
+
+<h2>Pro-Codes für deine Klasse</h2>
+<p>Mit InQuestly Pro sind alle 16 Kurse und alle 17 Spiele und Trainer freigeschaltet. Für Klassen gibt es Pro-Codes auf Anfrage. Schreib kurz, für welche Klasse du die Codes brauchst.</p>
+<a class="knopf" href="mailto:support@fotiadisapps.de?subject=Pro-Codes%20f%C3%BCr%20meine%20Klasse">E-Mail an support@fotiadisapps.de</a>
+
+<h2>Gut zu wissen</h2>
+<ul>
+  <li>InQuestly ist eine Lern-App und keine Anlageberatung. Die App gibt keine Kauf- oder Verkaufsempfehlungen und ist kein Broker.</li>
+  <li>Übungscharts und Fallstudien sind nachgebildet. Prognosen werden mit echten Schlusskursen ausgewertet.</li>
+  <li>In Ranglisten sieht man nur sich selbst, die eigenen Game-Center-Freunde und als KI gekennzeichnete Rivalen, keine fremden Personen.</li>
+  <li>Die Gratis-Version zeigt derzeit Werbung, für Nutzerinnen und Nutzer unter 16 ohne Personalisierung. Einzelheiten stehen in der <a href="datenschutz.html">Datenschutzerklärung</a>.</li>
+  <li>Käufe laufen über Apple. Für Minderjährige können Eltern dort „Kaufen anfragen“ in der Familienfreigabe nutzen.</li>
+</ul>
+
+<aside class="cta">
+  <img src="app/drache-lern.svg" alt="" width="104" height="99">
+  <div><h2>Erst selbst ausprobieren</h2>
+  <p>Spiel die ersten Lektionen und eine Challenge selbst, bevor du sie in der Klasse einsetzt.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&amp;ct=schule&amp;mt=8">Im App Store laden</a><span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
+</aside>
+</main><footer class="foot"><div class="wrap"><span>© 2026 Fotiadis Apps</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a><a href="haftungsausschluss.html">Haftungsausschluss</a><a href="support.html">Support</a><a href="blog/">Blog</a><a href="presse.html">Presse</a><a href="schule.html">Für Lehrkräfte</a><a href="mailto:support@fotiadisapps.de">support@fotiadisapps.de</a></div></footer></body>
+</html>
