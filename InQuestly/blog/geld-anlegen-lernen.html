@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Geld anlegen lernen: Der Start für Anfänger | InQuestly</title>
+<meta name="description" content="Geld anlegen lernen ohne Vorwissen: Kassensturz, Notgroschen, Sparrate, ETF-Sparplan, Risiko, Kosten und typische Anfängerfehler einfach erklärt.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/blog/geld-anlegen-lernen.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/blog/geld-anlegen-lernen.html">
+<meta property="og:title" content="Geld anlegen lernen: Der Start für Anfänger | InQuestly">
+<meta property="og:description" content="Geld anlegen lernen ohne Vorwissen: Kassensturz, Notgroschen, Sparrate, ETF-Sparplan, Risiko, Kosten und typische Anfängerfehler einfach erklärt.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/blog/og-geld-anlegen-lernen.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg"><link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="InQuestly Blog" href="https://fotiadisapps.de/InQuestly/blog/feed.xml">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>/* InQuestly Blog im Look der Website (Store-Look v67): Weiß und Violett, runde Überschriften, App-Bilder im Handyrahmen. Keine fremden Dateien. */
+@font-face { font-family: "IQ Nunito"; src: url("../fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+:root {
+  --violett: #5A46E6; --nacht: #20184A; --gruen: #15A055; --gelb: #FFC83A; --steigt: #22B35A; --faellt: #F0443A;
+  --grund: #FFFFFF; --nebel: #F3F1FF; --text: #20184A; --text-2: #5C5780; --linie: #E4E0F7; --karte: #FFFFFF; --link: #5A46E6;
+  --rund: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif;
+  --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --raus: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --grund: #0F0C26; --nebel: #17133A; --text: #F3F1FF; --text-2: #B9B3DD; --linie: #2B2656; --karte: #1B1744; --link: #B3A9FF; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--grund); color: var(--text); font: 400 1.125rem/1.7 var(--schrift); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+:focus-visible { outline: 3px solid var(--gelb); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { font-family: var(--rund); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); line-height: 1.02; letter-spacing: -0.028em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.25rem; font-weight: 800; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Kopfzeile wie auf der Startseite */
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--grund) 90%, transparent); box-shadow: 0 1px 0 var(--linie);
+  backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); view-transition-name: kopf; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 900 1.25rem/1 var(--rund); letter-spacing: -0.02em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: 0 2px 8px rgba(0, 0, 0, .14); }
+.nav { display: flex; align-items: center; gap: 8px 22px; font-size: .9375rem; font-weight: 600; }
+.nav a { color: var(--text); text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.nav a.laden { opacity: 1; color: #fff; background: var(--violett); padding: 10px 16px; border-radius: 999px; font: 800 .9375rem/1 var(--rund); text-decoration: none; transition: transform .15s var(--raus); }
+.nav a.laden:active { transform: scale(.97); }
+@media (max-width: 640px) { .nav a:not(.laden) { display: none; } }
+
+/* Artikel */
+.artikel { max-width: 760px; padding-block: 44px 72px; }
+.krumen { font-size: .875rem; color: var(--text-2); margin-bottom: 26px; }
+.krumen a { color: var(--text-2); }
+.kicker { display: inline-block; font: 800 .875rem/1 var(--rund); color: var(--violett); background: var(--nebel); padding: 8px 12px; border-radius: 999px; margin: 0 0 18px; }
+@media (prefers-color-scheme: dark) { .kicker { color: #C9C2FF; } }
+.lead { font-size: 1.25rem; line-height: 1.55; color: var(--text-2); margin-top: 20px; }
+.meta { color: var(--text-2); font-size: .9375rem; margin-top: 16px; }
+.inhalt { margin: 34px 0; padding: 20px 24px; background: var(--nebel); border-radius: 22px; font-size: 1rem; }
+.inhalt b { font: 900 1.0625rem/1 var(--rund); }
+.inhalt ol { margin: 10px 0 0; padding-left: 22px; }
+.inhalt li + li { margin-top: 4px; }
+.appbild { margin: 44px auto; max-width: 290px; text-align: center; }
+.appbild img { width: 100%; height: auto; border-radius: 42px; border: 10px solid #0E0D16; box-shadow: 0 30px 60px rgba(32, 24, 74, .22), 0 8px 18px rgba(32, 24, 74, .12); display: block; background: #F2F2F7; }
+.appbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 16px; }
+.text h2 { margin: 56px 0 14px; }
+.text h3 { margin: 32px 0 10px; }
+.text p + p, .text ul + p, .text ol + p, .text p + ul, .text p + ol, .text .tabelle + p { margin-top: 16px; }
+.text ul, .text ol { padding-left: 24px; margin: 16px 0; }
+.text li + li { margin-top: 8px; }
+.text li::marker { color: var(--violett); font-weight: 800; }
+.text strong, .text b { font-weight: 700; }
+.hinweis { margin: 28px 0; padding: 18px 22px; background: var(--nebel); border-left: 5px solid var(--violett); border-radius: 6px 18px 18px 6px; }
+.tabelle { overflow-x: auto; margin: 22px 0; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 1rem; border: 1px solid var(--linie); border-radius: 18px; overflow: hidden; background: var(--karte); }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { background: var(--nebel); font: 800 .9375rem/1.3 var(--rund); }
+.textbild { margin: 34px 0; }
+.textbild img { width: 100%; height: auto; border-radius: 24px; display: block; background: #fff; box-shadow: 0 18px 40px rgba(32, 24, 74, .12); }
+.textbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 12px; }
+
+/* Häufige Fragen */
+details { border-bottom: 1px solid var(--linie); }
+.text h2 + details, details:first-of-type { border-top: 1px solid var(--linie); }
+summary { list-style: none; cursor: pointer; padding: 18px 44px 18px 0; position: relative; font: 800 1.125rem/1.35 var(--rund); letter-spacing: -0.01em; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: ""; position: absolute; right: 8px; top: 50%; width: 12px; height: 12px; margin-top: -9px; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg); opacity: .55; transition: transform .3s var(--raus); }
+details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
+details p { color: var(--text-2); padding: 0 0 20px; }
+.hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
+
+/* Quiz-Kasten nach dem Artikeltext */
+.quizbox { margin: 44px 0 0; }
+.quizbox a { display: flex; align-items: center; gap: 16px; padding: 14px 20px 14px 14px; border: 1px solid var(--linie); border-radius: 22px; background: var(--karte); color: var(--text); text-decoration: none; transition: border-color .2s, transform .2s var(--raus); }
+.quizbox a:hover { border-color: var(--violett); transform: translateY(-2px); }
+.quizbox-symbol { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: var(--nebel); color: var(--violett); }
+.quizbox-symbol svg { width: 24px; height: 24px; }
+.quizbox-text { flex: 1; font: 700 1.0625rem/1.35 var(--rund); letter-spacing: -0.005em; }
+.quizbox-text b { font-weight: 900; }
+.quizbox-pfeil { flex: none; width: 22px; height: 22px; color: var(--violett); transition: transform .2s var(--raus); }
+.quizbox a:hover .quizbox-pfeil { transform: translateX(3px); }
+@media (prefers-color-scheme: dark) { .quizbox-symbol { color: #C9C2FF; } .quizbox-pfeil { color: #B3A9FF; } }
+
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
+/* Aufruf zur App */
+.cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
+.cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
+.cta p { color: #E4E0FF; margin-bottom: 18px; }
+.cta img { flex: none; width: 104px; height: auto; }
+.knopf { display: inline-flex; align-items: center; background: #fff; color: var(--nacht); text-decoration: none; padding: 14px 22px; border-radius: 999px; font: 800 1rem/1 var(--rund); box-shadow: 0 8px 22px rgba(20, 10, 80, .25); transition: transform .15s var(--raus); }
+.knopf:hover { transform: translateY(-2px); }
+.cta .klein { color: #E4E0FF; font-size: .875rem; margin-left: 12px; }
+@media (max-width: 600px) { .cta { flex-direction: column; align-items: flex-start; padding: 26px; } .cta .klein { display: block; margin: 12px 0 0; } .lead { font-size: 1.125rem; } }
+/* Ruhige Variante: helle Fläche, violetter Knopf */
+.cta.ruhig { background: var(--nebel); color: var(--text); }
+.cta.ruhig h2 { color: var(--text); }
+.cta.ruhig p, .cta.ruhig .klein { color: var(--text-2); }
+.cta.ruhig .knopf { background: var(--violett); color: #fff; box-shadow: none; }
+
+/* Weiterlesen */
+.mehr { margin-top: 8px; }
+.mehr h2 { margin-bottom: 8px; font-size: 1.5rem; }
+.mehr ul { list-style: none; padding: 0; margin: 0; }
+.mehr li a { display: block; padding: 14px 0; border-bottom: 1px solid var(--linie); text-decoration: none; color: var(--text); font-weight: 600; transition: color .2s, padding-left .25s var(--raus); }
+.mehr li a:hover { color: var(--link); padding-left: 6px; }
+
+/* Übersicht */
+.blogkopf { padding-block: 64px 28px; max-width: 820px; }
+.blogkopf h1 { font-size: clamp(2.8rem, 7vw, 5rem); }
+.nachschlagen { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px 12px; margin-top: 26px; padding: 13px 18px; border-radius: 22px; background: var(--nebel); color: var(--text-2); text-decoration: none; font-size: 1rem; line-height: 1.35; transition: transform .2s var(--raus); }
+.nachschlagen b { font: 900 1.0625rem/1.2 var(--rund); color: var(--text); }
+.nachschlagen svg { flex: none; width: 20px; height: 20px; color: var(--violett); transition: transform .2s var(--raus); }
+.nachschlagen:hover { transform: translateY(-2px); }
+.nachschlagen:hover svg { transform: translateX(3px); }
+@media (prefers-color-scheme: dark) { .nachschlagen svg { color: #B3A9FF; } }
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px 24px; padding-bottom: 24px; }
+.karte { display: grid; gap: 10px; align-content: start; color: var(--text); text-decoration: none; }
+.karte img { width: 100%; height: auto; display: block; border-radius: 22px; box-shadow: 0 12px 30px rgba(32, 24, 74, .12); transition: transform .35s var(--raus), box-shadow .35s var(--raus); }
+.karte .kicker { justify-self: start; margin: 8px 0 0; }
+.karte h2 { font-size: 1.375rem; line-height: 1.15; }
+.karte p { color: var(--text-2); font-size: 1rem; line-height: 1.55; }
+.karte .meta { margin: 0; font-size: .875rem; }
+.karte:hover img { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(32, 24, 74, .18); }
+.karte:hover h2 { color: var(--link); }
+
+/* Börsenlexikon: Buchstabenleiste bleibt unter der Kopfzeile stehen */
+html:has(.abc) { scroll-padding-top: 140px; }
+.abc { position: sticky; top: 64px; z-index: 5; display: flex; justify-content: space-between; gap: 4px; margin: 32px 0 0; padding: 10px 0;
+  background: color-mix(in srgb, var(--grund) 94%, transparent); box-shadow: 0 1px 0 var(--linie); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); }
+.abc a, .abc span { flex: 1 0 auto; display: grid; place-items: center; min-width: 24px; height: 34px; border-radius: 10px; font: 800 .9375rem/1 var(--rund); text-decoration: none; }
+.abc a { color: var(--violett); transition: background-color .15s, color .15s; }
+.abc a:hover { background: var(--nebel); }
+.abc span { color: var(--text-2); opacity: .35; }
+@media (prefers-color-scheme: dark) { .abc a { color: #C9C2FF; } }
+@media (max-width: 720px) {
+  .abc { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * max(20px, env(safe-area-inset-left, 0px))); padding-inline: 14px; }
+  .abc::-webkit-scrollbar { display: none; }
+  .abc a, .abc span { flex: none; min-width: 34px; }
+  .abc a { background: var(--nebel); }
+}
+.lexikon .buchstabe h2 { margin: 44px 0 4px; font-size: 2.25rem; color: var(--violett); }
+@media (prefers-color-scheme: dark) { .lexikon .buchstabe h2 { color: #B3A9FF; } }
+.begriffe { margin: 0; }
+.begriff { padding: 18px 0 20px; border-bottom: 1px solid var(--linie); }
+.begriff dt { font: 800 1.25rem/1.25 var(--rund); letter-spacing: -0.01em; }
+.begriff dd { margin: 8px 0 0; }
+.begriff .weiter { margin-top: 8px; font-size: .9375rem; }
+
+/* Fuß wie auf der Startseite */
+.foot { background: var(--nacht); color: #CFC9F2; margin-top: 56px; padding: 44px 0 calc(44px + env(safe-area-inset-bottom)); font-size: .9375rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.foot a { color: #CFC9F2; text-decoration: none; }
+.foot a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Geld anlegen lernen: So startest du ohne Vorwissen", "description": "Geld anlegen lernen ohne Vorwissen: Kassensturz, Notgroschen, Sparrate, ETF-Sparplan, Risiko, Kosten und typische Anfängerfehler einfach erklärt.", "datePublished": "2026-11-28", "dateModified": "2026-11-28", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-geld-anlegen-lernen.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/geld-anlegen-lernen.html", "keywords": "Geld anlegen lernen, Geld anlegen für Anfänger, Geld anlegen ohne Vorwissen, Geld anlegen wie anfangen, Notgroschen, Sparrate, ETF-Sparplan, Streuung, Anfängerfehler", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Geld anlegen lernen: So startest du ohne Vorwissen", "item": "https://fotiadisapps.de/InQuestly/blog/geld-anlegen-lernen.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wie fange ich an, Geld anzulegen?", "acceptedAnswer": {"@type": "Answer", "text": "Mit einem Kassensturz. Danach baust du teure Schulden ab und legst einen Notgroschen an. Erst dann investierst du regelmäßig einen festen Betrag breit gestreut, zum Beispiel über einen Sparplan."}}, {"@type": "Question", "name": "Wie viel Geld brauche ich, um mit dem Anlegen anzufangen?", "acceptedAnswer": {"@type": "Answer", "text": "Kein großes Startkapital. Viele Banken und Broker bieten Sparpläne schon ab wenigen Euro im Monat an. Wichtiger als die Höhe ist, dass du regelmäßig dabeibleibst."}}, {"@type": "Question", "name": "Wie hoch sollte mein Notgroschen sein?", "acceptedAnswer": {"@type": "Answer", "text": "Die Verbraucherzentrale nennt als Faustregel zwei bis drei Monatsgehälter auf einem Tagesgeldkonto. Die passende Höhe hängt von deiner Lage ab."}}, {"@type": "Question", "name": "Ist ein ETF-Sparplan sicher?", "acceptedAnswer": {"@type": "Answer", "text": "Im Sinne von garantiert nicht: Fällt der Markt, sinkt auch der Wert deiner Anteile. Die Anteile bleiben aber dein Eigentum, auch wenn deine Bank pleitegeht."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Sparen und Anlegen?", "acceptedAnswer": {"@type": "Answer", "text": "Beim Sparen legst du Geld zurück, etwa auf einem Konto. Beim Anlegen setzt du es so ein, dass es Ertrag bringen soll, zum Beispiel in Fonds oder Aktien, und nimmst dafür Schwankungen in Kauf."}}, {"@type": "Question", "name": "Kann ich Geld anlegen lernen, ohne Geld zu riskieren?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Mit Artikeln, Sparplanrechnern, Börsenspielen und Lern-Apps wie InQuestly übst du die wichtigsten Entscheidungen ohne echtes Geld."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../icon-180.png" alt="" width="34" height="34">InQuestly</a>
+  <nav class="nav" aria-label="Hauptnavigation"><a href="../">Die App</a><a href="./">Blog</a><a href="../quiz.html">Börsen-Quiz</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis laden</a></nav>
+</div></header>
+<main>
+<article class="wrap artikel">
+  <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
+  <p class="kicker">Geldanlage</p>
+  <h1>Geld anlegen lernen: So startest du ohne Vorwissen</h1>
+  <p class="meta">Von Stathis Fotiadis am 28. November 2026. Lesezeit 8 Minuten.</p>
+  <p class="lead">Du willst Geld anlegen, weißt aber nicht, wo du anfangen sollst? Diese Schritte führen dich vom Kassensturz über den Notgroschen bis zum ersten Sparplan, ohne Fachchinesisch.</p>
+  <nav class="inhalt" aria-label="Inhalt"><b>Inhalt</b><ol><li><a href="#geld-anlegen-fuer-anfaenger-der-fahrplan-in-6-schritten">Geld anlegen für Anfänger: der Fahrplan in 6 Schritten</a></li><li><a href="#warum-geld-auf-dem-konto-an-wert-verliert">Warum Geld auf dem Konto an Wert verliert</a></li><li><a href="#schritt-1-kassensturz-wohin-fliesst-dein-geld">Schritt 1: Kassensturz – wohin fließt dein Geld?</a></li><li><a href="#schritt-2-teure-schulden-zuerst">Schritt 2: Teure Schulden zuerst</a></li><li><a href="#schritt-3-der-notgroschen">Schritt 3: Der Notgroschen</a></li><li><a href="#schritt-4-die-passende-sparrate-finden">Schritt 4: Die passende Sparrate finden</a></li><li><a href="#schritt-5-der-etf-sparplan-neutral-erklaert">Schritt 5: Der ETF-Sparplan, neutral erklärt</a></li><li><a href="#risiko-und-streuung-nicht-alles-auf-eine-karte">Risiko und Streuung: nicht alles auf eine Karte</a></li><li><a href="#kosten-der-unterschaetzte-renditefresser">Kosten: der unterschätzte Renditefresser</a></li><li><a href="#typische-anfaengerfehler">Typische Anfängerfehler</a></li><li><a href="#geld-anlegen-ueben-ohne-echtes-geld">Geld anlegen üben, ohne echtes Geld</a></li></ol></nav>
+  <figure class="appbild"><img src="bild-geld-anlegen-lernen.jpg" alt="Lernkarte „Der Zinseszins“ aus der Lektion „Zinseszins &amp; Sparplan“ im Gratis-Kurs „Investieren 101“ von InQuestly." width="540" height="1174" loading="lazy"><figcaption>Lernkarte „Der Zinseszins“ aus der Lektion „Zinseszins &amp; Sparplan“ im Gratis-Kurs „Investieren 101“ von InQuestly.</figcaption></figure>
+  <div class="text">
+<p><strong>Geld anlegen</strong> heißt, Geld, das du gerade nicht brauchst, so einzusetzen, dass es mit der Zeit mehr wert werden kann. Dafür brauchst du weder Vorwissen noch ein großes Startkapital. Wichtiger ist die richtige Reihenfolge: erst die Basis, dann das Anlegen.</p>
+<p>Immer mehr Menschen fangen damit an. Laut Deutschem Aktieninstitut besaßen 2025 rund 14,1 Millionen Menschen in Deutschland Aktien, Aktienfonds oder ETFs, 2 Millionen mehr als im Jahr davor.</p>
+<h2 id="geld-anlegen-fuer-anfaenger-der-fahrplan-in-6-schritten">Geld anlegen für Anfänger: der Fahrplan in 6 Schritten</h2>
+<ol><li><strong>Kassensturz machen:</strong> Was kommt jeden Monat rein, was geht raus?</li><li><strong>Teure Schulden abbauen,</strong> etwa einen Dispokredit.</li><li><strong>Einen Notgroschen aufbauen,</strong> der jederzeit verfügbar ist.</li><li><strong>Eine Sparrate festlegen,</strong> die du auch in knappen Monaten durchhältst.</li><li><strong>Breit gestreut anlegen,</strong> zum Beispiel mit einem Sparplan, und auf die Kosten achten.</li><li><strong>Dranbleiben</strong> und typische Anfängerfehler vermeiden.</li></ol>
+<h2 id="warum-geld-auf-dem-konto-an-wert-verliert">Warum Geld auf dem Konto an Wert verliert</h2>
+<p>Geld auf dem Girokonto ist sicher, aber nicht wertbeständig, denn die Preise steigen. Im Oktober 2026 lag die Inflationsrate in Deutschland bei 2,8 % (Statistisches Bundesamt, November 2026). Bleibt die Teuerung ein Jahr lang so hoch, kaufst du mit 1.000 € danach nur noch so viel wie heute mit rund 973 €.</p>
+<p>Wie stark das ins Gewicht fällt, zeigt eine Auswertung der Deutschen Bundesbank vom Oktober 2026: Die vermögensärmere Hälfte der Haushalte erzielte mit ihrem Geldvermögen im zweiten Quartal 2026 eine reale Rendite von rund minus 0,7 %, also nach Abzug der Inflation einen Verlust. Ihr Geldvermögen besteht überwiegend aus Einlagen, etwa auf Konten, und aus Ansprüchen an Versicherungen.</p>
+<p>Das heißt nicht, dass jeder Euro an die Börse gehört. Es zeigt aber: Nichts zu tun ist auch eine Entscheidung.</p>
+<h2 id="schritt-1-kassensturz-wohin-fliesst-dein-geld">Schritt 1: Kassensturz – wohin fließt dein Geld?</h2>
+<p>Am Anfang steht keine Aktie, sondern ein ehrlicher Blick auf deine Finanzen. Schreib ein bis zwei Monate lang alle Einnahmen und Ausgaben auf, in einem Haushaltsbuch, einer Tabelle oder über die Kategorien deiner Banking-App. Ein vereinfachtes Beispiel:</p>
+<div class="tabelle"><table><thead><tr><th>Posten</th><th>Betrag pro Monat</th></tr></thead><tbody><tr><td>Nettoeinkommen</td><td>2.000 €</td></tr><tr><td>Fixkosten (Miete, Strom, Handy, Versicherungen)</td><td>1.150 €</td></tr><tr><td>Lebensmittel und Alltag</td><td>450 €</td></tr><tr><td>Freizeit und Sonstiges</td><td>200 €</td></tr><tr><td>Bleibt übrig</td><td>200 €</td></tr></tbody></table></div>
+<p>Was übrig bleibt, ist dein Spielraum für Notgroschen und Sparrate. Oft findest du dabei auch Posten zum Kürzen, etwa ungenutzte Abos.</p>
+<h2 id="schritt-2-teure-schulden-zuerst">Schritt 2: Teure Schulden zuerst</h2>
+<p>Ein Dispokredit oder ein Ratenkauf kostet meist mehr Zinsen, als eine Geldanlage verlässlich einbringt. Deshalb gilt: erst teure Schulden tilgen, dann anlegen.</p>
+<h2 id="schritt-3-der-notgroschen">Schritt 3: Der Notgroschen</h2>
+<p>Der Notgroschen ist deine Reserve für Unvorhergesehenes: eine kaputte Waschmaschine, eine Reparatur am Auto, eine Nachzahlung. Die Verbraucherzentrale nennt als Faustregel einen Puffer von zwei bis drei Monatsgehältern, am besten auf einem Tagesgeldkonto (Stand Februar 2026). Wer allein verdient oder ein schwankendes Einkommen hat, plant eher mehr ein.</p>
+<p>Guthaben auf Konten sind bei Banken in Deutschland bis 100.000 € pro Kundin oder Kunde und Bank gesetzlich abgesichert, so die Finanzaufsicht BaFin. Der Notgroschen soll keine Rendite bringen. Er sorgt dafür, dass du angelegtes Geld nie im ungünstigsten Moment verkaufen musst.</p>
+<h2 id="schritt-4-die-passende-sparrate-finden">Schritt 4: Die passende Sparrate finden</h2>
+<p>Die Sparrate ist der Betrag, den du jeden Monat zurücklegst oder anlegst. Eine feste Regel gibt es nicht. Die Verbraucherzentrale rechnet in einem Beispiel mit etwa 5 % des Nettoeinkommens, dazu einem Drittel von Geldgeschenken sowie von Weihnachts- oder Urlaubsgeld. Entscheidend ist, dass du den Betrag auch in knappen Monaten und schlechten Börsenjahren durchhältst.</p>
+<p>Ein Trick hilft: Richte einen Dauerauftrag zum Monatsanfang ein, direkt nach dem Gehaltseingang. So sparst du zuerst und gibst danach aus, statt am Monatsende zu sparen, was übrig bleibt.</p>
+<p>Was regelmäßige Beträge über die Zeit bewirken können, zeigt ein vereinfachtes Beispiel über 20 Jahre mit zwei angenommenen Renditen, vor Kosten und Steuern:</p>
+<div class="tabelle"><table><thead><tr><th>Sparrate pro Monat</th><th>Eingezahlt in 20 Jahren</th><th>Bei 3 % pro Jahr</th><th>Bei 7 % pro Jahr</th></tr></thead><tbody><tr><td>25 €</td><td>6.000 €</td><td>rund 8.200 €</td><td>rund 13.000 €</td></tr><tr><td>50 €</td><td>12.000 €</td><td>rund 16.400 €</td><td>rund 26.000 €</td></tr><tr><td>100 €</td><td>24.000 €</td><td>rund 32.800 €</td><td>rund 52.100 €</td></tr><tr><td>200 €</td><td>48.000 €</td><td>rund 65.700 €</td><td>rund 104.200 €</td></tr></tbody></table></div>
+<aside class="hinweis"><p>Die Renditen sind Annahmen, keine Garantie. Aktienanlagen können in einzelnen Jahren deutlich im Minus liegen, und niemand weiß, wie die nächsten 20 Jahre verlaufen.</p></aside>
+<h2 id="schritt-5-der-etf-sparplan-neutral-erklaert">Schritt 5: Der ETF-Sparplan, neutral erklärt</h2>
+<p>Ein <strong>ETF</strong> ist ein börsengehandelter Fonds, der meist einen Index nachbildet, etwa einen Welt-Aktienindex. Mit einem Anteil bist du an vielen Unternehmen gleichzeitig beteiligt. Wie das genau funktioniert, erklärt der Artikel <a href="etf-einfach-erklaert.html">Was ist ein ETF?</a>.</p>
+<p>Bei einem <strong>ETF-Sparplan</strong> kauft deine Bank oder dein Broker jeden Monat automatisch für einen festen Betrag Anteile, auch Bruchstücke davon. Laut Deutschem Aktieninstitut hatten 2025 rund 12,1 Millionen Menschen in Deutschland Aktienfonds oder ETFs. So läuft der Start ab:</p>
+<ol><li><strong>Depot eröffnen</strong> bei einer Bank oder einem Online-Broker. Vergleiche Depotgebühren und Sparplankosten.</li><li><strong>Fonds auswählen:</strong> Welchen Index bildet er ab, wie breit ist er gestreut, wie hoch sind die laufenden Kosten (TER)?</li><li><strong>Betrag und Termin festlegen,</strong> zum Beispiel 50 € am Monatsersten.</li><li><strong>Laufen lassen</strong> und den Plan ein- bis zweimal im Jahr prüfen, nicht täglich.</li></ol>
+<p>Die Fondsanteile in deinem Depot bleiben dein Eigentum, auch wenn die Bank pleitegeht. Unter die Einlagensicherung fallen sie laut BaFin aber nicht, und vor Kursverlusten schützt dich das Eigentum nicht: Fällt der Markt, fällt auch der ETF.</p>
+<p>Ein ETF-Sparplan ist ein verbreiteter, aber nicht der einzige Weg. Tagesgeld, Festgeld, Anleihen oder klassische Fonds haben ebenfalls ihren Platz, je nachdem, wann du das Geld brauchst. Welche Anlage zu dir passt, hängt von deinen Zielen, deinem Zeitraum und deiner Risikobereitschaft ab.</p>
+<h2 id="risiko-und-streuung-nicht-alles-auf-eine-karte">Risiko und Streuung: nicht alles auf eine Karte</h2>
+<p>Risiko heißt an der Börse vor allem: Der Wert schwankt, und du kannst zeitweise oder dauerhaft Geld verlieren. Drei Grundsätze helfen, damit umzugehen:</p>
+<ul><li><strong>Streuen:</strong> Verteile dein Geld auf viele Unternehmen, Branchen und Länder. Wer nur eine Aktie besitzt, hängt am Schicksal einer einzigen Firma. Fachleute nennen das Klumpenrisiko.</li><li><strong>Zeitraum beachten:</strong> Geld, das du in den nächsten Jahren sicher brauchst, gehört nicht in Aktien. Je länger du es nicht brauchst, desto eher lassen sich Schwankungen aussitzen. Eine Garantie gibt es nicht.</li><li><strong>Aufteilen:</strong> Viele kombinieren einen sicheren Teil, etwa Tagesgeld, mit einem schwankenden Teil in Aktien. Je größer der Aktienanteil, desto stärker schwankt das Vermögen insgesamt.</li></ul>
+<p>Frag dich vorher ehrlich: Wie würdest du reagieren, wenn dein Depot 30 % im Minus liegt? Dass solche Einbrüche vorkommen, zeigt der Artikel <a href="bulle-und-baer.html">Bulle und Bär</a> mit Beispielen aus der Börsengeschichte. Den Zusammenhang von Rendite, Sicherheit und Verfügbarkeit erklärt der Fahrplan <a href="investieren-lernen.html">Investieren lernen</a>.</p>
+<h2 id="kosten-der-unterschaetzte-renditefresser">Kosten: der unterschätzte Renditefresser</h2>
+<p>Jeder Euro Kosten fehlt dir später doppelt: als Geld und als Zinseszins. Diese Kosten können anfallen:</p>
+<div class="tabelle"><table><thead><tr><th>Kostenart</th><th>Was das ist</th></tr></thead><tbody><tr><td>Laufende Kosten (TER)</td><td>jährliche Gebühr des Fonds, in Prozent des Anlagebetrags</td></tr><tr><td>Ordergebühr</td><td>Gebühr pro Kauf oder Verkauf</td></tr><tr><td>Sparplangebühr</td><td>Gebühr pro Ausführung, bei manchen Anbietern 0 €</td></tr><tr><td>Spread</td><td>Unterschied zwischen Kauf- und Verkaufskurs</td></tr><tr><td>Depotgebühr</td><td>jährliche Gebühr für das Depot, bei vielen Anbietern 0 €</td></tr><tr><td>Ausgabeaufschlag</td><td>einmaliger Aufschlag beim Kauf, vor allem bei klassischen Fonds</td></tr></tbody></table></div>
+<p>Zwei Rechenbeispiele:</p>
+<ul><li><strong>Feste Gebühren:</strong> Kostet jede Sparplan-Ausführung 1,50 €, sind das bei 25 € Sparrate 6 % jeder Einzahlung, bei 100 € nur 1,5 %. Bei kleinen Beträgen fallen feste Gebühren besonders ins Gewicht.</li><li><strong>Laufende Kosten:</strong> 100 € im Monat über 20 Jahre, 7 % Rendite pro Jahr vor Kosten. Bei 0,2 % laufenden Kosten stehen am Ende rund 50.800 €, bei 1,5 % rund 43.600 €. Der Unterschied beträgt rund 7.300 €, bei gleicher Einzahlung von 24.000 €.</li></ul>
+<h2 id="typische-anfaengerfehler">Typische Anfängerfehler</h2>
+<ol><li><strong>Ohne Notgroschen starten.</strong> Dann musst du im Notfall verkaufen, womöglich mitten in einem Kurssturz.</li><li><strong>Alles auf eine Aktie oder einen Trend setzen.</strong> Was gerade alle kaufen, ist oft schon teuer geworden.</li><li><strong>Auf den perfekten Zeitpunkt warten.</strong> Niemand kann ihn zuverlässig vorhersagen. Ein Sparplan nimmt dir diese Entscheidung ab.</li><li><strong>Bei Kursverlusten in Panik verkaufen.</strong> Damit wird aus einem Verlust auf dem Papier ein echter Verlust.</li><li><strong>Tipps aus sozialen Medien ungeprüft folgen.</strong> Manche Empfehlung ist bezahlte Werbung, und kein Video kennt deine Lage.</li><li><strong>Hebelprodukte kaufen, ohne sie zu verstehen.</strong> CFDs oder Knock-out-Zertifikate vervielfachen Gewinne und Verluste. Für den Einstieg sind sie keine Übungswiese.</li></ol>
+<h2 id="geld-anlegen-ueben-ohne-echtes-geld">Geld anlegen üben, ohne echtes Geld</h2>
+<p>Bevor du echtes Geld einsetzt, kannst du die wichtigsten Entscheidungen ohne Risiko durchspielen:</p>
+<ul><li><strong>Rechnen:</strong> Spiel mit einem Sparplanrechner verschiedene Sparraten, Laufzeiten und Renditen durch.</li><li><strong>Schwankungen erleben:</strong> In einem Börsenspiel oder Depot-Simulator siehst du, wie sich ein Minus von 20 % anfühlt, ohne dass es wehtut. Einen Überblick gibt der Artikel <a href="boersenspiel.html">Börsenspiel-App und Aktien-Simulator</a>.</li><li><strong>Grundlagen trainieren:</strong> In der App InQuestly erklärt der Gratis-Kurs „Investieren 101“ Notgroschen, Depot, Kosten, Streuung und typische Fehler in Lektionen von rund fünf Minuten, jeweils mit Quiz. Mit Prognosen, die am Stichtag mit echten Schlusskursen ausgewertet werden, übst du, Märkte einzuschätzen, ganz ohne echtes Geld.</li></ul>
+<p>Wenn die Grundlagen sitzen, kannst du mit einem kleinen Betrag beginnen und ihn später erhöhen.</p>
+<h2 id="haeufige-fragen">Häufige Fragen</h2>
+<details><summary>Wie fange ich an, Geld anzulegen?</summary><p>Mit einem Kassensturz. Danach baust du teure Schulden ab und legst einen Notgroschen an. Erst dann investierst du regelmäßig einen festen Betrag breit gestreut, zum Beispiel über einen Sparplan.</p></details>
+<details><summary>Wie viel Geld brauche ich, um mit dem Anlegen anzufangen?</summary><p>Kein großes Startkapital. Viele Banken und Broker bieten Sparpläne schon ab wenigen Euro im Monat an. Wichtiger als die Höhe ist, dass du regelmäßig dabeibleibst.</p></details>
+<details><summary>Wie hoch sollte mein Notgroschen sein?</summary><p>Die Verbraucherzentrale nennt als Faustregel zwei bis drei Monatsgehälter auf einem Tagesgeldkonto. Die passende Höhe hängt von deiner Lage ab.</p></details>
+<details><summary>Ist ein ETF-Sparplan sicher?</summary><p>Im Sinne von garantiert nicht: Fällt der Markt, sinkt auch der Wert deiner Anteile. Die Anteile bleiben aber dein Eigentum, auch wenn deine Bank pleitegeht.</p></details>
+<details><summary>Was ist der Unterschied zwischen Sparen und Anlegen?</summary><p>Beim Sparen legst du Geld zurück, etwa auf einem Konto. Beim Anlegen setzt du es so ein, dass es Ertrag bringen soll, zum Beispiel in Fonds oder Aktien, und nimmst dafür Schwankungen in Kauf.</p></details>
+<details><summary>Kann ich Geld anlegen lernen, ohne Geld zu riskieren?</summary><p>Ja. Mit Artikeln, Sparplanrechnern, Börsenspielen und Lern-Apps wie InQuestly übst du die wichtigsten Entscheidungen ohne echtes Geld.</p></details>
+  </div>
+  <aside class="quizbox" aria-label="Börsen-Quiz">
+  <a href="../quiz.html"><span class="quizbox-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 16 9.5 10.5l3.5 3.5L20 7m-5 0h5v5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="quizbox-text"><b>Teste dich:</b> Börsen-Quiz im Browser, 2 Minuten</span><svg class="quizbox-pfeil" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</aside>
+  <section class="quellen" aria-label="Quellen"><h2>Quellen und Stand</h2><ul><li>Deutsches Aktieninstitut, Aktionärszahlen 2025 (Kantar-Befragung von rund 28.000 Personen ab 14 Jahren), veröffentlicht am 13. Januar 2026</li><li>Statistisches Bundesamt (Destatis), Inflationsrate im Oktober 2026: +2,8 %, Pressemitteilung Nr. 392 vom 11. November 2026</li><li>Deutsche Bundesbank, Geldvermögensbildung und Außenfinanzierung in Deutschland im zweiten Quartal 2026, Pressemitteilung vom 20. Oktober 2026</li><li>Verbraucherzentrale, Ratgeber „Sparen“ (Reihe „Laura zieht aus“) zu Notgroschen und Sparbetrag, Stand 12. Februar 2026</li><li>BaFin, Einlagensicherung: gesetzlicher Schutz bis 100.000 Euro pro Kundin oder Kunde und Bank, Wertpapiere sind nicht erfasst (abgerufen am 28. November 2026)</li></ul><p>Stand: 28. November 2026.</p></section>
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
+  <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
+  <aside class="cta">
+  <img src="../app/drache-lern.svg" alt="" width="104" height="99">
+  <div><h2>Üben statt nur lesen</h2>
+  <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
+</aside>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="investieren-lernen.html">Investieren lernen: Der Fahrplan für Einsteiger</a></li><li><a href="dax-einfach-erklaert.html">Was ist der DAX? Einfach erklärt für Einsteiger</a></li><li><a href="etf-einfach-erklaert.html">Was ist ein ETF? Einfach erklärt für Anfänger</a></li></ul></section>
+</article>
+</main>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="lexikon.html">Börsenlexikon</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a><a href="../schule.html">Für Lehrkräfte</a>
+</div></footer>
+</body>
+</html>

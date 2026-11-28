@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finanzbildung: Was fehlt, wie du sie nachholst | InQuestly</title>
+<meta name="description" content="Finanzbildung einfach erklärt: Was Finanzkompetenz bedeutet, wie es um Schule und Jugendliche steht und wie du dein Finanzwissen kostenlos nachholst.">
+<link rel="canonical" href="https://fotiadisapps.de/InQuestly/blog/finanzbildung.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://fotiadisapps.de/InQuestly/blog/finanzbildung.html">
+<meta property="og:title" content="Finanzbildung: Was fehlt, wie du sie nachholst | InQuestly">
+<meta property="og:description" content="Finanzbildung einfach erklärt: Was Finanzkompetenz bedeutet, wie es um Schule und Jugendliche steht und wie du dein Finanzwissen kostenlos nachholst.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/blog/og-finanzbildung.jpg">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg"><link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="InQuestly Blog" href="https://fotiadisapps.de/InQuestly/blog/feed.xml">
+<meta name="apple-itunes-app" content="app-id=6834527194">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>/* InQuestly Blog im Look der Website (Store-Look v67): Weiß und Violett, runde Überschriften, App-Bilder im Handyrahmen. Keine fremden Dateien. */
+@font-face { font-family: "IQ Nunito"; src: url("../fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+@view-transition { navigation: auto; }
+:root {
+  --violett: #5A46E6; --nacht: #20184A; --gruen: #15A055; --gelb: #FFC83A; --steigt: #22B35A; --faellt: #F0443A;
+  --grund: #FFFFFF; --nebel: #F3F1FF; --text: #20184A; --text-2: #5C5780; --linie: #E4E0F7; --karte: #FFFFFF; --link: #5A46E6;
+  --rund: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif;
+  --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --raus: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --grund: #0F0C26; --nebel: #17133A; --text: #F3F1FF; --text-2: #B9B3DD; --linie: #2B2656; --karte: #1B1744; --link: #B3A9FF; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--grund); color: var(--text); font: 400 1.125rem/1.7 var(--schrift); -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+:focus-visible { outline: 3px solid var(--gelb); outline-offset: 3px; border-radius: 8px; }
+h1, h2, h3 { font-family: var(--rund); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); line-height: 1.02; letter-spacing: -0.028em; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.25rem; font-weight: 800; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Kopfzeile wie auf der Startseite */
+.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--grund) 90%, transparent); box-shadow: 0 1px 0 var(--linie);
+  backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); view-transition-name: kopf; }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 900 1.25rem/1 var(--rund); letter-spacing: -0.02em; }
+.brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: 0 2px 8px rgba(0, 0, 0, .14); }
+.nav { display: flex; align-items: center; gap: 8px 22px; font-size: .9375rem; font-weight: 600; }
+.nav a { color: var(--text); text-decoration: none; opacity: .85; }
+.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.nav a.laden { opacity: 1; color: #fff; background: var(--violett); padding: 10px 16px; border-radius: 999px; font: 800 .9375rem/1 var(--rund); text-decoration: none; transition: transform .15s var(--raus); }
+.nav a.laden:active { transform: scale(.97); }
+@media (max-width: 640px) { .nav a:not(.laden) { display: none; } }
+
+/* Artikel */
+.artikel { max-width: 760px; padding-block: 44px 72px; }
+.krumen { font-size: .875rem; color: var(--text-2); margin-bottom: 26px; }
+.krumen a { color: var(--text-2); }
+.kicker { display: inline-block; font: 800 .875rem/1 var(--rund); color: var(--violett); background: var(--nebel); padding: 8px 12px; border-radius: 999px; margin: 0 0 18px; }
+@media (prefers-color-scheme: dark) { .kicker { color: #C9C2FF; } }
+.lead { font-size: 1.25rem; line-height: 1.55; color: var(--text-2); margin-top: 20px; }
+.meta { color: var(--text-2); font-size: .9375rem; margin-top: 16px; }
+.inhalt { margin: 34px 0; padding: 20px 24px; background: var(--nebel); border-radius: 22px; font-size: 1rem; }
+.inhalt b { font: 900 1.0625rem/1 var(--rund); }
+.inhalt ol { margin: 10px 0 0; padding-left: 22px; }
+.inhalt li + li { margin-top: 4px; }
+.appbild { margin: 44px auto; max-width: 290px; text-align: center; }
+.appbild img { width: 100%; height: auto; border-radius: 42px; border: 10px solid #0E0D16; box-shadow: 0 30px 60px rgba(32, 24, 74, .22), 0 8px 18px rgba(32, 24, 74, .12); display: block; background: #F2F2F7; }
+.appbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 16px; }
+.text h2 { margin: 56px 0 14px; }
+.text h3 { margin: 32px 0 10px; }
+.text p + p, .text ul + p, .text ol + p, .text p + ul, .text p + ol, .text .tabelle + p { margin-top: 16px; }
+.text ul, .text ol { padding-left: 24px; margin: 16px 0; }
+.text li + li { margin-top: 8px; }
+.text li::marker { color: var(--violett); font-weight: 800; }
+.text strong, .text b { font-weight: 700; }
+.hinweis { margin: 28px 0; padding: 18px 22px; background: var(--nebel); border-left: 5px solid var(--violett); border-radius: 6px 18px 18px 6px; }
+.tabelle { overflow-x: auto; margin: 22px 0; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 1rem; border: 1px solid var(--linie); border-radius: 18px; overflow: hidden; background: var(--karte); }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--linie); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th { background: var(--nebel); font: 800 .9375rem/1.3 var(--rund); }
+.textbild { margin: 34px 0; }
+.textbild img { width: 100%; height: auto; border-radius: 24px; display: block; background: #fff; box-shadow: 0 18px 40px rgba(32, 24, 74, .12); }
+.textbild figcaption { font-size: .875rem; color: var(--text-2); margin-top: 12px; }
+
+/* Häufige Fragen */
+details { border-bottom: 1px solid var(--linie); }
+.text h2 + details, details:first-of-type { border-top: 1px solid var(--linie); }
+summary { list-style: none; cursor: pointer; padding: 18px 44px 18px 0; position: relative; font: 800 1.125rem/1.35 var(--rund); letter-spacing: -0.01em; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: ""; position: absolute; right: 8px; top: 50%; width: 12px; height: 12px; margin-top: -9px; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg); opacity: .55; transition: transform .3s var(--raus); }
+details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
+details p { color: var(--text-2); padding: 0 0 20px; }
+.hinweis-klein { color: var(--text-2); font-size: .875rem; margin-top: 44px; }
+
+/* Quiz-Kasten nach dem Artikeltext */
+.quizbox { margin: 44px 0 0; }
+.quizbox a { display: flex; align-items: center; gap: 16px; padding: 14px 20px 14px 14px; border: 1px solid var(--linie); border-radius: 22px; background: var(--karte); color: var(--text); text-decoration: none; transition: border-color .2s, transform .2s var(--raus); }
+.quizbox a:hover { border-color: var(--violett); transform: translateY(-2px); }
+.quizbox-symbol { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: var(--nebel); color: var(--violett); }
+.quizbox-symbol svg { width: 24px; height: 24px; }
+.quizbox-text { flex: 1; font: 700 1.0625rem/1.35 var(--rund); letter-spacing: -0.005em; }
+.quizbox-text b { font-weight: 900; }
+.quizbox-pfeil { flex: none; width: 22px; height: 22px; color: var(--violett); transition: transform .2s var(--raus); }
+.quizbox a:hover .quizbox-pfeil { transform: translateX(3px); }
+@media (prefers-color-scheme: dark) { .quizbox-symbol { color: #C9C2FF; } .quizbox-pfeil { color: #B3A9FF; } }
+
+/* Quellen und Autor */
+.quellen { margin: 44px 0 0; padding: 20px 22px; border: 1px solid var(--linie); border-radius: 22px; font-size: .9375rem; }
+.quellen h2 { font-size: 1.125rem; margin: 0 0 10px; }
+.quellen ul { margin: 0; padding-left: 20px; color: var(--text-2); }
+.quellen li + li { margin-top: 6px; }
+.quellen p { margin-top: 12px; color: var(--text-2); font-size: .875rem; }
+.autor { display: flex; gap: 14px; align-items: flex-start; margin: 28px 0 0; padding: 18px 20px; background: var(--nebel); border-radius: 22px; font-size: .9375rem; }
+.autor img { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.autor p { color: var(--text-2); }
+.autor b { color: var(--text); font-weight: 700; }
+
+/* Aufruf zur App */
+.cta { display: flex; gap: 24px; align-items: center; margin: 48px 0; padding: 30px 32px; background: var(--violett); color: #fff; border-radius: 30px; }
+.cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 8px; }
+.cta p { color: #E4E0FF; margin-bottom: 18px; }
+.cta img { flex: none; width: 104px; height: auto; }
+.knopf { display: inline-flex; align-items: center; background: #fff; color: var(--nacht); text-decoration: none; padding: 14px 22px; border-radius: 999px; font: 800 1rem/1 var(--rund); box-shadow: 0 8px 22px rgba(20, 10, 80, .25); transition: transform .15s var(--raus); }
+.knopf:hover { transform: translateY(-2px); }
+.cta .klein { color: #E4E0FF; font-size: .875rem; margin-left: 12px; }
+@media (max-width: 600px) { .cta { flex-direction: column; align-items: flex-start; padding: 26px; } .cta .klein { display: block; margin: 12px 0 0; } .lead { font-size: 1.125rem; } }
+/* Ruhige Variante: helle Fläche, violetter Knopf */
+.cta.ruhig { background: var(--nebel); color: var(--text); }
+.cta.ruhig h2 { color: var(--text); }
+.cta.ruhig p, .cta.ruhig .klein { color: var(--text-2); }
+.cta.ruhig .knopf { background: var(--violett); color: #fff; box-shadow: none; }
+
+/* Weiterlesen */
+.mehr { margin-top: 8px; }
+.mehr h2 { margin-bottom: 8px; font-size: 1.5rem; }
+.mehr ul { list-style: none; padding: 0; margin: 0; }
+.mehr li a { display: block; padding: 14px 0; border-bottom: 1px solid var(--linie); text-decoration: none; color: var(--text); font-weight: 600; transition: color .2s, padding-left .25s var(--raus); }
+.mehr li a:hover { color: var(--link); padding-left: 6px; }
+
+/* Übersicht */
+.blogkopf { padding-block: 64px 28px; max-width: 820px; }
+.blogkopf h1 { font-size: clamp(2.8rem, 7vw, 5rem); }
+.nachschlagen { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px 12px; margin-top: 26px; padding: 13px 18px; border-radius: 22px; background: var(--nebel); color: var(--text-2); text-decoration: none; font-size: 1rem; line-height: 1.35; transition: transform .2s var(--raus); }
+.nachschlagen b { font: 900 1.0625rem/1.2 var(--rund); color: var(--text); }
+.nachschlagen svg { flex: none; width: 20px; height: 20px; color: var(--violett); transition: transform .2s var(--raus); }
+.nachschlagen:hover { transform: translateY(-2px); }
+.nachschlagen:hover svg { transform: translateX(3px); }
+@media (prefers-color-scheme: dark) { .nachschlagen svg { color: #B3A9FF; } }
+.raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px 24px; padding-bottom: 24px; }
+.karte { display: grid; gap: 10px; align-content: start; color: var(--text); text-decoration: none; }
+.karte img { width: 100%; height: auto; display: block; border-radius: 22px; box-shadow: 0 12px 30px rgba(32, 24, 74, .12); transition: transform .35s var(--raus), box-shadow .35s var(--raus); }
+.karte .kicker { justify-self: start; margin: 8px 0 0; }
+.karte h2 { font-size: 1.375rem; line-height: 1.15; }
+.karte p { color: var(--text-2); font-size: 1rem; line-height: 1.55; }
+.karte .meta { margin: 0; font-size: .875rem; }
+.karte:hover img { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(32, 24, 74, .18); }
+.karte:hover h2 { color: var(--link); }
+
+/* Börsenlexikon: Buchstabenleiste bleibt unter der Kopfzeile stehen */
+html:has(.abc) { scroll-padding-top: 140px; }
+.abc { position: sticky; top: 64px; z-index: 5; display: flex; justify-content: space-between; gap: 4px; margin: 32px 0 0; padding: 10px 0;
+  background: color-mix(in srgb, var(--grund) 94%, transparent); box-shadow: 0 1px 0 var(--linie); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); }
+.abc a, .abc span { flex: 1 0 auto; display: grid; place-items: center; min-width: 24px; height: 34px; border-radius: 10px; font: 800 .9375rem/1 var(--rund); text-decoration: none; }
+.abc a { color: var(--violett); transition: background-color .15s, color .15s; }
+.abc a:hover { background: var(--nebel); }
+.abc span { color: var(--text-2); opacity: .35; }
+@media (prefers-color-scheme: dark) { .abc a { color: #C9C2FF; } }
+@media (max-width: 720px) {
+  .abc { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * max(20px, env(safe-area-inset-left, 0px))); padding-inline: 14px; }
+  .abc::-webkit-scrollbar { display: none; }
+  .abc a, .abc span { flex: none; min-width: 34px; }
+  .abc a { background: var(--nebel); }
+}
+.lexikon .buchstabe h2 { margin: 44px 0 4px; font-size: 2.25rem; color: var(--violett); }
+@media (prefers-color-scheme: dark) { .lexikon .buchstabe h2 { color: #B3A9FF; } }
+.begriffe { margin: 0; }
+.begriff { padding: 18px 0 20px; border-bottom: 1px solid var(--linie); }
+.begriff dt { font: 800 1.25rem/1.25 var(--rund); letter-spacing: -0.01em; }
+.begriff dd { margin: 8px 0 0; }
+.begriff .weiter { margin-top: 8px; font-size: .9375rem; }
+
+/* Fuß wie auf der Startseite */
+.foot { background: var(--nacht); color: #CFC9F2; margin-top: 56px; padding: 44px 0 calc(44px + env(safe-area-inset-bottom)); font-size: .9375rem; }
+.foot .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.foot a { color: #CFC9F2; text-decoration: none; }
+.foot a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Finanzbildung: Warum sie fehlt und wie du sie nachholst", "description": "Finanzbildung einfach erklärt: Was Finanzkompetenz bedeutet, wie es um Schule und Jugendliche steht und wie du dein Finanzwissen kostenlos nachholst.", "datePublished": "2026-11-28", "dateModified": "2026-11-28", "inLanguage": "de-DE", "image": "https://fotiadisapps.de/InQuestly/blog/og-finanzbildung.jpg", "mainEntityOfPage": "https://fotiadisapps.de/InQuestly/blog/finanzbildung.html", "keywords": "Finanzbildung, Finanzbildung Jugendliche, Finanzbildung Schule, Finanzkompetenz, Finanzwissen, Finanzbildungsstrategie, Finanzen lernen, ökonomische Bildung", "author": {"@type": "Person", "name": "Stathis Fotiadis", "url": "https://fotiadisapps.de/InQuestly/blog/ueber-uns.html"}, "publisher": {"@type": "Organization", "name": "Fotiadis Apps", "logo": {"@type": "ImageObject", "url": "https://fotiadisapps.de/InQuestly/icon-512.png"}}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "InQuestly", "item": "https://fotiadisapps.de/InQuestly/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fotiadisapps.de/InQuestly/blog/"}, {"@type": "ListItem", "position": 3, "name": "Finanzbildung: Warum sie fehlt und wie du sie nachholst", "item": "https://fotiadisapps.de/InQuestly/blog/finanzbildung.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was ist Finanzbildung?", "acceptedAnswer": {"@type": "Answer", "text": "Das Wissen und Können, mit Geld gute Entscheidungen zu treffen: Budget, Konto und Kredite, Versicherungen, Sparen, Anlegen, Altersvorsorge und der sichere Umgang mit digitalen Finanzangeboten."}}, {"@type": "Question", "name": "Gibt es Finanzbildung als Schulfach?", "acceptedAnswer": {"@type": "Answer", "text": "Bildung ist in Deutschland Ländersache, ein bundesweites Schulfach für Finanzen gibt es nicht. Finanzthemen kommen je nach Bundesland in Fächern wie Wirtschaft, Politik oder Sozialkunde vor."}}, {"@type": "Question", "name": "Warum fehlt Finanzbildung in der Schule so oft?", "acceptedAnswer": {"@type": "Answer", "text": "Ob Finanzthemen vorkommen, hängt vom Bundesland, von der Schulart und oft von einzelnen Lehrkräften ab. Der Bedarf ist groß: In einer Befragung für die Bertelsmann Stiftung (veröffentlicht 2026) wünschten sich 90 % der 16- bis 25-Jährigen mehr Wirtschaftsthemen in der Schule."}}, {"@type": "Question", "name": "Wie können Jugendliche Finanzen lernen?", "acceptedAnswer": {"@type": "Answer", "text": "Am besten mit eigenem Geld: ein Budget planen und Taschengeld oder Ausbildungsvergütung einteilen. Dazu kommen kostenlose Angebote wie die Plattform „Mit Geld & Verstand“ des Bundesfinanzministeriums und Lern-Apps, in denen du ohne echtes Geld übst."}}, {"@type": "Question", "name": "Wo kann ich Finanzbildung kostenlos nachholen?", "acceptedAnswer": {"@type": "Answer", "text": "Bei öffentlichen Stellen wie Bundesfinanzministerium, BaFin und Bundesbank, bei den Verbraucherzentralen, in der Stadtbibliothek und mit Lern-Apps, die einen Gratis-Teil haben."}}, {"@type": "Question", "name": "Was ist die Finanzbildungsstrategie?", "acceptedAnswer": {"@type": "Answer", "text": "Ein Plan der Bundesregierung, den das Kabinett am 18. November 2026 beschlossen hat. Er umfasst sieben Handlungsfelder und 39 Maßnahmen, ab 2027 steuert eine Task Force unter Leitung von Bundesfinanzministerium und Bundesbank die Umsetzung."}}, {"@type": "Question", "name": "Ab welchem Alter sollten Kinder etwas über Geld lernen?", "acceptedAnswer": {"@type": "Answer", "text": "Möglichst früh, spätestens mit dem ersten Taschengeld. Die Bundesbank bietet Unterrichtsmaterial schon für die Grundschule an."}}]}]</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../"><img src="../icon-180.png" alt="" width="34" height="34">InQuestly</a>
+  <nav class="nav" aria-label="Hauptnavigation"><a href="../">Die App</a><a href="./">Blog</a><a href="../quiz.html">Börsen-Quiz</a><a class="laden" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Gratis laden</a></nav>
+</div></header>
+<main>
+<article class="wrap artikel">
+  <nav class="krumen" aria-label="Brotkrumen"><a href="../">InQuestly</a> › <a href="./">Blog</a></nav>
+  <p class="kicker">Einstieg</p>
+  <h1>Finanzbildung: Warum sie fehlt und wie du sie nachholst</h1>
+  <p class="meta">Von Stathis Fotiadis am 28. November 2026. Lesezeit 8 Minuten.</p>
+  <p class="lead">Viele lernen erst spät, wie Geld funktioniert. Was Finanzbildung umfasst, wo Schule und Politik gerade stehen und wie Jugendliche und Erwachsene die Lücke selbst schließen.</p>
+  <nav class="inhalt" aria-label="Inhalt"><b>Inhalt</b><ol><li><a href="#was-bedeutet-finanzbildung">Was bedeutet Finanzbildung?</a></li><li><a href="#wie-steht-es-um-die-finanzbildung-in-deutschland">Wie steht es um die Finanzbildung in Deutschland?</a></li><li><a href="#warum-finanzbildung-so-oft-fehlt">Warum Finanzbildung so oft fehlt</a></li><li><a href="#was-die-politik-plant-die-finanzbildungsstrategie">Was die Politik plant: die Finanzbildungsstrategie</a></li><li><a href="#welche-themen-wirklich-wichtig-sind">Welche Themen wirklich wichtig sind</a></li><li><a href="#so-holst-du-finanzbildung-nach">So holst du Finanzbildung nach</a></li><li><a href="#fuer-eltern-und-lehrkraefte">Für Eltern und Lehrkräfte</a></li></ol></nav>
+  <figure class="appbild"><img src="bild-finanzbildung.jpg" alt="Der Lernpfad in InQuestly: Der Gratis-Kurs „Investieren 101“ erklärt Depot, Kosten, Streuung und Altersvorsorge in kurzen Lektionen." width="540" height="1174" loading="lazy"><figcaption>Der Lernpfad in InQuestly: Der Gratis-Kurs „Investieren 101“ erklärt Depot, Kosten, Streuung und Altersvorsorge in kurzen Lektionen.</figcaption></figure>
+  <div class="text">
+<p><strong>Finanzbildung</strong> ist das Wissen und Können, mit Geld gute Entscheidungen zu treffen: vom ersten Taschengeld über den Handyvertrag bis zur Altersvorsorge. Viele eignen es sich erst spät an, oft dann, wenn der erste Arbeitsvertrag, die erste Steuererklärung oder ein Kredit ansteht.</p>
+<p>Am 18. November 2026 hat das Bundeskabinett die erste Finanzbildungsstrategie des Bundes beschlossen. Warten musst du darauf aber nicht. Finanzwissen lässt sich in jedem Alter nachholen, vieles davon kostenlos.</p>
+<h2 id="was-bedeutet-finanzbildung">Was bedeutet Finanzbildung?</h2>
+<p>Die OECD beschreibt Finanzkompetenz als Zusammenspiel aus Wissen, Fähigkeiten, Einstellungen und Verhalten, das nötig ist, um gute finanzielle Entscheidungen zu treffen. Es reicht also nicht, Begriffe zu kennen. Du musst sie im Alltag anwenden können. Börsenprofi musst du dafür nicht werden.</p>
+<p>Zur Finanzbildung gehören vor allem diese Bereiche:</p>
+<div class="tabelle"><table><thead><tr><th>Bereich</th><th>Typische Fragen</th></tr></thead><tbody><tr><td>Budget und Haushalt</td><td>Wohin fließt mein Geld? Wie viel kann ich sparen?</td></tr><tr><td>Konto, Kredite und Schulden</td><td>Was kostet der Dispo? Worauf achte ich bei Ratenkäufen?</td></tr><tr><td>Verträge und Versicherungen</td><td>Welche Versicherungen brauche ich wirklich? Wie kündige ich?</td></tr><tr><td>Sparen und Anlegen</td><td>Notgroschen, Zinseszins, Inflation, Aktien, ETFs und Risiko</td></tr><tr><td>Altersvorsorge</td><td>Wie viel Rente bekomme ich, und wie sorge ich zusätzlich vor?</td></tr><tr><td>Steuern und Lohn</td><td>Was steht auf der Gehaltsabrechnung? Lohnt sich eine Steuererklärung?</td></tr><tr><td>Digitale Finanzen</td><td>Online-Banking, Betrugsmaschen, Krypto und Finfluencer</td></tr></tbody></table></div>
+<h2 id="wie-steht-es-um-die-finanzbildung-in-deutschland">Wie steht es um die Finanzbildung in Deutschland?</h2>
+<p>Auf den ersten Blick gut. Im Mai 2024 hat die OECD eine Bestandsaufnahme zur Finanzbildung in Deutschland veröffentlicht. Grundlage war vor allem eine Befragung der Finanzaufsicht BaFin unter 1.000 Erwachsenen aus dem Jahr 2022. Mit 76 von 100 Punkten belegte Deutschland im Vergleich mit 38 Ländern Platz 1, der OECD-Durchschnitt lag bei 63 Punkten.</p>
+<p>Der Durchschnitt verdeckt aber Lücken:</p>
+<ul><li><strong>Sparen ja, anlegen selten:</strong> Fast 90 % der Erwachsenen legten aktiv Geld zurück, aber nur 18 % investierten in Kapitalmarktprodukte. Inzwischen wächst die Zahl: Laut Deutschem Aktieninstitut besaßen 2025 rund 14,1 Millionen Menschen in Deutschland Aktien, Aktienfonds oder ETFs.</li><li><strong>Zinseszins:</strong> Die Frage zur Zinseszinsberechnung beantworteten 73 % richtig, Männer zu 81 %, Frauen nur zu 65 %.</li></ul>
+<p>Bei jungen Menschen zeigt sich vor allem ein großer Wunsch nach mehr. In einer forsa-Befragung für die Bertelsmann Stiftung sagten 90 % der 16- bis 25-Jährigen, dass wirtschaftliche Themen in der Schule eine größere Rolle spielen sollten (Young Economy Tracker, befragt im April 2025, veröffentlicht im Januar 2026).</p>
+<p>Wie gut Schülerinnen und Schüler in Deutschland im internationalen Vergleich mit Geld umgehen können, bleibt offen. Am Finanzkompetenz-Test der PISA-Studie 2029 nimmt Deutschland nicht teil. Das berichtete die Finanztip Stiftung im Juli 2026, die OECD hat die Absage bestätigt.</p>
+<h2 id="warum-finanzbildung-so-oft-fehlt">Warum Finanzbildung so oft fehlt</h2>
+<ul><li><strong>Schule:</strong> Bildung ist Ländersache, ein bundesweites Schulfach für Finanzen gibt es nicht. Ob und wie viel Finanzwissen im Unterricht vorkommt, hängt vom Bundesland, von der Schulart und oft von einzelnen Lehrkräften ab. Meist tauchen Finanzthemen in Fächern wie Wirtschaft, Politik oder Sozialkunde auf.</li><li><strong>Zuhause:</strong> Wer zu Hause selten über Geld spricht, lernt es dort auch nicht. Kinder übernehmen viel von dem, was sie bei ihren Eltern sehen, im Guten wie im Schlechten.</li><li><strong>Schnellere Angebote:</strong> Bezahlen per Smartphone, Ratenkauf mit einem Klick, Krypto und Anlagetipps in sozialen Medien machen Entscheidungen schneller, aber nicht leichter.</li><li><strong>Interessen:</strong> Nicht jedes Lernmaterial ist neutral. Neun von zehn Befragten ist wichtig, dass Unterrichtsmaterialien frei von wirtschaftlichen Interessen sind (forsa-Befragung für den Verbraucherzentrale Bundesverband, September 2024).</li></ul>
+<h2 id="was-die-politik-plant-die-finanzbildungsstrategie">Was die Politik plant: die Finanzbildungsstrategie</h2>
+<p>Die Finanzbildungsstrategie des Bundes umfasst sieben Handlungsfelder und 39 Maßnahmen. Sie reichen von Altersvorsorge und Kapitalmarkt über Haushaltsplanung und Schuldenprävention bis zum sicheren Umgang mit digitalen Finanzdienstleistungen. Ab 2027 soll eine Task Force Finanzbildung die Umsetzung steuern. Geleitet wird sie von Bundesfinanzministerium und Bundesbank, beteiligt sind auch die Länder, etwa über die Kultusministerkonferenz.</p>
+<p>Zwei Maßnahmen betreffen Familien direkt:</p>
+<ul><li><strong>Frühstart-Rente:</strong> Ab dem 1. Januar 2027 zahlt der Staat für Kinder vom 6. bis zum 18. Geburtstag 10 € im Monat in ein Vorsorgedepot, zuerst für die Jahrgänge 2020 und 2021. Ausgezahlt wird das Geld frühestens ab dem 65. Geburtstag (Bundesfinanzministerium).</li><li><strong>Schulbesuche:</strong> Die Bundesbank soll mit Besuchen in Schulen Finanzwissen direkt in die Klassen bringen.</li></ul>
+<p>Der Verbraucherzentrale Bundesverband fordert, dass Finanzbildung unabhängig, transparent und qualitativ hochwertig sein muss. Die neue Task Force solle deshalb vor allem die Qualität sichern (Pressemitteilung vom 19. November 2026).</p>
+<h2 id="welche-themen-wirklich-wichtig-sind">Welche Themen wirklich wichtig sind</h2>
+<p>Worauf Kinder und Jugendliche vorbereitet werden sollten, hat der Verbraucherzentrale Bundesverband im Oktober 2025 abfragen lassen (Online-Befragung durch eye square, 1.000 Internetnutzer ab 16 Jahren). Als sehr oder eher wichtig gelten:</p>
+<div class="tabelle"><table><thead><tr><th>Thema</th><th>Anteil der Befragten</th></tr></thead><tbody><tr><td>Überschuldung vermeiden</td><td>93 %</td></tr><tr><td>Umgang mit eigenem Geld</td><td>92 %</td></tr><tr><td>Langfristig sparen</td><td>89 %</td></tr><tr><td>Umgang mit digitalen Finanzdienstleistungen</td><td>89 %</td></tr></tbody></table></div>
+<p>Daraus ergibt sich eine sinnvolle Reihenfolge, egal ob du 15 oder 45 bist:</p>
+<ol><li><strong>Budget:</strong> Einnahmen und Ausgaben kennen, ein Haushaltsbuch führen.</li><li><strong>Konto und Schulden:</strong> Dispo, Ratenkauf und Verträge verstehen.</li><li><strong>Rücklagen:</strong> einen Notgroschen für Unvorhergesehenes aufbauen.</li><li><strong>Zinseszins und Inflation:</strong> verstehen, warum Zeit beim Sparen zählt.</li><li><strong>Anlegen:</strong> Aktien, ETFs, Streuung und Risiko. Den Einstieg erklärt der Artikel <a href="geld-anlegen-lernen.html">Geld anlegen lernen</a>, den langfristigen Weg der Fahrplan <a href="investieren-lernen.html">Investieren lernen</a>.</li><li><strong>Altersvorsorge:</strong> gesetzliche Rente und zusätzliche Vorsorge.</li><li><strong>Digitale Sicherheit:</strong> Phishing, Betrugsmaschen und versteckte Werbung erkennen.</li></ol>
+<h2 id="so-holst-du-finanzbildung-nach">So holst du Finanzbildung nach</h2>
+<h3>Für Jugendliche</h3>
+<ul><li><strong>Mit eigenem Geld üben:</strong> Taschengeld, Nebenjob oder Ausbildungsvergütung sind das beste Trainingsfeld. Plane ein Monatsbudget und prüfe am Monatsende, ob es aufgegangen ist.</li><li><strong>Kostenlose Angebote nutzen:</strong> Die Plattform <a href="https://www.mitgeldundverstand.de/" rel="noopener">Mit Geld &amp; Verstand</a> des Bundesfinanzministeriums sortiert Themen nach Lebensphasen, etwa „Kindheit und Jugend“ oder „Ausbildung und Studium“, und bietet ein Quiz zum Finanzwissen.</li><li><strong>Spielerisch lernen:</strong> Lern-Apps wie InQuestly erklären Begriffe wie Aktie, ETF oder Zinseszins in kurzen Lektionen mit Quiz. Ein Konto brauchst du dafür nicht, echtes Geld ist nie im Spiel. Worauf du bei einer Lern-App achten solltest, steht im Artikel <a href="boerse-lernen-app.html">Börse lernen App</a>.</li><li><strong>Social Media kritisch lesen:</strong> Frag bei jedem Tipp, wer daran verdient. Seriöse Quellen nennen Risiken und versprechen keine schnellen Gewinne.</li></ul>
+<h3>Für Erwachsene</h3>
+<ul><li><strong>Kassensturz machen:</strong> ein bis zwei Monate lang alle Ausgaben aufschreiben.</li><li><strong>Rente prüfen:</strong> Die Digitale Rentenübersicht der Deutschen Rentenversicherung zeigt deine Ansprüche an einem Ort.</li><li><strong>Unabhängige Informationen nutzen:</strong> Die Verbraucherzentralen informieren zu Geldanlage, Altersvorsorge und Verträgen, persönliche Beratung ist dort teils kostenpflichtig. Das Verbraucherportal der BaFin erklärt Finanzprodukte und warnt vor unseriösen Anbietern.</li><li><strong>Bücher und Kurse:</strong> Einsteiger-Ratgeber zu Haushalt, Geldanlage und Altersvorsorge gibt es in fast jeder Stadtbibliothek. Viele Volkshochschulen bieten Kurse zu Finanzthemen an.</li><li><strong>Begriffe klären:</strong> Das <a href="lexikon.html">Börsenlexikon</a> erklärt die wichtigsten Begriffe von Aktie bis Zinseszins in wenigen Sätzen.</li></ul>
+<h3>Üben, ohne Geld zu riskieren</h3>
+<p>Wissen bleibt erst hängen, wenn du es anwendest. Kurze, regelmäßige Einheiten wirken dabei besser als seltene lange Lernsessions. Bevor du echtes Geld einsetzt, kannst du Entscheidungen ohne Risiko durchspielen: mit einem Sparplanrechner, einem Börsenspiel oder einer Lern-App mit Übungen. Wie du die Börse Schritt für Schritt verstehst, zeigt der Artikel <a href="boerse-lernen-einstieg.html">Börse lernen in 7 Schritten</a>.</p>
+<h2 id="fuer-eltern-und-lehrkraefte">Für Eltern und Lehrkräfte</h2>
+<p><strong>Eltern</strong> sind für viele Kinder die ersten Ansprechpartner in Geldfragen. Ein paar Ideen:</p>
+<ul><li>Offen über Geld reden, auch über Fehler: Was hat der Urlaub gekostet, und warum gibt es einen Notgroschen?</li><li>Taschengeld als Übungsfeld nutzen und kleine Fehlkäufe aushalten, statt sie sofort auszugleichen.</li><li>Die Frühstart-Rente als Anlass nehmen: Wird für dein Kind ein Depot bespart, könnt ihr gemeinsam verfolgen, wie es sich entwickelt.</li></ul>
+<p><strong>Lehrkräfte</strong> finden kostenloses Material von unabhängigen Stellen:</p>
+<ul><li>Die Deutsche Bundesbank bietet kostenlose Unterrichtsmaterialien von der Primarstufe bis zur Sekundarstufe II, etwa die Schülerbücher „Geld verstehen“ (Sekundarstufe I) und „Geld und Geldpolitik“ (Sekundarstufe II), dazu Seminare für Lehrkräfte.</li><li>Der Materialkompass des Verbraucherzentrale Bundesverbands bewertet Unterrichtsmaterialien, unter anderem zu Finanzkompetenz. Material mit Produktwerbung oder interessengeleiteten Informationen gilt dort als mangelhaft.</li></ul>
+<p>Ideen, wie sich Lektionen, die Wochen-Challenge und Prognose-Duelle aus InQuestly im Unterricht einsetzen lassen, stehen auf der Seite <a href="../schule.html">für Lehrkräfte</a>.</p>
+<h2 id="haeufige-fragen">Häufige Fragen</h2>
+<details><summary>Was ist Finanzbildung?</summary><p>Das Wissen und Können, mit Geld gute Entscheidungen zu treffen: Budget, Konto und Kredite, Versicherungen, Sparen, Anlegen, Altersvorsorge und der sichere Umgang mit digitalen Finanzangeboten.</p></details>
+<details><summary>Gibt es Finanzbildung als Schulfach?</summary><p>Bildung ist in Deutschland Ländersache, ein bundesweites Schulfach für Finanzen gibt es nicht. Finanzthemen kommen je nach Bundesland in Fächern wie Wirtschaft, Politik oder Sozialkunde vor.</p></details>
+<details><summary>Warum fehlt Finanzbildung in der Schule so oft?</summary><p>Ob Finanzthemen vorkommen, hängt vom Bundesland, von der Schulart und oft von einzelnen Lehrkräften ab. Der Bedarf ist groß: In einer Befragung für die Bertelsmann Stiftung (veröffentlicht 2026) wünschten sich 90 % der 16- bis 25-Jährigen mehr Wirtschaftsthemen in der Schule.</p></details>
+<details><summary>Wie können Jugendliche Finanzen lernen?</summary><p>Am besten mit eigenem Geld: ein Budget planen und Taschengeld oder Ausbildungsvergütung einteilen. Dazu kommen kostenlose Angebote wie die Plattform „Mit Geld &amp; Verstand“ des Bundesfinanzministeriums und Lern-Apps, in denen du ohne echtes Geld übst.</p></details>
+<details><summary>Wo kann ich Finanzbildung kostenlos nachholen?</summary><p>Bei öffentlichen Stellen wie Bundesfinanzministerium, BaFin und Bundesbank, bei den Verbraucherzentralen, in der Stadtbibliothek und mit Lern-Apps, die einen Gratis-Teil haben.</p></details>
+<details><summary>Was ist die Finanzbildungsstrategie?</summary><p>Ein Plan der Bundesregierung, den das Kabinett am 18. November 2026 beschlossen hat. Er umfasst sieben Handlungsfelder und 39 Maßnahmen, ab 2027 steuert eine Task Force unter Leitung von Bundesfinanzministerium und Bundesbank die Umsetzung.</p></details>
+<details><summary>Ab welchem Alter sollten Kinder etwas über Geld lernen?</summary><p>Möglichst früh, spätestens mit dem ersten Taschengeld. Die Bundesbank bietet Unterrichtsmaterial schon für die Grundschule an.</p></details>
+  </div>
+  <aside class="quizbox" aria-label="Börsen-Quiz">
+  <a href="../quiz.html"><span class="quizbox-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 16 9.5 10.5l3.5 3.5L20 7m-5 0h5v5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="quizbox-text"><b>Teste dich:</b> Börsen-Quiz im Browser, 2 Minuten</span><svg class="quizbox-pfeil" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</aside>
+  <section class="quellen" aria-label="Quellen"><h2>Quellen und Stand</h2><ul><li>Bundesregierung, Finanzbildungsstrategie des Bundes, vom Kabinett beschlossen am 18. November 2026 (7 Handlungsfelder, 39 Maßnahmen, Task Force ab 2027)</li><li>Bundesministerium der Finanzen, Monatsbericht Mai 2024: OECD-Bestandsaufnahme „Finanzbildung in Deutschland“, veröffentlicht am 13. Mai 2024 (Datenbasis: BaFin-Befragung von 1.000 Erwachsenen im Jahr 2022)</li><li>Deutsches Aktieninstitut, Aktionärszahlen 2025, veröffentlicht am 13. Januar 2026</li><li>Bertelsmann Stiftung, Young Economy Tracker (forsa-Befragung von 1.507 jungen Menschen zwischen 16 und 25 Jahren, April 2025), veröffentlicht am 15. Januar 2026</li><li>Finanztip Stiftung, Bericht zur Absage am Finanzbildungs-Modul der PISA-Studie 2029 (von der OECD bestätigt), Stand 16. Juli 2026</li><li>Verbraucherzentrale Bundesverband, forsa-Befragung zu Unterrichtsmaterialien, September 2024</li><li>Verbraucherzentrale Bundesverband, Online-Befragung durch eye square vom 21. bis 31. Oktober 2025 (1.000 Internetnutzer ab 16 Jahren), veröffentlicht am 20. April 2026</li><li>Verbraucherzentrale Bundesverband, Pressemitteilung „Finanzbildungsstrategie: Qualität hat Priorität“ vom 19. November 2026</li><li>Bundesministerium der Finanzen, Frühstartrente: 10 Euro im Monat vom 6. bis zum 18. Geburtstag, Start am 1. Januar 2027 (abgerufen am 28. November 2026)</li><li>Deutsche Bundesbank, kostenlose Unterrichtsmaterialien von der Primarstufe bis zur Sekundarstufe II (abgerufen am 28. November 2026)</li></ul><p>Stand: 28. November 2026.</p></section>
+  <aside class="autor">
+  <img src="../icon-180.png" alt="" width="48" height="48" loading="lazy">
+  <p><b>Stathis Fotiadis</b> entwickelt InQuestly, eine App zum Börse lernen ohne echtes Geld. Der Blog erklärt die Grundlagen dazu verständlich und mit Beispielen. <a href="ueber-uns.html">Wie die Artikel entstehen</a></p>
+</aside>
+  <p class="hinweis-klein">Dieser Artikel dient der Bildung und ist keine Anlageberatung. Beispiele sind vereinfacht und ohne Steuern dargestellt.</p>
+  <aside class="cta">
+  <img src="../app/drache-lern.svg" alt="" width="104" height="99">
+  <div><h2>Üben statt nur lesen</h2>
+  <p>In <strong>InQuestly</strong> lernst du solche Dinge in 5 Minuten am Tag: kurze Lektionen mit Quiz, Chart-Training und Prognosen gegen Freunde, ohne echtes Geld.</p>
+  <a class="knopf" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&ct=blog&mt=8">Im App Store laden</a> <span class="klein">Gratis für iPhone, mit In-App-Käufen</span></div>
+</aside>
+  <section class="mehr"><h2>Weiterlesen</h2><ul><li><a href="aktien-app-anfaenger.html">Aktien-App für Anfänger: Welche Börsen-App wofür?</a></li><li><a href="boerse-lernen-app.html">Börse lernen App: So findest du die richtige Lern-App</a></li><li><a href="bulle-und-baer.html">Bulle und Bär: Was die Begriffe an der Börse bedeuten</a></li></ul></section>
+</article>
+</main>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 Fotiadis Apps</span><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><a href="../haftungsausschluss.html">Haftungsausschluss</a><a href="../support.html">Support</a><a href="./">Blog</a><a href="lexikon.html">Börsenlexikon</a><a href="ueber-uns.html">Über uns</a><a href="feed.xml">RSS</a><a href="../quiz.html">Börsen-Quiz</a><a href="../presse.html">Presse</a><a href="../schule.html">Für Lehrkräfte</a>
+</div></footer>
+</body>
+</html>
