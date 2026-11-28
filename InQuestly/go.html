@@ -5,66 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>InQuestly – Einladung</title>
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#5A46E6">
 <meta name="apple-itunes-app" content="app-id=6834527194">
 <link rel="icon" href="favicon.svg">
 <link rel="apple-touch-icon" href="icon-180.png">
 <meta property="og:site_name" content="InQuestly">
-<meta property="og:title" content="InQuestly – Einladung">
-<meta property="og:description" content="Du wurdest herausgefordert! Öffne die Einladung in InQuestly – die Börse spielerisch verstehen.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Du wurdest herausgefordert!">
+<meta property="og:description" content="Öffne die Einladung in InQuestly – Börse lernen wie ein Spiel. Gratis für iPhone.">
+<meta property="og:image" content="https://fotiadisapps.de/InQuestly/og-einladung.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <style>
-  :root { --lime:#C7F36B; --forest:#10261C; --forest2:#1E4530; --cream:#F5F0E3; --lav:#6B5CF5; }
-  * { box-sizing:border-box; }
-  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
-    font:17px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    color:var(--cream); background:linear-gradient(180deg, var(--forest2), var(--forest)); }
-  main { width:100%; max-width:420px; text-align:center; }
-  img { width:120px; height:auto; filter:drop-shadow(0 10px 18px rgba(0,0,0,.3)); }
-  h1 { font-size:28px; line-height:1.15; margin:14px 0 8px; }
-  p { margin:0 0 18px; opacity:.85; }
-  .claim { background:rgba(255,255,255,.08); border-radius:18px; padding:14px 16px; margin:0 0 18px; font-weight:600; }
-  a.btn { display:block; padding:16px; border-radius:16px; font-weight:700; text-decoration:none; margin-bottom:10px; }
-  .open { background:var(--lime); color:var(--forest); }
-  .store { background:rgba(255,255,255,.12); color:var(--cream); }
-  .code { margin-top:18px; font-size:13px; opacity:.6; word-break:break-all; }
-  small { display:block; margin-top:20px; opacity:.5; font-size:12px; }
+@font-face { font-family: "IQ Nunito"; src: url("fonts/Nunito-var.ttf") format("truetype"); font-weight: 200 1000; font-display: swap; }
+:root {
+  --violett: #5A46E6; --violett-tief: #4935D4; --nacht: #20184A; --gelb: #FFC83A; --steigt: #0F8445; --faellt: #D63A31;
+  --karte: #FFFFFF; --nebel: #F3F1FF; --text: #20184A; --text-2: #5C5780; --linie: #E4E0F7;
+  --rund: ui-rounded, "SF Pro Rounded", "IQ Nunito", system-ui, sans-serif;
+  --schrift: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --feder: cubic-bezier(.34, 1.56, .64, 1); --raus: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --karte: #1B1744; --nebel: #241F55; --text: #F3F1FF; --text-2: #C3BDEA; --linie: #2E2862; --steigt: #3FCB7E; --faellt: #FF7A70; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; min-height: 100vh; min-height: 100svh; background: var(--violett); color: var(--text); font: 400 1.0625rem/1.5 var(--schrift);
+  -webkit-font-smoothing: antialiased; display: grid; place-items: center;
+  padding: max(28px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+a, button { -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--gelb); outline-offset: 3px; border-radius: 10px; }
+main { width: 100%; max-width: 420px; position: relative; padding-top: 92px; }
+.drache { position: absolute; left: 50%; top: 0; width: 132px; transform: translateX(-50%); z-index: 0; }
+.drache img { width: 100%; height: auto; display: block; }
+.karte { position: relative; z-index: 1; background: var(--karte); border-radius: 32px; padding: 30px 24px 24px; text-align: center;
+  box-shadow: 0 30px 60px rgba(20, 10, 80, .35); }
+.marke { display: inline-flex; align-items: center; gap: 8px; font: 800 .9375rem/1 var(--rund); color: var(--violett); background: var(--nebel); padding: 8px 12px; border-radius: 99px; }
+@media (prefers-color-scheme: dark) { .marke { color: #C9C2FF; } }
+.marke img { width: 18px; height: 18px; border-radius: 5px; }
+h1 { font: 900 clamp(1.9rem, 8vw, 2.3rem)/1.05 var(--rund); letter-spacing: -0.025em; margin: 18px 0 10px; text-wrap: balance; }
+.unter { color: var(--text-2); margin: 0 auto; max-width: 32ch; text-wrap: pretty; }
+.prognose { margin: 22px 0 4px; padding: 18px 18px 16px; border-radius: 22px; background: var(--nebel); text-align: left; }
+.prognose .wer { font-size: .9375rem; color: var(--text-2); }
+.prognose .was { display: flex; align-items: center; gap: 10px; margin-top: 6px; font: 900 1.5rem/1.1 var(--rund); letter-spacing: -0.02em; }
+.prognose .pfeil { flex: none; width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; color: #fff; font: 900 1.25rem/1 var(--rund); }
+.prognose .pfeil.auf { background: var(--steigt); } .prognose .pfeil.ab { background: var(--faellt); }
+.prognose .bis { margin-top: 8px; font-size: .9375rem; color: var(--text-2); }
+.prognose .frage { margin-top: 10px; font: 800 1.0625rem/1.3 var(--rund); }
+.knopf { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 56px; margin-top: 22px; border-radius: 18px;
+  background: var(--violett); color: #fff; text-decoration: none; font: 800 1.125rem/1 var(--rund); box-shadow: 0 10px 24px rgba(90, 70, 230, .35);
+  transition: transform .15s var(--raus); }
+.knopf:active { transform: scale(.97); }
+.knopf svg { width: 20px; height: 20px; flex: none; }
+.klein { font-size: .875rem; color: var(--text-2); margin-top: 10px; }
+.oeffnen { display: inline-block; margin-top: 14px; padding: 10px 14px; font: 800 1rem/1.2 var(--rund); color: var(--violett); text-decoration: none; border-radius: 12px; }
+@media (prefers-color-scheme: dark) { .oeffnen { color: #C9C2FF; } }
+.schritte { list-style: none; counter-reset: s; margin: 20px 0 0; padding: 18px 0 0; border-top: 1px solid var(--linie); text-align: left; display: grid; gap: 12px; }
+.schritte li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; font-size: .9375rem; color: var(--text-2); }
+.schritte li::before { content: counter(s); width: 30px; height: 30px; border-radius: 10px; display: grid; place-items: center; background: var(--nebel); color: var(--violett); font: 900 .9375rem/1 var(--rund); }
+@media (prefers-color-scheme: dark) { .schritte li::before { color: #C9C2FF; } }
+.schritte b { color: var(--text); font-weight: 700; }
+.code { margin-top: 14px; font-size: .75rem; color: var(--text-2); opacity: .8; word-break: break-all; }
+.fuss { margin-top: 22px; text-align: center; color: #E4E0FF; font-size: .8125rem; line-height: 1.6; }
+.fuss a { color: #fff; text-underline-offset: 3px; }
+/* Einmalige Ladefolge: Drache taucht auf, Karte gleitet hoch */
+@media (prefers-reduced-motion: no-preference) {
+  .drache { animation: auftauchen .7s var(--feder) .15s both; }
+  .karte { animation: hoch .55s var(--raus) both; }
+  @keyframes auftauchen { from { transform: translate(-50%, 40px) scale(.9); opacity: 0; } to { transform: translate(-50%, 0) scale(1); opacity: 1; } }
+  @keyframes hoch { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+}
 </style>
 </head>
 <body>
 <main>
-  <img src="mascot.svg" alt="">
-  <h1 id="h">Du wurdest herausgefordert!</h1>
-  <p id="s">Öffne die Einladung in InQuestly.</p>
-  <div class="claim" id="c" hidden></div>
-  <a class="btn open" id="open" href="#">In InQuestly öffnen</a>
-  <a class="btn store" id="store" href="https://apps.apple.com/app/id6834527194">InQuestly laden – kostenlos</a>
-  <div class="code" id="code"></div>
-  <small id="f">InQuestly – die Börse spielerisch verstehen. Keine Anlageberatung.</small>
+  <div class="drache" aria-hidden="true"><img src="app/drache-lern.svg" alt=""></div>
+  <div class="karte">
+    <span class="marke"><img src="icon-180.png" alt="">InQuestly</span>
+    <h1 id="h">Du wurdest herausgefordert!</h1>
+    <p class="unter" id="s">Öffne die Einladung in InQuestly.</p>
+    <div class="prognose" id="c" hidden></div>
+    <a class="knopf" id="store" href="https://apps.apple.com/app/apple-store/id6834527194?pt=129681978&amp;ct=einladung&amp;mt=8">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="storeT">InQuestly gratis laden</span>
+    </a>
+    <p class="klein" id="storeK">Gratis für iPhone, mit In-App-Käufen</p>
+    <a class="oeffnen" id="open" href="#" hidden>Schon geladen? In InQuestly öffnen</a>
+    <ol class="schritte" id="schritte" hidden>
+      <li id="s1"><span><b>InQuestly laden.</b> Gratis aus dem App Store.</span></li>
+      <li id="s2"><span><b>Den Link noch einmal antippen.</b> Dort, wo du ihn bekommen hast.</span></li>
+      <li id="s3"><span><b>Loslegen.</b> Die Einladung öffnet sich direkt in der App.</span></li>
+    </ol>
+    <div class="code" id="code"></div>
+  </div>
+  <p class="fuss" id="fuss"><span id="f">Börse lernen wie ein Spiel. Ohne echtes Geld, keine Anlageberatung.</span><br>
+    <a href="./" id="mehr">Mehr über InQuestly</a> · <a href="datenschutz.html" id="ds">Datenschutz</a> · <a href="impressum.html" id="imp">Impressum</a></p>
 </main>
 <script>
 (function () {
   var en = !/^de\b/i.test(navigator.language || 'de');
   var q = new URLSearchParams(location.search), p = q.get('p'), d = q.get('d'), a = q.get('a'), f = q.get('f'), link = '', code = p || d || a || '';
   function dec(s) { try { return JSON.parse(decodeURIComponent(escape(atob(s.replace(/^PR[GA]-/, '').replace(/\.[a-z0-9]+$/, '').replace(/-/g, '+').replace(/_/g, '/'))))); } catch (e) { return null; } }
-  var T = en ? { h:'You have been challenged!', s:'Open the invitation in InQuestly.', open:'Open in InQuestly', store:'Get InQuestly – free', f:'InQuestly – learn the stock market like a game. Not investment advice.',
-                 pred:function (o) { return o.u + ' says: ' + o.n + (o.d ? ' rises' : ' falls') + (o.g ? ' by at least ' + o.g + ' %' : '') + ' by ' + new Date(o.e).toLocaleDateString('en-GB') + '. Do you agree?'; },
-                 duel:'Read the same charts as your friend – whoever gets more right wins.', quiz:'Answer the same knowledge questions as your friend – whoever gets more right wins.', tip:'Call the same 5 stocks as your friend: up or down over 4 weeks? Whoever scores more points wins.', ans:'Your friend answered your forecast.', code:'Code: ',
-                 friend:'Open the invite in InQuestly – then you are friends and see each other in leagues, duels and forecasts.', fh:function (w) { return w ? w + ' wants to learn with you!' : 'A friend invites you!'; } }
-              : { h:'Du wurdest herausgefordert!', s:'Öffne die Einladung in InQuestly.', open:'In InQuestly öffnen', store:'InQuestly laden – kostenlos', f:'InQuestly – die Börse spielerisch verstehen. Keine Anlageberatung.',
-                 pred:function (o) { return o.u + ' sagt: ' + o.n + (o.d ? ' steigt' : ' fällt') + (o.g ? ' um mindestens ' + o.g + ' %' : '') + ' bis ' + new Date(o.e).toLocaleDateString('de-DE') + '. Hältst du dagegen?'; },
-                 duel:'Lies dieselben Charts wie dein Freund – wer mehr richtig hat, gewinnt.', quiz:'Beantworte dieselben Wissensfragen wie dein Freund – wer mehr richtig hat, gewinnt.', tip:'Tippe dieselben 5 Aktien wie dein Freund: Steigen oder fallen sie in 4 Wochen? Wer mehr Punkte holt, gewinnt.', ans:'Dein Freund hat auf deine Prognose geantwortet.', code:'Code: ',
-                 friend:'Öffne die Einladung in InQuestly – dann seid ihr Freunde und seht euch in Liga, Duellen und Prognosen.', fh:function (w) { return w ? w + ' möchte mit dir lernen!' : 'Ein Freund lädt dich ein!'; } };
+  var T = en ? {
+      h: 'You have been challenged!', s: 'Open the invitation in InQuestly.', store: 'Get InQuestly – free', storeK: 'Free for iPhone, with in-app purchases',
+      open: 'Already installed? Open in InQuestly', f: 'Learn the stock market like a game. No real money, not investment advice.',
+      mehr: 'More about InQuestly', ds: 'Privacy', imp: 'Imprint',
+      s1: ['Get InQuestly.', ' Free on the App Store.'], s2: ['Tap the link again.', ' Wherever you received it.'], s3: ['Start.', ' The invitation opens right in the app.'],
+      says: function (u) { return u + ' says:'; }, up: ' rises', down: ' falls', by: function (g, e) { return (g ? 'by at least ' + g + ' % ' : '') + 'by ' + e; }, ask: 'Do you agree?',
+      duel: 'Read the same charts as your friend – whoever gets more right wins.', quiz: 'Answer the same knowledge questions as your friend – whoever gets more right wins.',
+      tip: 'Call the same 5 stocks as your friend: up or down over 4 weeks? Whoever scores more points wins.', ans: 'Your friend answered your forecast.', code: 'Code: ',
+      friend: 'Open the invite in InQuestly – then you are friends and see each other in leagues, duels and forecasts.',
+      fh: function (w) { return w ? w + ' wants to learn with you!' : 'A friend invites you!'; }, dh: function (w) { return w + ' challenges you!'; }, date: 'en-GB'
+    } : {
+      h: 'Du wurdest herausgefordert!', s: 'Öffne die Einladung in InQuestly.', store: 'InQuestly gratis laden', storeK: 'Gratis für iPhone, mit In-App-Käufen',
+      open: 'Schon geladen? In InQuestly öffnen', f: 'Börse lernen wie ein Spiel. Ohne echtes Geld, keine Anlageberatung.',
+      mehr: 'Mehr über InQuestly', ds: 'Datenschutz', imp: 'Impressum',
+      s1: ['InQuestly laden.', ' Gratis aus dem App Store.'], s2: ['Den Link noch einmal antippen.', ' Dort, wo du ihn bekommen hast.'], s3: ['Loslegen.', ' Die Einladung öffnet sich direkt in der App.'],
+      says: function (u) { return u + ' sagt:'; }, up: ' steigt', down: ' fällt', by: function (g, e) { return (g ? 'um mindestens ' + g + ' % ' : '') + 'bis ' + e; }, ask: 'Hältst du dagegen?',
+      duel: 'Lies dieselben Charts wie dein Freund – wer mehr richtig hat, gewinnt.', quiz: 'Beantworte dieselben Wissensfragen wie dein Freund – wer mehr richtig hat, gewinnt.',
+      tip: 'Tippe dieselben 5 Aktien wie dein Freund: Steigen oder fallen sie in 4 Wochen? Wer mehr Punkte holt, gewinnt.', ans: 'Dein Freund hat auf deine Prognose geantwortet.', code: 'Code: ',
+      friend: 'Öffne die Einladung in InQuestly – dann seid ihr Freunde und seht euch in Liga, Duellen und Prognosen.',
+      fh: function (w) { return w ? w + ' möchte mit dir lernen!' : 'Ein Freund lädt dich ein!'; }, dh: function (w) { return w + ' fordert dich heraus!'; }, date: 'de-DE'
+    };
+  var $ = function (id) { return document.getElementById(id); };
+  var setze = function (id, t) { $(id).textContent = t; };
   document.documentElement.lang = en ? 'en' : 'de';
-  ['h', 's', 'open', 'store', 'f'].forEach(function (k) { document.getElementById(k).textContent = T[k]; });
-  if (p) { link = 'tqapp://pred?c=' + encodeURIComponent(p); var o = dec(p); if (o) { var c = document.getElementById('c'); c.textContent = T.pred(o); c.hidden = false; } }
-  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); document.getElementById('s').textContent = /^TIPP-/i.test(d) ? T.tip : /^Q/i.test(d) ? T.quiz : T.duel;
-    var ti = d.indexOf('~'); if (ti > 0) { var who = d.slice(ti + 1); var si = who.lastIndexOf('*'); if (si > 0) who = who.slice(0, si); who = who.slice(0, 24); code = d.slice(0, ti); document.getElementById('h').textContent = en ? who + ' challenges you!' : who + ' fordert dich heraus!'; } }
-  else if (a) { link = 'tqapp://predans?c=' + encodeURIComponent(a); document.getElementById('s').textContent = T.ans; }
+  setze('h', T.h); setze('s', T.s); setze('storeT', T.store); setze('storeK', T.storeK); setze('open', T.open); setze('f', T.f); setze('mehr', T.mehr); setze('ds', T.ds); setze('imp', T.imp);
+  ['s1', 's2', 's3'].forEach(function (id) { var li = $(id), sp = document.createElement('span'), b = document.createElement('b'); b.textContent = T[id][0]; sp.appendChild(b); sp.appendChild(document.createTextNode(T[id][1])); li.textContent = ''; li.appendChild(sp); });
+  /* Alle Werte aus der Adresse nur als Text einsetzen, nie als HTML */
+  function karte(o) {
+    var c = $('c'), wer = document.createElement('div'), was = document.createElement('div'), pfeil = document.createElement('span'), name = document.createElement('span'), bis = document.createElement('div'), frage = document.createElement('div');
+    wer.className = 'wer'; wer.textContent = T.says(String(o.u || '').slice(0, 24));
+    was.className = 'was'; pfeil.className = 'pfeil ' + (o.d ? 'auf' : 'ab'); pfeil.textContent = o.d ? '↑' : '↓'; pfeil.setAttribute('aria-hidden', 'true');
+    name.textContent = String(o.n || '').slice(0, 40) + (o.d ? T.up : T.down); was.appendChild(pfeil); was.appendChild(name);
+    var e = new Date(o.e); bis.className = 'bis'; bis.textContent = T.by(o.g ? String(o.g).slice(0, 6) : '', isNaN(e) ? '' : e.toLocaleDateString(T.date));
+    frage.className = 'frage'; frage.textContent = T.ask;
+    [wer, was, bis, frage].forEach(function (x) { c.appendChild(x); }); c.hidden = false;
+  }
+  if (p) { link = 'tqapp://pred?c=' + encodeURIComponent(p); var o = dec(p); if (o) karte(o); }
+  else if (d) { link = 'tqapp://duel?c=' + encodeURIComponent(d); setze('s', /^TIPP-/i.test(d) ? T.tip : /^Q/i.test(d) ? T.quiz : T.duel);
+    var ti = d.indexOf('~'); if (ti > 0) { var who = d.slice(ti + 1), si = who.lastIndexOf('*'); if (si > 0) who = who.slice(0, si); who = who.slice(0, 24); code = d.slice(0, ti); if (who) setze('h', T.dh(who)); } }
+  else if (a) { link = 'tqapp://predans?c=' + encodeURIComponent(a); setze('s', T.ans); }
   else if (f) { link = 'tqapp://friend?c=' + encodeURIComponent(f); code = '';
-    var cut = f.lastIndexOf('*'), who = (cut > 0 ? f.slice(0, cut) : f).slice(0, 24);
-    document.getElementById('h').textContent = T.fh(who); document.getElementById('s').textContent = T.friend; }
-  var btn = document.getElementById('open');
-  if (link) { btn.href = link; if (code) document.getElementById('code').textContent = T.code + code; setTimeout(function () { location.href = link; }, 400); }
-  else btn.style.display = 'none';
+    var cut = f.lastIndexOf('*'), wer = (cut > 0 ? f.slice(0, cut) : f).slice(0, 24); setze('h', T.fh(wer)); setze('s', T.friend); }
+  /* Kein automatischer Sprung in die App: Ohne installierte App zeigt Safari sonst „Adresse ungültig“.
+     Wer die App hat, landet über den Universal Link ohnehin direkt in der App. */
+  if (link) {
+    var open = $('open'); open.href = link; open.hidden = false;
+    $('schritte').hidden = !!a;
+    if (code) setze('code', T.code + code.slice(0, 80));
+  } else {
+    setze('h', en ? 'Learn the stock market like a game.' : 'Börse lernen wie ein Spiel.');
+    setze('s', en ? 'Lessons, chart games and forecasts against friends. 5 minutes a day.' : 'Lektionen, Chart-Spiele und Prognosen gegen Freunde. 5 Minuten am Tag.');
+  }
 })();
 </script>
 </body>
